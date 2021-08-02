@@ -82,8 +82,8 @@ analytics:
 author:
   name             : "Baojun Liu"
   avatar           : "profile.png"
-  bio              : "Postdoctoral Researcher at NISL, Tsinghua University"
-  location         : "FIT 4-204, Tsinghua Univ., Beijing 100084, P.R.China"
+  bio              : "Postdoc Researcher, Tsinghua University"
+  location         : "FIT 4-204, Tsinghua Univ."
   googlescholar    : "https://scholar.google.com/citations?user=6Hme86QAAAAJ"
   email            : "lbj [AT] tsinghua [dot] edu [dot] cn"
   researchgate     : "https://www.researchgate.net/profile/Baojun-Liu-3"
@@ -148,15 +148,15 @@ kramdown:
 
 # Collections
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
+#  teaching:
+#    output: true
+#    permalink: /:collection/:path/
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
+#  portfolio:
+#    output: true
+#    permalink: /:collection/:path/
   talks:
     output: true
     permalink: /:collection/:path/
