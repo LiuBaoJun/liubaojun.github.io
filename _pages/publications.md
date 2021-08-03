@@ -41,7 +41,7 @@ Conference Papers
 
 - **[CCS 20 A]** [Lies in the Air: Characterizing Fake-base-station Spam Ecosystem in China.](../files/paper/CCS-2020A.pdf)     
   Yiming Zhang, **Baojun Liu †**, Chaoyi Lu, Zhou Li, Haixin Duan †, Shuang Hao, Mingxuan Liu, Ying Liu †, Dong Wang and Qiang Li.    
-  To appear in the 27th ACM Conference on Computer and Communications Security, Orlando, USA, November 9-13, 2020.    
+  To appear in the 27th ACM Conference on Computer and Communications Security (CCS), Orlando, USA, November 9-13, 2020.    
 
 - **[USENIX Security 20]** [Poison over Troubled Forwarders: A Cache Poisoning Attack Targeting DNS Forwarding Devices.](../files/paper/USENIXSecurity-2020.pdf)     
   Xiaofeng Zheng, Chaoyi Lu, Jian Peng, Qiushi Yang, Dongjie Zhou, **Baojun Liu**, Keyu Man, Shuang Hao, Haixin Duan and Zhiyun Qian.       
@@ -75,30 +75,30 @@ Conference Papers
 
 - **[NDSS 19]** [Cracking Wall of Confinement: Understanding and Analyzing Malicious Domain Takedowns.](../files/paper/NDSS-2019.pdf)   
   Eihal Alowaisheq, Peng Wang, Sumayah Alrwais, Xiaojing Liao, XaioFeng Wang, Tasneem Alowaisheq, XiangHang Mi, Siyuan Tang and **Baojun Liu**.  
-  Accepted by the 26th ISOC Network and Distributed System Security Symposium, San Diego, CA, USA, February 24-27, 2020.     
+  Accepted by the 26th ISOC Network and Distributed System Security Symposium (NDSS), San Diego, CA, USA, February 24-27, 2020.     
   **Distinguished Paper Award !!!**
 
 - **[IEEE S&P 19]** [Resident Evil: Understanding Residential IP Proxy as a Dark Service.](../files/paper/Oakland-2019.pdf)     
   Xianghang Mi, Xuan Feng, Xiaojing Liao, **Baojun Liu**, Xiaofeng Wang, Feng Qian, Zhou Li, Sumayah Alrwais, Limin Sun and Ying Liu.   
-  Accepted by the 40th IEEE Symposium on Security and Privacy, San Francisco, USA, May 20-22, 2019.
+  Accepted by the 40th IEEE Symposium on Security and Privacy (IEEE S&P), San Francisco, USA, May 20-22, 2019.
 
 - **[SRDS 18]** [Abusing CDNs for Fun and Profit: Security Issues in CDNs' Origin Validation.](../files/paper/SRDS-2018.pdf)     
   Run Guo, Jianjun Chen, **Baojun Liu**, Jia Zhang, Chao Zhang, Haixin Duan, Tao Wan, Jian Jiang, Shuang Hao and Yaoqi Jia.    
-  Accepted by the 37th IEEE International Symposium on Reliable Distributed Systems, Bahia, Brazil, October 2-5, 2018.
+  Accepted by the 37th IEEE International Symposium on Reliable Distributed Systems (SRDS), Bahia, Brazil, October 2-5, 2018.
 
 - **[FOCI 18]** [Measuring Privacy Threats in China-Wide Mobile Networks.](../files/paper/FOCI-2018.pdf)    
   Mingming Zhang, **Baojun Liu**, Chaoyi Lu, Jia Zhang, Shuang Hao and Haixin Duan.   
-  Accepted by the 8th USENIX Workshop on Free and Open Communications on the Internet, Baltimore, USA, August 14, 2018.  
+  Accepted by the 8th USENIX Workshop on Free and Open Communications on the Internet (FOCI), Baltimore, USA, August 14, 2018.  
 
 - **[USENIX Security 18]** [Who Is Answering My Queries: Understanding and Characterizing Interception of the DNS Resolution Path.](../files/paper/USENIXSecurity-2018.pdf)        
   **Baojun Liu**, Chaoyi Lu, Haixin Duan, Ying Liu, Zhou Li, Shuang Hao and Min Yang.   
-  Accepted by the 27th USENIX Security Symposium, Baltimore, USA, August 15-17, 2018.        
+  Accepted by the 27th USENIX Security Symposium (USENIX Security), Baltimore, USA, August 15-17, 2018.        
   **Media:** [ACM TechNews](https://technews.acm.org/archives.cfm?fo=2018-08-aug/aug-24-2018.html); [APNIC](https://blog.apnic.net/2019/07/17/one-in-four-google-public-dns-requests-are-being-intercepted-in-china-report/); [The Register](https://www.theregister.com/2018/08/20/dns_interception/); [Hackread](https://www.hackread.com/hackers-can-intercept-and-manipulate-dns-queries-researchers-warn/); [HelpNet Security](https://www.helpnetsecurity.com/2018/08/21/dns-interception/); [CircleID](https://www.circleid.com/posts/20180823_large_scale_study_sheds_light_on_the_scope_of_dns_interception/); [Mozilla](https://blog.nightly.mozilla.org/2018/08/28/firefox-nightly-secure-dns-experimental-results/); [Aqniu](https://www.aqniu.com/news-views/37682.html); [HackWareNews](https://hackwarenews.com/dangers-of-dns-interception/); [Rambler](https://news.rambler.ru/other/40604197-bolshinstvo-dns-zaprosov-legko-perehvatit-schitayut-eksperty/) .....
 
 - **[DSN 18]** [A Reexamination of Internationalized Domain Names: the Good, the Bad and the Ugly.](../files/paper/DSN-2018.pdf)   
   **Baojun Liu**, Chaoyi Lu, Zhou Li, Ying Liu, Haixin Duan, Shuang Hao and Zaifeng Zhang.       
-  Accepted by the 48th IEEE/IFIP International Conference on Dependable Systems and Networks, Luxembourg City, Luxembourg, June 25-28, 2018.
+  Accepted by the 48th IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), Luxembourg City, Luxembourg, June 25-28, 2018.
 
 - **[CCS 17]** [Don't Let One Rotten Apple Spoil the Whole Barrel: Towards Automated Detection of Shadowed Domains.](../files/paper/CCS-2017.pdf)    
   Daiping Liu, Zhou Li, Kun Du, Haining Wang, **Baojun Liu** and Haixin Duan.   
-  Accepted by the 24th ACM Conference on Computer and Communications Security, Dallas, TX, October 30- November 3, 2017.
+  Accepted by the 24th ACM Conference on Computer and Communications Security (CCS), Dallas, TX, October 30- November 3, 2017.
