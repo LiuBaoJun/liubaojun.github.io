@@ -3,7 +3,7 @@ title: "Baojun Liu, PhD Thesis Defense"
 collection: talks
 type: "Talk"
 permalink: /talks/2020-09-04-thesis-defense
-venue: "FIT, Tsinghua Univ."
+venue: "FIT, Tsinghua University"
 date: 2020-09-04
 location: "Beijing, CN"
 ---
