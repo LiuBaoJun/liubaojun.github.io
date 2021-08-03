@@ -1,5 +1,14 @@
-Baojun Liu's Homepage
-------
+---
+permalink: /
+title: "Baojun Liu's Homepage"
+excerpt: "About me"
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
+
+
 Hey!
 
 Now, I join the Institute for Network Science and Cyberspace of Tsinghua University as a postdoc researcher.
