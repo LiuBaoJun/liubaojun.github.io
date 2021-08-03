@@ -5,7 +5,7 @@ author_profile: true
 ---
 
 
-Statistical summary
+Statistical Summary
 ------
 Publications at [top-tier conferences in network security](http://s3.eurecom.fr/~balzarot/notes/top4_2020/) ( 11 papers ):  S&P ( '19),  Security ( '18, '20, '21),  CCS ( '17, '20, '21), NDSS ( '19, '20, '21)
 
@@ -14,42 +14,84 @@ Publications at [top-tier conferences in network security](http://s3.eurecom.fr/
 Conference Papers
 ------
 
-- **[DSN 21]** Xiang Li, **Baojun Liu †**, Xiaofeng Zheng, Haixin Duan, Qi Li † and Youjun Huang. Fast IPv6 Network Periphery Discovery and Security Implications.
-Accepted by the 51th IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), Virtual, June 2021. 
+- **[CCS 21]** Rusted Anchors: A National Client-Side View of Hidden Root CAs in the Web PKI Ecosystem.        
+  Yiming Zhang, **Baojun Liu †**, Chaoyi Lu, Zhou Li, Haixin Duan †, Jiachen Li and Zaifeng Zhang.     
+  Conditionally accepted by the 28th ACM Conference on Computer and Communications Security (CCS), Seoul, Republic of Korea, November 15-19, 2021.    
 
 
-- **[NDSS' 21]** From WHOIS to WHOWAS: A Large-Scale Measurement Study of Domain Registration Privacy under the GDPR. Chaoyi Lu,  **Baojun Liu †**, Yiming Zhang, Zhou Li, Fenglu Zhang, Haixin Duan †, Ying Liu, Joann Chen, Jinjin Liang, Zaifeng Zhang, Shuang Hao and Min Yang. 28th Annual Network and Distributed Security Symposium (NDSS), Virtual, February 2021.
+- **[DSN 21]** [Fast IPv6 Network Periphery Discovery and Security Implications](../files/paper/DSN-2021.pdf).        
+  Xiang Li, **Baojun Liu †**, Xiaofeng Zheng, Haixin Duan, Qi Li † and Youjun Huang.       
+  Accepted by the 51th IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), Virtual, June 21-24, 2021.    
 
 
-- **[USENIX Security' 21]** Weak Links in Authentication Chains: A Large-scale Analysis of Email Sender Spoofing Attacks. Kaiwen Shen, Chuhan Wang, Xiaofeng Zheng †, Minglei Guo, Chaoyi Lu, **Baojun Liu †**, Yuxuan Zhao, Shuang Hao, Haixin Duan, Qinfeng Pan and Min Yang. To appear in the 30th USENIX Security Symposium, Vancouver, BC, Canada, August 2021.
+- **[NDSS 21]** [From WHOIS to WHOWAS: A Large-Scale Measurement Study of Domain Registration Privacy under the GDPR.](../files/paper/NDSS-2021.pdf)      
+  Chaoyi Lu, **Baojun Liu †**, Yiming Zhang, Zhou Li, Fenglu Zhang, Haixin Duan †, Ying Liu, Joann Chen, Jinjin Liang, Zaifeng Zhang, Shuang Hao and Min Yang.     
+  Accepted by the 28th Annual Network and Distributed Security Symposium (NDSS), Virtual, February 21-25, 2021.   
 
 
-- **[CCS' 20 B]** Talking with Familiar Strangers: An Empirical Study on HTTPS Context Confusion Attacks. Mingming Zhang, Xiaofeng Zheng †, Kaiwen Shen, Ziqiao Kong, Chaoyi Lu, Yu Wang, Haixin Duan †, Shuang Hao, **Baojun Liu** and Min Yang. To appear in the 27th ACM Conference on Computer and Communications Security, Orlando, USA, November 2020.
+- **[USENIX Security 21]** [Weak Links in Authentication Chains: A Large-scale Analysis of Email Sender Spoofing Attacks.](../files/paper/USENIXSecurity-2021.pdf)  
+  Kaiwen Shen, Chuhan Wang, Xiaofeng Zheng †, Minglei Guo, Chaoyi Lu, **Baojun Liu †**, Yuxuan Zhao, Shuang Hao, Haixin Duan, Qinfeng Pan and Min Yang.     
+  Accepted by the 30th USENIX Security Symposium (USENIX Security), Vancouver, BC, Canada, August 11-13, 2021.  
 
-- **[CCS' 20 A]** Lies in the Air: Characterizing Fake-base-station Spam Ecosystem in China. Yiming Zhang, **Baojun Liu †**, Chaoyi Lu, Zhou Li, Haixin Duan †, Shuang Hao, Mingxuan Liu, Ying Liu †, Dong Wang and Qiang Li. To appear in the 27th ACM Conference on Computer and Communications Security, Orlando, USA, November 2020.  
+- **[CCS 20 B]** [Talking with Familiar Strangers: An Empirical Study on HTTPS Context Confusion Attacks.](../files/paper/CCS-2020B.pdf)      
+  Mingming Zhang, Xiaofeng Zheng †, Kaiwen Shen, Ziqiao Kong, Chaoyi Lu, Yu Wang, Haixin Duan †, Shuang Hao, **Baojun Liu** and Min Yang.        
+  Accepted by the 27th ACM Conference on Computer and Communications Security (CCS), Orlando, USA, November 9-13, 2020.
 
-- **[USENIX Security' 20]** Poison over Troubled Forwarders: A Cache Poisoning Attack Targeting DNS Forwarding Devices. Xiaofeng Zheng, Chaoyi Lu, Jian Peng, Qiushi Yang, Dongjie Zhou, **Baojun Liu**, Keyu Man, Shuang Hao, Haixin Duan and Zhiyun Qian. Accepted by the 29th USENIX Security Symposium, Boston, MA, USA, August 2020.
+- **[CCS 20 A]** [Lies in the Air: Characterizing Fake-base-station Spam Ecosystem in China.](../files/paper/CCS-2020A.pdf)     
+  Yiming Zhang, **Baojun Liu †**, Chaoyi Lu, Zhou Li, Haixin Duan †, Shuang Hao, Mingxuan Liu, Ying Liu †, Dong Wang and Qiang Li.    
+  To appear in the 27th ACM Conference on Computer and Communications Security, Orlando, USA, November 9-13, 2020.    
 
-- **[DSN' 20]** CDN Backfired: Amplification Attacks Based on HTTP Range Requests. Weizhong Li, Kaiwen Shen, Run Guo, **Baojun Liu**, Jia Zhang, Haixin Duan, Shuang Hao, Xiarun Chen and Yao Wang. Accepted by the 50th IEEE/IFIP International Conference on Dependable Systems and Networks, Valencia, Spain, July 2020. **Best Paper Award !!!**
+- **[USENIX Security 20]** [Poison over Troubled Forwarders: A Cache Poisoning Attack Targeting DNS Forwarding Devices.](../files/paper/USENIXSecurity-2020.pdf)     
+  Xiaofeng Zheng, Chaoyi Lu, Jian Peng, Qiushi Yang, Dongjie Zhou, **Baojun Liu**, Keyu Man, Shuang Hao, Haixin Duan and Zhiyun Qian.     
+  Accepted by the 29th USENIX Security Symposium (USENIX Security), Boston, MA, USA, August 12-14, 2020.  
 
-- **[NDSS' 20]** CDN Judo: Breaking the CDN DoS Protection with Itself. Ruo Guo, Weizhong Li, **Baojun Liu**, Shuang Hao, Haixin Duan, Jia Zhang, Kaiwen Shen, Jianjun Chen and Ying Liu. Accepted by the 27th ISOC Network and Distributed System Security Symposium, San Diego, CA, USA, February 2020.
+- **[DSN 20]** [CDN Backfired: Amplification Attacks Based on HTTP Range Requests.](../files/paper/DSN-2020.pdf) 
+  Weizhong Li, Kaiwen Shen, Run Guo, **Baojun Liu**, Jia Zhang, Haixin Duan, Shuang Hao, Xiarun Chen and Yao Wang.   
+  Accepted by the 50th IEEE/IFIP International Conference on Dependable Systems and Networks, Valencia, Spain, July 2020.   
+  **Best Paper Award !!!**
 
-- **[IMC' 19]** An End-to-End, Large-Scale Measurement of DNS-over-Encryption: How Far Have We Come? Chaoyi Lu, **Baojun Liu**, Zhou Li, Shuang Hao, Haixin Duan, Mingming Zhang, Chunying Leng, Ying Liu, Zaifeng Zhang and Jianping Wu. Accepted by the 2019 Internet Measurement Conference, Amsterdam, Netherlands, October 2019.​ **IETF/IRTF Applied Networking Research Prize!!!**
+- **[NDSS 20]** [CDN Judo: Breaking the CDN DoS Protection with Itself.](../files/paper/NDSS-2020.pdf)   
+  Ruo Guo, Weizhong Li, **Baojun Liu**, Shuang Hao, Haixin Duan, Jia Zhang, Kaiwen Shen, Jianjun Chen and Ying Liu.   
+  Accepted by the 27th ISOC Network and Distributed System Security Symposium, San Diego, CA, USA, February 2020.   
+  
+- **[IMC 19]** [An End-to-End, Large-Scale Measurement of DNS-over-Encryption: How Far Have We Come?](../files/paper/IMC-2019.pdf) 
+  Chaoyi Lu, **Baojun Liu**, Zhou Li, Shuang Hao, Haixin Duan, Mingming Zhang, Chunying Leng, Ying Liu, Zaifeng Zhang and Jianping Wu. 
+  Accepted by the 2019 Internet Measurement Conference, Amsterdam, Netherlands, October 2019. 
+  **IETF/IRTF Applied Networking Research Prize!!!**
 
-- **[SecureComm' 19]** TL;DR Hazard: A Comprehensive Study of Levelsquatting Scams. Kun Du, Hao Yang, Zhou Li, Haixin Duan, Shuang Hao, **Baojun Liu**, Yuxiao Ye, Mingxuan Liu, Xiaodong Su, Guang Liu, Zhifeng Geng, Zaifeng Zhang and Jinjin Liang. Accepted by the 15th International Conference on Security and Privacy On Communication Networks, Orlando, USA, October 2019.​​
+- **[SecureComm 19]** TL;DR Hazard: A Comprehensive Study of Levelsquatting Scams.   
+  Kun Du, Hao Yang, Zhou Li, Haixin Duan, Shuang Hao, **Baojun Liu**, Yuxiao Ye, Mingxuan Liu, Xiaodong Su, Guang Liu, Zhifeng Geng, Zaifeng Zhang and Jinjin Liang.   
+  Accepted by the 15th International Conference on Security and Privacy On Communication Networks, Orlando, USA, October 2019.
 
-- **[EuroS&P' 19]** TraffickStop: Detecting and Measuring Illicit Traffic Monetization Through Large-scale DNS Analysis. **Baojun Liu**, Zhou Li, Peiyuan Zong, Chaoyi Lu, Haixin Duan, Ying Liu, Sumayah Alrwais, XaioFeng Wang, Shuang Hao, Yaoqi Jia, Yiming Zhang, Kai Chen and Zaifeng Zhang. Accepted by the 4th IEEE European Symposium on Security and Privacy, Stockholm, Sweden, June 2019. ​​
+- **[EuroS&P 19]** TraffickStop: Detecting and Measuring Illicit Traffic Monetization Through Large-scale DNS Analysis.  
+  **Baojun Liu**, Zhou Li, Peiyuan Zong, Chaoyi Lu, Haixin Duan, Ying Liu, Sumayah Alrwais, XaioFeng Wang, Shuang Hao, Yaoqi Jia, Yiming Zhang, Kai Chen and Zaifeng Zhang. 
+  Accepted by the 4th IEEE European Symposium on Security and Privacy, Stockholm, Sweden, June 2019.  
 
-- **[NDSS' 19]** Cracking Wall of Confinement: Understanding and Analyzing Malicious Domain Takedowns. Eihal Alowaisheq, Peng Wang, Sumayah Alrwais, Xiaojing Liao, XaioFeng Wang, Tasneem Alowaisheq, XiangHang Mi, Siyuan Tang and **Baojun Liu**. Accepted by the 26th ISOC Network and Distributed System Security Symposium, San Diego, CA, USA, February 2020. **Distinguished Paper Award !!!**
+- **[NDSS 19]** Cracking Wall of Confinement: Understanding and Analyzing Malicious Domain Takedowns. 
+  Eihal Alowaisheq, Peng Wang, Sumayah Alrwais, Xiaojing Liao, XaioFeng Wang, Tasneem Alowaisheq, XiangHang Mi, Siyuan Tang and **Baojun Liu**.  
+  Accepted by the 26th ISOC Network and Distributed System Security Symposium, San Diego, CA, USA, February 2020.  
+  **Distinguished Paper Award !!!**
 
-- **[Oakland' 19]** Resident Evil: Understanding Residential IP Proxy as a Dark Service.  Xianghang Mi, Xuan Feng, Xiaojing Liao, **Baojun Liu**, Xiaofeng Wang, Feng Qian, Zhou Li, Sumayah Alrwais, Limin Sun and Ying Liu. Accepted by the 40th IEEE Symposium on Security and Privacy, San Francisco, USA, May 2019.
+- **[Oakland 19]** Resident Evil: Understanding Residential IP Proxy as a Dark Service.   
+  Xianghang Mi, Xuan Feng, Xiaojing Liao, **Baojun Liu**, Xiaofeng Wang, Feng Qian, Zhou Li, Sumayah Alrwais, Limin Sun and Ying Liu.   
+  Accepted by the 40th IEEE Symposium on Security and Privacy, San Francisco, USA, May 2019.
 
-- **[SRDS' 18]** Abusing CDNs for Fun and Profit: Security Issues in CDNs' Origin Validation. Run Guo, Jianjun Chen, **Baojun Liu**, Jia Zhang, Chao Zhang, Haixin Duan, Tao Wan, Jian Jiang, Shuang Hao and Yaoqi Jia. Accepted by the 37th IEEE International Symposium on Reliable Distributed Systems, Bahia, Brazil, October 2018.
+- **[SRDS 18]** Abusing CDNs for Fun and Profit: Security Issues in CDNs' Origin Validation.   
+  Run Guo, Jianjun Chen, **Baojun Liu**, Jia Zhang, Chao Zhang, Haixin Duan, Tao Wan, Jian Jiang, Shuang Hao and Yaoqi Jia.    
+  Accepted by the 37th IEEE International Symposium on Reliable Distributed Systems, Bahia, Brazil, October 2018.
 
-- **[FOCI' 18]** Measuring Privacy Threats in China-Wide Mobile Networks. Mingming Zhang, **Baojun Liu**, Chaoyi Lu, Jia Zhang, Shuang Hao and Haixin Duan. Accepted by the 8th USENIX Workshop on Free and Open Communications on the Internet, Baltimore, USA, August 2018.
+- **[FOCI 18]** Measuring Privacy Threats in China-Wide Mobile Networks.  
+  Mingming Zhang, **Baojun Liu**, Chaoyi Lu, Jia Zhang, Shuang Hao and Haixin Duan.   
+  Accepted by the 8th USENIX Workshop on Free and Open Communications on the Internet, Baltimore, USA, August 2018.  
 
-- **[USENIX Security' 18]** Who Is Answering My Queries: Understanding and Characterizing Interception of the DNS Resolution Path. **Baojun Liu**, Chaoyi Lu, Haixin Duan, Ying Liu, Zhou Li, Shuang Hao and Min Yang. Accepted by the 27th USENIX Security Symposium, Baltimore, USA, August 2018.
+- **[USENIX Security 18]** Who Is Answering My Queries: Understanding and Characterizing Interception of the DNS Resolution Path.   
+  **Baojun Liu**, Chaoyi Lu, Haixin Duan, Ying Liu, Zhou Li, Shuang Hao and Min Yang. 
+  Accepted by the 27th USENIX Security Symposium, Baltimore, USA, August 2018.
 
-- **[DSN' 18]** A Reexamination of Internationalized Domain Names: the Good, the Bad and the Ugly. **Baojun Liu**, Chaoyi Lu, Zhou Li, Ying Liu, Haixin Duan, Shuang Hao and Zaifeng Zhang. Accepted by the 48th IEEE/IFIP International Conference on Dependable Systems and Networks, Luxembourg City, Luxembourg, June 2018.
+- **[DSN 18]** A Reexamination of Internationalized Domain Names: the Good, the Bad and the Ugly.
+  **Baojun Liu**, Chaoyi Lu, Zhou Li, Ying Liu, Haixin Duan, Shuang Hao and Zaifeng Zhang.    
+  Accepted by the 48th IEEE/IFIP International Conference on Dependable Systems and Networks, Luxembourg City, Luxembourg, June 2018.
 
-- **[CCS' 17]** Don't Let One Rotten Apple Spoil the Whole Barrel: Towards Automated Detection of Shadowed Domains. Daiping Liu, Zhou Li, Kun Du, Haining Wang, **Baojun Liu** and Haixin Duan. Accepted by the 24th ACM Conference on Computer and Communications Security, Dallas, TX, October 2017.
+- **[CCS 17]** Don't Let One Rotten Apple Spoil the Whole Barrel: Towards Automated Detection of Shadowed Domains.  
+  Daiping Liu, Zhou Li, Kun Du, Haining Wang, **Baojun Liu** and Haixin Duan.   
+  Accepted by the 24th ACM Conference on Computer and Communications Security, Dallas, TX, October 2017.
