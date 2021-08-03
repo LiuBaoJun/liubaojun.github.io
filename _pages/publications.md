@@ -33,7 +33,7 @@ Conference Papers
   Kaiwen Shen, Chuhan Wang, Xiaofeng Zheng †, Minglei Guo, Chaoyi Lu, **Baojun Liu †**, Yuxuan Zhao, Shuang Hao, Haixin Duan, Qinfeng Pan and Min Yang.     
   Accepted by the 30th USENIX Security Symposium (USENIX Security), Vancouver, BC, Canada, August 11-13, 2021.  
 
-- **[An Anonymous Paper Got Accepted ! ! ]**
+- **[An Anonymous Paper Got Accepted !! ]**
 
 - **[CCS 20 B]** [Talking with Familiar Strangers: An Empirical Study on HTTPS Context Confusion Attacks.](../files/paper/CCS-2020B.pdf)      
   Mingming Zhang, Xiaofeng Zheng †, Kaiwen Shen, Ziqiao Kong, Chaoyi Lu, Yu Wang, Haixin Duan †, Shuang Hao, **Baojun Liu** and Min Yang.          
@@ -50,7 +50,7 @@ Conference Papers
 - **[DSN 20]** [CDN Backfired: Amplification Attacks Based on HTTP Range Requests.](../files/paper/DSN-2020.pdf)   
   Weizhong Li, Kaiwen Shen, Run Guo, **Baojun Liu**, Jia Zhang, Haixin Duan, Shuang Hao, Xiarun Chen and Yao Wang.    
   Accepted by the 50th IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), Valencia, Spain, June 29 - July 02, 2020.     
-  **Best Paper Award !!!**.  
+  **Best Paper Award !!!**  
   **Media:** [ZDNet](https://www.zdnet.com/article/rangeamp-attacks-can-take-down-websites-and-cdn-servers/); [IT News](https://www.itnews.com.au/news/rangeamp-attacks-turn-cdns-into-giant-dos-cannons-548559); [HK GovCERT](https://www.govcert.gov.hk/weekly_report/2020w22.pdf)
 
 - **[NDSS 20]** [CDN Judo: Breaking the CDN DoS Protection with Itself.](../files/paper/NDSS-2020.pdf)   
@@ -60,9 +60,9 @@ Conference Papers
 - **[IMC 19]** [An End-to-End, Large-Scale Measurement of DNS-over-Encryption: How Far Have We Come?](../files/paper/IMC-2019.pdf)   
   Chaoyi Lu, **Baojun Liu**, Zhou Li, Shuang Hao, Haixin Duan, Mingming Zhang, Chunying Leng, Ying Liu, Zaifeng Zhang and Jianping Wu.   
   Accepted by the 2019 Internet Measurement Conference (IMC), Amsterdam, Netherlands, October 21-23, 2019.   
-  **IETF/IRTF Applied Networking Research Prize!!!**     
-  **Best Paper Award Nominee !**    
-  **Community Contribution Nominee !**.    
+  **IETF/IRTF Applied Networking Research Prize !!!**     
+  **Best Paper Award Nominee !!**    
+  **Community Contribution Nominee !!**   
   Source Code and Datasets: https://dnsencryption.info  
 
 - **[SecureComm 19]** [TL;DR Hazard: A Comprehensive Study of Levelsquatting Scams.](../files/paper/SecureComm-2019.pdf)       
@@ -75,7 +75,7 @@ Conference Papers
 
 - **[NDSS 19]** [Cracking Wall of Confinement: Understanding and Analyzing Malicious Domain Takedowns.](../files/paper/NDSS-2019.pdf)   
   Eihal Alowaisheq, Peng Wang, Sumayah Alrwais, Xiaojing Liao, XaioFeng Wang, Tasneem Alowaisheq, XiangHang Mi, Siyuan Tang and **Baojun Liu**.  
-  Accepted by the 26th ISOC Network and Distributed System Security Symposium, San Diego, CA, USA, February 24-27, 2020.  
+  Accepted by the 26th ISOC Network and Distributed System Security Symposium, San Diego, CA, USA, February 24-27, 2020.     
   **Distinguished Paper Award !!!**
 
 - **[IEEE S&P 19]** [Resident Evil: Understanding Residential IP Proxy as a Dark Service.](../files/paper/Oakland-2019.pdf)     
