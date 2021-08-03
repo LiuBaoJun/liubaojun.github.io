@@ -8,4 +8,4 @@ date: 2020-07-07
 location: "Beijing, CN"
 ---
 
-[For more information](../files/slides/Domain-Takedown-2021-07-07.pdf)
+[Domain Takedown Analysis](../files/slides/Domain-Takedown-2021-07-07.pdf)
