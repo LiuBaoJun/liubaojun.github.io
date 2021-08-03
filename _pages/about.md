@@ -17,7 +17,7 @@ Recent News
 ------
 - (07/21/2021) Our paper that sheds lights on hidden root CAs in the web PKE ecosystem is conditionally accepted by CCS 2021.
 - (03/09/2021) Our paper that introduces a novel methodology to discover IPv6 network periphery is accepted by DSN 2021. 
-- (10/23/2020) Our paper that presents a comprehensive measurement study of domain registration privacy under the GDPR is accepted by NDSS 2021.
+- (10/23/2020) Our paper that presents a measurement of domain registration privacy under the GDPR is accepted by NDSS 2021.
 - (10/2020) I receive my Ph.D degree, finally ! 
 
 
