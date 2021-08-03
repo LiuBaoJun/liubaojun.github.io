@@ -50,7 +50,7 @@ Conference Papers
 - **[DSN 20]** [CDN Backfired: Amplification Attacks Based on HTTP Range Requests.](../files/paper/DSN-2020.pdf)   
   Weizhong Li, Kaiwen Shen, Run Guo, **Baojun Liu**, Jia Zhang, Haixin Duan, Shuang Hao, Xiarun Chen and Yao Wang.    
   Accepted by the 50th IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), Valencia, Spain, June 29 - July 02, 2020.     
-  **Best Paper Award !!!**
+  **Best Paper Award !!!**.  
   **Media:** [ZDNet](https://www.zdnet.com/article/rangeamp-attacks-can-take-down-websites-and-cdn-servers/); [IT News](https://www.itnews.com.au/news/rangeamp-attacks-turn-cdns-into-giant-dos-cannons-548559); [HK GovCERT](https://www.govcert.gov.hk/weekly_report/2020w22.pdf)
 
 - **[NDSS 20]** [CDN Judo: Breaking the CDN DoS Protection with Itself.](../files/paper/NDSS-2020.pdf)   
@@ -90,13 +90,13 @@ Conference Papers
   Mingming Zhang, **Baojun Liu**, Chaoyi Lu, Jia Zhang, Shuang Hao and Haixin Duan.   
   Accepted by the 8th USENIX Workshop on Free and Open Communications on the Internet, Baltimore, USA, August 14, 2018.  
 
-- **[USENIX Security 18]** [Who Is Answering My Queries: Understanding and Characterizing Interception of the DNS Resolution Path.](../files/paper/USENIXSecurity-2018.pdf)      
-  **Baojun Liu**, Chaoyi Lu, Haixin Duan, Ying Liu, Zhou Li, Shuang Hao and Min Yang. 
-  Accepted by the 27th USENIX Security Symposium, Baltimore, USA, August 15-17, 2018.    
+- **[USENIX Security 18]** [Who Is Answering My Queries: Understanding and Characterizing Interception of the DNS Resolution Path.](../files/paper/USENIXSecurity-2018.pdf)        
+  **Baojun Liu**, Chaoyi Lu, Haixin Duan, Ying Liu, Zhou Li, Shuang Hao and Min Yang.   
+  Accepted by the 27th USENIX Security Symposium, Baltimore, USA, August 15-17, 2018.        
   **Media:** [ACM TechNews](https://technews.acm.org/archives.cfm?fo=2018-08-aug/aug-24-2018.html); [APNIC](https://blog.apnic.net/2019/07/17/one-in-four-google-public-dns-requests-are-being-intercepted-in-china-report/); [The Register](https://www.theregister.com/2018/08/20/dns_interception/); [Hackread](https://www.hackread.com/hackers-can-intercept-and-manipulate-dns-queries-researchers-warn/); [HelpNet Security](https://www.helpnetsecurity.com/2018/08/21/dns-interception/); [CircleID](https://www.circleid.com/posts/20180823_large_scale_study_sheds_light_on_the_scope_of_dns_interception/); [Mozilla](https://blog.nightly.mozilla.org/2018/08/28/firefox-nightly-secure-dns-experimental-results/); [Aqniu](https://www.aqniu.com/news-views/37682.html); [HackWareNews](https://hackwarenews.com/dangers-of-dns-interception/); [Rambler](https://news.rambler.ru/other/40604197-bolshinstvo-dns-zaprosov-legko-perehvatit-schitayut-eksperty/) .....
 
-- **[DSN 18]** [A Reexamination of Internationalized Domain Names: the Good, the Bad and the Ugly.](../files/paper/DSN-2018.pdf) 
-  **Baojun Liu**, Chaoyi Lu, Zhou Li, Ying Liu, Haixin Duan, Shuang Hao and Zaifeng Zhang.    
+- **[DSN 18]** [A Reexamination of Internationalized Domain Names: the Good, the Bad and the Ugly.](../files/paper/DSN-2018.pdf)   
+  **Baojun Liu**, Chaoyi Lu, Zhou Li, Ying Liu, Haixin Duan, Shuang Hao and Zaifeng Zhang.       
   Accepted by the 48th IEEE/IFIP International Conference on Dependable Systems and Networks, Luxembourg City, Luxembourg, June 25-28, 2018.
 
 - **[CCS 17]** [Don't Let One Rotten Apple Spoil the Whole Barrel: Towards Automated Detection of Shadowed Domains.](../files/paper/CCS-2017.pdf)    
