@@ -4,7 +4,7 @@ collection: talks
 type: "Talk"
 permalink: /talks/2020-07-07-domain-takedown
 venue: "QiAnXin Group."
-date: 2020-07-07
+date: 2021-07-07
 location: "Beijing, CN"
 ---
 
