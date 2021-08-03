@@ -1,6 +1,6 @@
 ---
 title: '美国查封伊朗媒体域名事件背后的技术分析'
-date: 2015-08-14
+date: 2021-07-01
 permalink: /posts/2021/07/2021-07-01-domain-takedown/
 tags:
   - DNS & Domain
