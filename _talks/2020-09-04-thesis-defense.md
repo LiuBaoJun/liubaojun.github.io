@@ -5,6 +5,7 @@ type: "Talk"
 permalink: /talks/2020-09-04-thesis-defense
 venue: "FIT, Tsinghua Univ."
 date: 2020-09-04
+location: "Beijing, CN"
 ---
 
 
