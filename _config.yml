@@ -82,12 +82,11 @@ analytics:
 author:
   name             : "Baojun Liu"
   avatar           : "BYWH7067_2.JPG"
-  bio              : "Postdoc Researcher, Tsinghua University"
+  bio              : "Postdoc Researcher"
   location         : "FIT 4-204, Tsinghua Univ."
   googlescholar    : "https://scholar.google.com/citations?user=6Hme86QAAAAJ"
   email            : "lbj [AT] tsinghua [dot] edu [dot] cn"
   researchgate     : "https://www.researchgate.net/profile/Baojun-Liu-3"
-  orcid            : "http://orcid.org/yourorcidurl"
 
 
 # Reading Files
@@ -148,9 +147,9 @@ kramdown:
 
 # Collections
 collections:
-#  teaching:
-#    output: true
-#    permalink: /:collection/:path/
+  teaching:
+    output: true
+    permalink: /:collection/:path/
   publications:
     output: true
     permalink: /:collection/:path/
