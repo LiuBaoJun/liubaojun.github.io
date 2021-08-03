@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "Baojun Liu's Homepage"
-excerpt: "About me"
+excerpt: "About Me"
 author_profile: true
 redirect_from: 
   - /about/
@@ -11,15 +11,17 @@ redirect_from:
 
 Hey!
 
-Now, I join the Institute for Network Science and Cyberspace of Tsinghua University as a postdoc researcher.
-I am working on network security area, and dedicated to to discovering previously unknown security problems. 
+Now, I am a postdoctoral researcher follow at the Institute for Network Science and Cyberspace of Tsinghua University.
+I am working in the area of network security, and committed to discovering previously unknown security problems. 
 
 I received my Ph.D degree from the department of Computer Science and Technology at the Tsinghua University in Oct. 2020, advised by Prof. Haixin Duan and Prof. Ying Liu. 
 
-From Sep. 2016, I server as a research intern at 360 Network Security Research Lab (NETLAB), reported to Fengpei Li, mentored by Zaifeng Zhang and Dr. Jinjin Liang.
+Since September 2016, I have been working as a research intern at 360 Network Security Research Lab (360 NETLAB), under the supervision of by Zaifeng Zhang, Dr. Jinjin Liang, and Fengpei Li.
 
-From Jan. 2018, I spent one year in the International Computer Science Institute (ICSI) of Berkeley as a Visiting Research Scholar (a member of Networking and Security Group), report to Vern Paxson. 
-I am quite enjoy this fantastic and awesome experience! Thank you, ICSI. Thank you, Berkeley!
+Since January 2018, I have been a visiting research scholar (a member of Networking and Security Group) at the International Computer Science Institute (ICSI) of Berkeley for a year, report to Vern Paxson. 
+I was quite enjoyed this fantastic and awesome experience! Thank you, ICSI. Thank you, Berkeley!
+
+[To Download My CV.](../files/cv/Baojun-CV-202107.pdf) 
 
 
 Recent News
@@ -27,7 +29,7 @@ Recent News
 - (07/21/2021) Our paper that sheds lights on hidden root CAs in the web PKE ecosystem is conditionally accepted by CCS 2021.
 - (03/09/2021) Our paper that introduces a novel methodology to discover IPv6 network periphery is accepted by DSN 2021. 
 - (10/23/2020) Our paper that presents a measurement of domain registration privacy under the GDPR is accepted by NDSS 2021.
-- (10/2020) I receive my Ph.D degree, finally ! 
+- (10/2020)    I receive my Ph.D degree, finally ! 
 
 
 Research Areas
