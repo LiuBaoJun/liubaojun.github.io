@@ -26,3 +26,10 @@ Competition
 ​
 ​       National Undergraduate Electronic Design Contest.
                 -- 2014 Information Security Technology Invitational Contest.  The Second Prize. Aug. 2014.
+
+
+Stay Hungry, Stay Foolish. (July 1, 2018)
+Garbage in, Garbage out. (Aug. 1, 2018)
+Less is More. (July 1, 2019)
+Time Flies. (Mar. 1, 2020)
+无业即业，无图即图。(Aug. 1, 2020)
