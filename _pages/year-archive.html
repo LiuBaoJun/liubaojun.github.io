@@ -1,19 +1,56 @@
 ---
 layout: archive
 permalink: /year-archive/
-title: "Blog posts"
 author_profile: true
 redirect_from:
   - /wordpress/blog-posts/
 ---
 
-{% include base_path %}
-{% capture written_year %}'None'{% endcapture %}
-{% for post in site.posts %}
-  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-  {% if year != written_year %}
-    <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
-    {% capture written_year %}{{ year }}{% endcapture %}
-  {% endif %}
-  {% include archive-single.html %}
-{% endfor %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+	  <meta charset="utf-8">
+	  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   </head>
+
+
+
+<body>
+
+<div class="container">
+  <div class="bs-docs-section">
+	<div class="row">
+    <div class="col-xs-12">
+        <h3>Technical Blog</h3>
+<br />
+<h4><font color="red">2021</font></h4>
+
+
+<ul>
+          <li>
+          <p><strong>美国查封伊朗媒体域名事件背后的技术分析</strong><br />
+            Chaoyi Lu, Baojun Liu, Haixin Duan. July 07, 2021.
+            <a href="../files/blog/21-07-07.pdf" class="label label-info">PDF</a>
+            </p>
+          </li>
+</ul>
+	    <br />
+<h4><font color="red">2019</font></h4>
+<ul>
+          <li>
+              <p><strong>谁劫持了我的DNS：全球域名解析路径劫持测量与分析</strong><br />
+              Baojun Liu, Chaoyi Lu. April 04, 2019.
+              <a href="../files/blog/19-04-08.pdf" class="label label-info">PDF</a>
+              </p>
+          </li>
+
+</ul>
+	    <br />
+
+
+</body></html>
