@@ -3,11 +3,11 @@ main:
   - title: "Publications"
     url: /publications/
 
-  - title: "Press"
-    url: /press/
-    
   - title: "Talks"
     url: /talks/  
+    
+  - title: "Press"
+    url: /press/
     
   - title: "Activities"
     url: /activities/
@@ -27,5 +27,5 @@ main:
   #- title: "Guide"
   #  url: /markdown/
     
-  - title: "MISC"
-    url: /misc/
+  #- title: "MISC"
+  #  url: /misc/
