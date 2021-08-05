@@ -12,16 +12,14 @@ redirect_from:
 Hey!
 
 Now, I am a postdoctoral researcher follow at the Institute for Network Science and Cyberspace of Tsinghua University.
-I am working in the area of network security, and committed to discovering previously unknown security problems. 
+I am working on the area of network security, and devoted to discovering unknown security problems. 
 
 I received my Ph.D degree from the department of Computer Science and Technology at the Tsinghua University in Oct. 2020, advised by Prof. Haixin Duan and Prof. Ying Liu. 
 
-Since September 2016, I have been working as a research intern at 360 Network Security Research Lab (360 NETLAB), under the supervision of by Zaifeng Zhang, Dr. Jinjin Liang, and Fengpei Li.
+Since September 2016, I have been working as a research intern at 360 Network Security Research Lab (360 NETLAB), under the supervision of Zaifeng Zhang, Dr. Jinjin Liang, and Fengpei Li.
 
 Since January 2018, I have been a visiting research scholar (a member of Networking and Security Group) at the International Computer Science Institute (ICSI) of Berkeley for a year, report to Vern Paxson. 
 I was quite enjoyed this fantastic and awesome experience! Thank you, ICSI. Thank you, Berkeley!
-
-[To Download My CV.](../files/cv/Baojun-CV-202107.pdf) 
 
 
 Recent News
