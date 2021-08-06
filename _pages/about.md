@@ -1,6 +1,5 @@
 ---
 permalink: /
-title: "Baojun Liu's Homepage"
 excerpt: "About Me"
 author_profile: true
 redirect_from: 
@@ -11,15 +10,16 @@ redirect_from:
 
 Hey!
 
-Now, I am a postdoctoral researcher follow at the Institute for Network Science and Cyberspace of Tsinghua University.
-I am working on the area of network security, and devoted to discovering unknown security problems. 
+Now, I am a Postdoctoral researcher at the Institute for Network Science and Cyberspace of Tsinghua University.
+My research covers a range of topics in network security, Internet measurement and data analysis. 
 
-I received my Ph.D degree from the department of Computer Science and Technology at the Tsinghua University in Oct. 2020, advised by Prof. Haixin Duan and Prof. Ying Liu. 
+I obtained my Ph.D. from Tsinghua University under the supervision of Haixin Duan and Ying Liu in 2020.
+Before that, I received my bachelor's degreee from XiDian University in 2015. 
 
-Since September 2016, I have been working as a research intern at 360 Network Security Research Lab (360 NETLAB), under the supervision of Zaifeng Zhang, Dr. Jinjin Liang, and Fengpei Li.
+Since September 2016, I am working as a research intern at 360 Network Security Research Lab (360 NETLAB), under the supervision of Zaifeng Zhang, Dr. Jinjin Liang, and Fengpei Li.
 
-Since January 2018, I have been a visiting research scholar (a member of Networking and Security Group) at the International Computer Science Institute (ICSI) of Berkeley for a year, report to Vern Paxson. 
-I was quite enjoyed this fantastic and awesome experience! Thank you, ICSI. Thank you, Berkeley!
+Since January 2018, I spent one year as a visiting research scholar (member of the Networking and Security Group) at the International Computer Science Institute (ICSI) in Berkeley, reporting to Vern Paxson.
+I really enjoyed this fantastic and awesome experience! 
 
 
 Recent News
