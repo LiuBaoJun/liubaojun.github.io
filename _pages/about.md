@@ -22,8 +22,10 @@ Since January 2018, I spent one year as a visiting research scholar (member of t
 I really enjoyed this fantastic and awesome experience! 
 
 
+
 Recent News
 ------
+- 08/19/2021, My research proposal is awarded by NSFC, thanks !
 - 07/21/2021, Our paper that sheds lights on hidden root CAs in the web PKE ecosystem is conditionally accepted by CCS 2021.  
 - 03/09/2021, Our paper that introduces a novel methodology to discover IPv6 network periphery is accepted by DSN 2021.   
 - 10/23/2020, Our paper that presents a measurement of domain registration privacy under the GDPR is accepted by NDSS 2021.  
