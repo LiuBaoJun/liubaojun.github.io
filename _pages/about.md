@@ -25,7 +25,7 @@ I really enjoyed this fantastic and awesome experience!
 
 Recent News
 ------
-- 08/28/2021, Our paper that presents a measurement of SMS spearphising attacks is conditionally accepted by ACSAC 2021. 
+- 08/28/2021, Our paper that presents a measurement of SMS spearphising attacks is accepted by ACSAC 2021. 
 - 08/19/2021, My research proposal is awarded by NSFC, thanks !
 - 07/21/2021, Our paper that sheds lights on hidden root CAs in the web PKE ecosystem is accepted by CCS 2021.  
 - 03/09/2021, Our paper that introduces a novel methodology to discover IPv6 network periphery is accepted by DSN 2021.   
