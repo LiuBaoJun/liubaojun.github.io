@@ -25,8 +25,8 @@ I really enjoyed this fantastic and awesome experience!
 
 Recent News
 ------
-- 20/11/2021, Our two papers is conditionally accepted by USENIX Security 2022.
-- 29/10/2021, Our paper is conditionally accepted by NDSS 2022. 
+- 20/11/2021, Our two papers are conditionally accepted by USENIX Security 2022.
+- 29/10/2021, Our one paper is accepted by NDSS 2022. 
 - 08/28/2021, Our paper that presents a measurement of SMS spearphising attacks is accepted by ACSAC 2021. 
 - 08/19/2021, My research proposal is awarded by NSFC, thanks !
 - 07/21/2021, Our paper that sheds lights on hidden root CAs in the web PKE ecosystem is accepted by CCS 2021.  
