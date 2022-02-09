@@ -25,22 +25,24 @@ I really enjoyed this fantastic and awesome experience!
 
 Recent News
 ------
-- 20/11/2021, Our two papers are conditionally accepted by USENIX Security 2022.
-- 29/10/2021, Our one paper is accepted by NDSS 2022. 
+- 02/09/2022, Our paper that presents a security analysis on MQTT protocol is accepted by EuroS&P 2022.
+- 12/22/2021, Our paper that presents a measurement of DNS Root instances is accepted by PAM 2022.
+- 11/20/2021, Our two papers are accepted by USENIX Security 2022.
+- 10/29/2021, Our one paper is accepted by NDSS 2022. 
 - 08/28/2021, Our paper that presents a measurement of SMS spearphising attacks is accepted by ACSAC 2021. 
-- 08/19/2021, My research proposal is awarded by NSFC, thanks !
+- 08/19/2021, My research proposal is awarded by NSFC, thanks!
 - 07/21/2021, Our paper that sheds lights on hidden root CAs in the web PKE ecosystem is accepted by CCS 2021.  
 - 03/09/2021, Our paper that introduces a novel methodology to discover IPv6 network periphery is accepted by DSN 2021.   
 - 10/23/2020, Our paper that presents a measurement of domain registration privacy under the GDPR is accepted by NDSS 2021.  
-- 10/2020,    I receive my Ph.D degree, finally ! 
+- 10/2020,    I receive my Ph.D degree, finally! 
 
 
 Research Areas
 ------
 * **Domain Name & DNS Security.**   
-  [NDSS 21] [Security 20] [IMC 19] [EuroS&P 19] [NDSS 19] [Security 18] [DSN 18] [CCS 17]   
+  [PAM 21] [NDSS'21] [Security'20] [IMC'19] [EuroS&P'19] [NDSS'19] [Security'18] [DSN'18] [CCS'17]   
 * **Data-Centric Security & Internet Measurement.**   
-  [CCS 21] [DSN 21] [Security 21] [CCS 20] [S&P 19] [FOCI 18]
+  [CCS'21] [DSN'21] [Security'21] [CCS'20] [S&P'19] [FOCI'18]
 
 
 Selected Publictions
