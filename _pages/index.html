@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baojun Liu</title>
+  <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="./third_pirty/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script> -->
+  <!-- <script src="./third_pirty/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script> -->
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      // 获取导航栏的高度
+      var navbarHeight = document.querySelector('.navbar').offsetHeight + 30;
+
+      // 将导航栏的高度应用于container的margin-top
+      var container = document.querySelector('.container');
+      container.style.marginTop = navbarHeight + 'px';
+    });
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    .custom-link:hover {
+      color: #faef79;
+    }
+
+    .custom-link {
+      color: white;
+    }
+
+    @media (max-width: 576px) {
+      .lead {
+        font-size: 0.01rem !important;
+        /* 设置你想要的较小字体大小 */
+      }
+    }
+
+    .basic_info_button {
+      margin-top: 5px;
+    }
+
+    .basic_info_button button {
+      padding: 2px;
+    }
+
+    .ResearchGate {
+      /* width:40%;
+      border-radius: 5%;
+      background-color: #a9f3b4 !important;
+      border:none; */
+      width: 45%;
+
+      @media (max-width: 576px) {
+        width: 100%;
+      }
+
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    .GoogleSchloar {
+      /* margin-left:5px;
+      width:100%;
+      background-color: #a9f3b4 !important;
+      border:none;
+      border-radius: 5%; */
+      width: 45%;
+
+      @media (max-width: 576px) {
+        width: 100%;
+      }
+
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    .container a {
+      color: black;
+    }
+
+    .container a:hover {
+      cursor: pointer;
+      color: rgb(54, 54, 237);
+    }
+
+    h4 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #52105b">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center">
+        <img src="./img/logo.png" alt="Bootstrap" width="90" height="30" class="d-inline-block align-text-top">
+        <span style="margin-left:1rem;font-weight:500;color:white;">Baojun
+          Liu</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 offset-1">
+          <li class="nav-item">
+            <a class="nav-link custom-link active" href="./index.html">
+              <font color="#faef79" style="font-weight: 900;">Home</font>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="custom-link nav-link " href="./Papers.html">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-link" href="./Teaching.html">Teaching</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-link" href="./Talks.html">Talks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-link" href="./Teams.html">Teams</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-link" href="./files/Baojun-CV-2023.pdf">CV</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link custom-link" href="./index.html">EN</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-3 offset-1" style="border-right: 1px solid gray;">
+        <img src=".//img/BYWH7097.jpg" class='img-fluid' alt="Bao Junliu"
+          style="border-radius: 50%;width: 70%;display: block;">
+        <ul class="list-unstyled">
+          <br />
+          <li class="lead d-flex">
+            <i class="fas fa-university"></i>
+            &nbsp;FIT 4-204, Tsinghua Univ.
+          </li>
+          <li class="lead d-flex">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:lbj@tsinghua.edu.cn" class="text-break">&nbsp;lbj@tsinghua.edu.cn</a>
+          </li>
+
+        </ul>
+        <div class="basic_info_button">
+          <button class="ResearchGate lead btn btn-success btn-block">
+            <a href="https://www.researchgate.net/profile/Baojun-Liu-5">ResearchGate</a>
+          </button>
+          <button class="GoogleSchloar lead btn btn-success btn-block">
+            <a href="https://scholar.google.com/citations?user=6Hme86QAAAAJ">Google Scholar</a>
+          </button>
+          <br />
+          <br />
+        </div>
+        <div class="course col-12">
+          <h4 class="display-6">Courses</h4>
+          <ul class="list-unstyled">
+            <li class="lead d-flex">
+              <a href="#" class="text-break">Summer 2023: Network Security Attack and Defense Practice</a>
+            </li>
+            <li class="lead d-flex">
+              <a href="#" class="text-break">Fall 2023: Internet Architecture and its Security</a>
+            </li>
+          </ul>
+        </div>
+        <div class="news">
+          <h4 style="margin-top:20px;" class="display-6">Recent News</h4>
+
+          <ul class="list-unstyled">
+            <li>
+              <p class="lead"><strong><em>03/08/2023</em></strong>, Dr. Baojun Liu is awarded by the Internet Fundamental Technology Archievement Award.</p>
+            </li>
+            <li>
+              <p class="lead"><strong><em>31/07/2023</em></strong>, Dr. Baojun Liu is sponsored by the CCF-Tencent Rhino-Bird Young Faculty Open Research Fund.</p>
+            </li>
+            <li>
+              <p class="lead"><strong><em>29/07/2023</em></strong>, Dr. Baojun Liu is awarded by the ACM SIGSAC China Rising Star Award.</p>
+            </li>
+            <li>
+              <p class="lead"><strong><em>25/03/2023</em></strong>, three research papers were accepted by CCS 2023.</p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="col-7">
+        <br />
+        <p class="lead">Hey!</p>
+        <p style="margin-top:10px;" class="lead">
+          I am an Associate Professor at Tsinghua University (a PhD supervisor).
+          My research focuses on measuring and enhancing the security of Internet infrastructure,
+          uncovering significant vulnerabilities in core protocols like DNS and TLS,
+          and understanding emerging cyberspace security threats.
+        </p>
+        <p style="margin-top:10px;" class="lead">
+          I have discovered security issues in domains names, certificates,
+          and other fundamental Internet building blocks, as well as serious
+          vulnerabilities in protocols like DNS and HTTP.
+          My work has received worldwide recognition and impact:
+          informing standards bodies like IETF, earning awards at top academic venues,
+          and being integrated into security products by companies like Huawei and QiAnXin to protect users.
+        </p>
+        <p style="margin-top:10px;" class="lead">
+          I have published more than 20 research papers at leading network security conferences
+           including IEEE S&P, USENIX Security, ACM CCS, and NDSS.
+          My students and I have reported over 160 software vulnerabilities,
+          contributing to CVE/CNVD and working with affected vendors for remediation.
+          I have been honored with a number of awards: IRTF Applied Networking Research Prize, Internet Fundamental Technology Archievement Award, NDSS Best Paper, DSN Best Paper, and ACM SIGSAC China Rising Star.
+        </p>
+        <p style="margin-top:10px;" class="lead">
+          My research work focuses on three main areas: (1) Measuring and improving infrastructure security, including DNS, PKI, and BGP.
+          (2) Discovering vulnerabilities in core protocols like DNS, HTTP, and TLS.
+          (3)Tracking emerging criminal threats like underground economy, cryptojacking, and mobile fraud.
+        </p>
+
+        <p style="margin-top:10px;" class="lead">
+          My research has been featured at venues like Black Hat, ICANN DNS Symposium, DNS-OARC,
+          and covered by media outlets like ZDNet and ACM TechNews.
+          I aim to continue advancing the state of Internet security through impactful discoveries and strong collaboration between academia and industry.
+          Please feel free to contact me to discuss my work!
+        </p>
+
+        <hr style="margin-top:15px;">
+        <h4 style="margin-top:20px;" class='display-6;' id="nowarph">
+          Selected Publications / <a href="./Papers.html" id="more">More</a>
+        </h4>
+        <ul>
+          <li>
+            <p>
+              <strong>
+                <font size="3">Rusted Anchors: A National Client-Side View of Hidden Root
+                  CAs in the Web PKI Ecosystem</font>
+              </strong>
+              <br />
+              Yiming Zhang, Baojun Liu †, Chaoyi Lu, Zhou Li, Haixin Duan †,
+              Jiachen Li and Zaifeng Zhang<br />
+              xiang Seoul, South Korea, November 15-19, 2021. <span class="badge text-bg-success">C</span>
+              <a href="./files/paper/CCS-2021.pdf" class="btn btn-primary"
+                style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.9rem;--bs-btn-font-weight:600">PDF</a>
+              <a href="./files/slides/CCS-2021-Slides.pdf" class="btn btn-primary"
+                style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.9rem;--bs-btn-font-weight:600">Slides</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>
+                <font size="3">Lies in the Air: Characterizing Fake-base-station Spam
+                  Ecosystem in China</font>
+              </strong>
+              <br />
+              Yiming Zhang, Baojun Liu †, Chaoyi Lu, Zhou Li, Haixin Duan †,
+              Shuang Hao, Mingxuan Liu, Ying Liu †, Dong Wang and Qiang Li<br />
+              Proceedings of
+              <em>
+                The 27th ACM Conference on Computer and Communications Security
+                (<strong>CCS</strong>
+                )
+              </em>
+              <br />
+              Orlando, USA, November 9-13, 2020. <span class="badge text-bg-success">C</span>
+              <a href="./files/paper/CCS-2020A.pdf" class="btn btn-primary"
+                style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.9rem;--bs-btn-font-weight:600">PDF</a>
+              <a href="./files/slides/CCS-2020-A-Slides.pdf" class="btn btn-primary"
+                style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.9rem;--bs-btn-font-weight:600">Slides</a>
+              <a href="https://github.com/Cypher-Z/FBS_SMS_Dataset" class="btn btn-primary"
+                style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.9rem;--bs-btn-font-weight:600">Dataset</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>
+                <font size="3">An End-to-End, Large-Scale Measurement of
+                  DNS-over-Encryption: How Far Have We Come?</font>
+              </strong>
+              <br />
+              Chaoyi Lu, Baojun Liu, Zhou Li, Shuang Hao, Haixin Duan, Mingming
+              Zhang, Chunying Leng, Ying Liu, Zaifeng Zhang and Jianping Wu<br />
+              Proceedings of
+              <em>
+                The 2019 Internet Measurement Conference (<strong>IMC</strong>
+                )
+              </em>
+              <br />
+              Amsterdam, Netherlands, October 21-23, 2019. <span class="badge text-bg-success">C</span>
+              <a href="./files/paper/IMC-2019.pdf" class="btn btn-primary"
+                style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.9rem;--bs-btn-font-weight:600">PDF</a>
+              <a href="./files/slides/IMC-2019-Slides.pdf" class="btn btn-primary"
+                style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.9rem;--bs-btn-font-weight:600">Slides</a>
+              <a href="https://dnsencryption.info" class="btn btn-primary"
+                style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.9rem;--bs-btn-font-weight:600">Website</a>
+              <br />
+              <span class="badge text-bg-success">Applied Networking Research
+                Prize</span>
+              <span class="badge text-bg-success">Best Paper Award Nominee</span>
+              <span class="badge text-bg-success">Community Contribution
+                Nominee</span>
+              <br />
+              Selected by
+              <em>
+                The 31th <strong>DNS-OARC</strong>
+              </em>
+            </p>
+          </li>
+
+
+          <li>
+            <p>
+              <strong>
+                <font size="3">Who Is Answering My Queries: Understanding and Characterizing Interception of the DNS Resolution Path </font>
+              </strong>
+              <br />
+              Baojun Liu, Chaoyi Lu, Haixin Duan, Ying Liu, Zhou Li, Shuang Hao and Min Yang<br />
+              Proceedings of
+              <em>
+                The 27th USENIX Security Symposium (<strong>USENIX Security </strong>
+                )
+              </em>
+              <br />
+              Baltimore, USA, August 14, 2018. <span class="badge text-bg-success">C</span>
+              <a href="./files/paper/USENIXSecurity-2018.pdf" class="btn btn-primary"
+                style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.9rem;--bs-btn-font-weight:600">PDF</a>
+              <a href="./files/slides/USENIX-Security-2018-Slides.pdf" class="btn btn-primary"
+                style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.9rem;--bs-btn-font-weight:600">Slides</a>
+              <br />
+              Selected by
+              <em>
+                The 30th <strong>DNS-OARC</strong>
+                and The <strong>ANRW</strong>
+                2019
+              </em>
+            </p>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <hr>
+        <p class="lead" style="text-align: center;">&copy;   <font size="2"> 2023 Baojun Liu. All rights reserved. </p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
