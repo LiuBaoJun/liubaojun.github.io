@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baojun Liu</title>
+    <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./third_pirty/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script> -->
+    <!-- <script src="./third_pirty/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script> -->
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // 获取导航栏的高度
+            var navbarHeight = document.querySelector('.navbar').offsetHeight + 30;
+
+            // 将导航栏的高度应用于container的margin-top
+            var container = document.querySelector('.container');
+            container.style.marginTop = navbarHeight + 'px';
+        });
+    </script>
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        @media (max-width: 576px) {
+            .lead {
+                font-size: 0.01rem !important;
+            }
+        }
+
+        .custom-link:hover {
+            color: #faef79;
+        }
+
+        .custom-link {
+            color: white;
+        }
+
+        .container a {
+            color: purple;
+        }
+
+        .container a:hover {
+            cursor: pointer;
+            color: rgb(54, 54, 237);
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+        }
+
+        .inbox {
+            position: relative;
+            margin-left: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #52105b">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center">
+                <img src="./img/logo.png" alt="Bootstrap" width="90" height="30" class="d-inline-block align-text-top">
+                <span style="margin-left:1rem;font-weight:500;color:white;font-size:large;">Baojun
+                    Liu</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 offset-1">
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="custom-link nav-link " href="./Papers.html">Publications</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link custom-link" href="./Teaching.html">Teaching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link active" href="./Talks.html">
+                            <font color="#faef79" style="font-weight: 900;">Talks</font>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="./Teams.html">
+                            Teams
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="./Talks.html">EN</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="inbox">
+            <h3 style="margin-top:7rem;">Talks and presentations</h3>
+            <p> <span class="badge text-bg-success">C</span> Conferences | <span
+                    class="badge text-bg-danger">R</span> Technical Reports | <span
+                    class="badge text-bg-secondary">O</span>
+                Others</p><br />
+            <h4>
+              <font color="purple">2023</font>
+          </h4>
+          <ul>
+              <li>
+                  <p><strong>Introduction to DNS Security Research Frontiers and Trends</strong><br /> ACM TURC 2023 Conference, Wuhan, July 29,
+                      2022. <span class="badge text-bg-success">C</span> <a
+                          href="./files/slides/RecentResearch-20230409.pdf" class="btn btn-primary"
+                          style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.8rem;--bs-btn-font-weight:600">Slides</a>
+                  </p>
+              </li>
+              <li>
+                <p><strong>Introduction to DNS Cache Poisoning Attacks</strong><br />  Institute of Computing Technology, Chinese Academy of Sciences, Beijing, June 14, 2023.
+                    <span class="badge text-bg-success">C</span>
+                  </p>
+              </li>
+          </ul><br />
+          <h4>
+
+                <font color="purple">2021</font>
+            </h4>
+            <ul>
+                <li>
+                    <p><strong>A Nation-wide View into the Effect of DNS Root Server
+                            Instances</strong><br /> Yunxi Conference, Hangzhou, October 22,
+                        2021. <span class="badge text-bg-success">C</span> <a
+                            href="./files/slides/DNS-Root-Measurement-2021-10-22.pdf" class="btn btn-primary"
+                            style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.8rem;--bs-btn-font-weight:600">Slides</a>
+                    </p>
+                </li>
+                <li>
+                    <p><strong>Real-world Practice of Domain Seizure</strong><br /> QiAnXin
+                        Group, Beijing, July 07, 2021. <span class="badge text-bg-success">C</span> <a
+                            href="./files/slides/Domain-Takedown-2021-07-07.pdf" class="btn btn-primary"
+                            style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.8rem;--bs-btn-font-weight:600">Slides</a>
+                    </p>
+                </li>
+            </ul><br />
+            <h4>
+                <font color="purple">2020</font>
+            </h4>
+            <ul>
+                <li>
+                    <p><strong>Some Tips for Internet Measurement Study</strong><br />
+                        Tsinghua University, Beijing, December 10, 2020. <span class="badge text-bg-danger">R</span> <a
+                            href="./files/slides/Network-Measurement-2020-11-10.pdf" class="btn btn-primary"
+                            style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.8rem;--bs-btn-font-weight:600">Slides</a>
+                    </p>
+                </li>
+                <li>
+                    <p><strong>Coremail Email Security Competition (2020)</strong><br />
+                        FIT, Tsinghua University, Beijing, October 26, 2020. <span class="badge text-bg-danger">R</span>
+                        <a href="./files/slides/Coremail-Email-Security-2020-10-26.pdf" class="btn btn-primary"
+                            style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.8rem;--bs-btn-font-weight:600">Slides</a>
+                    </p>
+                </li>
+                <li>
+                    <p><strong>[PhD Dissertation Defense] Research on Security of Internet
+                            Domain Name System</strong><br /> FIT, Tsinghua University,
+                        Beijing, September 04, 2020. <span class="badge text-bg-danger">R</span> <a
+                            href="./files/slides/Baojun-PhD-2020-09-04.pdf" class="btn btn-primary"
+                            style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.8rem;--bs-btn-font-weight:600">Slides</a>
+                    </p>
+                </li>
+                <li>
+                    <p><strong>A Measurement Study of DNS over Encryption</strong><br />
+                        Online, BCS Conference, August 12, 2020. <span class="badge text-bg-success">C</span> <a
+                            href="./files/slides/DNS-Encryption-2020-08-12.pdf" class="btn btn-primary"
+                            style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.8rem;--bs-btn-font-weight:600">Slides</a>
+                    </p>
+                </li>
+                <li>
+                    <p><strong>Some Tips for DNS Big Data Security Analysis</strong><br />
+                        Online, InForSec Forum, July 19, 2020. <span class="badge text-bg-danger">R</span> <a
+                            href="./files/slides/DNS-Big-Data-Security-Analysis-2020-07-19.pdf" class="btn btn-primary"
+                            style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.8rem;--bs-btn-font-weight:600">Slides</a>
+                    </p>
+                </li>
+                <li>
+                    <p><strong>Understanding and Analyzing Malicious Domain
+                            Take-downs</strong><br /> FIT, Tsinghua, InForSec Forum, January
+                        04, 2020. <span class="badge text-bg-success">C</span> <a
+                            href="./files/slides/Domain-Takedown-2020-01-04.pdf" class="btn btn-primary"
+                            style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.8rem;--bs-btn-font-weight:600">Slides</a>
+                    </p>
+                </li>
+            </ul><br />
+            <h4>
+                <font color="purple">2019</font>
+            </h4>
+            <ul>
+                <li>
+                    <p><strong>The Evolution of DNS Security: From DNS Interception to DNS
+                            Encryption</strong><br /> Xi'an Jiaotong University, Xi'An,
+                        InForSec Forum, December 14, 2019. <span class="badge text-bg-success">C</span>
+                    </p>
+                </li>
+                <li>
+                    <p><strong>An Overview of DNS Security and Measurements
+                            Study</strong><br /> FIT, Tsinghua University, November 28,
+                        2019. <span class="badge text-bg-danger">R</span>
+                    </p>
+                </li>
+                <li>
+                    <p><strong>DataCon 2019: DNS Security Competition</strong><br /> 360
+                        Security Corp, June 05, 2019. <span class="badge text-bg-danger">R</span> <a
+                            href="./files/slides/DataCon-2019-Slides.pdf" class="btn btn-primary"
+                            style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.8rem;--bs-btn-font-weight:600">Slides</a>
+                    </p>
+                </li>
+                <li>
+                    <p><strong>ICSI Visiting</strong><br /> FIT, Tsinghua University,
+                        January 17, 2019. <span class="badge text-bg-secondary">O</span> <a
+                            href="./files/slides/Baojun-ICSI-2019.pdf" class="btn btn-primary"
+                            style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0.5rem; --bs-btn-font-size: 0.8rem;--bs-btn-font-weight:600">Slides</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <hr>
+                <p class="lead" style="text-align: center;">&copy;   <font size="2"> 2023 Baojun Liu. All rights reserved. </p>
+                    Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
