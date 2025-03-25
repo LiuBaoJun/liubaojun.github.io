@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Your Name]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        .sidebar {
+            width: 200px;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #4169E1;
+            border-bottom: 1px solid #4169E1;
+            padding-bottom: 10px;
+        }
+        
+        .menu-title {
+            font-weight: bold;
+            margin-top: 20px;
+            color: #333;
+        }
+        
+        .menu-items {
+            list-style: none;
+            padding: 0;
+            margin-top: 5px;
+        }
+        
+        .menu-items li {
+            margin-bottom: 8px;
+        }
+        
+        .menu-items a {
+            color: #4169E1;
+            text-decoration: none;
+        }
+        
+        .menu-items a:hover {
+            text-decoration: underline;
+        }
+        
+        .profile {
+            display: flex;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+        
+        .profile-image {
+            width: 200px;
+            height: auto;
+        }
+        
+        .profile-info {
+            flex: 1;
+        }
+        
+        .highlight-box {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .contact-section {
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: auto;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+            
+            .profile {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="menu-title">[Your Name]</div>
+        <ul class="menu-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Biography</a></li>
+        </ul>
+        
+        <div class="menu-title">Research</div>
+        <ul class="menu-items">
+            <li><a href="#">Interests</a></li>
+            <li><a href="#">Publications</a></li>
+            <li><a href="#">Research Projects</a></li>
+        </ul>
+        
+        <div class="menu-title">Teaching</div>
+        <ul class="menu-items">
+            <li><a href="#">Courses</a></li>
+        </ul>
+        
+        <div class="menu-title">Group</div>
+        <ul class="menu-items">
+            <li><a href="#">Members</a></li>
+            <li><a href="#">Alumni</a></li>
+        </ul>
+
+        <div class="menu-title">Links</div>
+    </div>
+
+    <div class="main-content">
+        <h1>[Your Name]</h1>
+        
+        <div class="profile">
+            <img src="placeholder-for-photo.jpg" alt="Profile Photo" class="profile-image">
+            <div class="profile-info">
+                <h2>[Your Name]</h2>
+                <p>Professor</p>
+                <p>Department of [Your Department]</p>
+                <p>[Your University]</p>
+            </div>
+        </div>
+
+        <h2>Welcome</h2>
+        <p>I am a Professor with the Department of [Your Department] at [Your University]. My research interests include [Your Research Areas].</p>
+
+        <div class="highlight-box">
+            <strong>Students and Postdocs:</strong>
+            <p>I am looking for highly motivated students and postdoctoral researchers with solid background in [Your Required Skills], who are interested in [Your Research Areas].</p>
+        </div>
+
+        <div class="contact-section">
+            <h2>Contact</h2>
+            <p>Department of [Your Department]</p>
+            <p>[Building and Room Number], [Your University]</p>
+            <p>[City, Postal Code, Country]</p>
+            <p>Phone: +[Your Phone Number]</p>
+            <p>Email: [your_email]@[university].edu</p>
+            <p>Web: http://[your_website_url]</p>
+        </div>
+    </div>
+</body>
+</html>
