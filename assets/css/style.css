@@ -1,0 +1,121 @@
+@media (max-width: 768px) {
+    body { flex-direction: column; }
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+.section-title {
+    font-weight: bold;
+    margin: 15px 0 5px; /* 与education.html完全一致 */
+    color: #333;
+    font-size: 1em; /* 取消额外字号设置 */
+}
+
+.menu-items a {
+    color: #4169E1; /* 严格保持原有蓝色 */
+    text-decoration: none; /* 移除默认下划线 */
+    font-size: 0.95em; /* 统一字号 */
+}
+
+
+
+/* 新增样式 */
+.profile {
+    padding: 15px;
+    background: #f8f9fa;
+    margin-bottom: 20px;
+}
+.avatar {
+    width: 150px;
+    border-radius: 50%;
+    margin: 10px auto;
+    display: block;
+}
+.name-title {
+    font-size: 1.2em;
+    text-align: center;
+    color: #2c3e50;
+    margin: 10px 0;
+}
+.contact {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+/* 当前页面高亮 */
+.menu-items a[href*="education"] {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* 新闻条目样式 */
+.news .date {
+    display: inline-block;
+    width: 100px;
+    color: #666;
+}
+
+/* 年份标题 */
+.pub-year {
+    color: #c00;
+    font-weight: bold;
+    margin: 25px 0 15px;
+    font-size: 1.1em;
+}
+
+/* 项目符号 */
+.pub-item::before {
+    content: "•";
+    position: absolute;
+    left: -15px;
+    color: #666;
+}
+
+/* 链接图标 */
+.pub-links a {
+    margin-right: 15px;
+    text-decoration: none;
+}
+.conf-link { color: #228B22; }  /* 会议绿色 */
+.journal-link { color: #c00; }  /* 期刊红色 */
+.workshop-link { color: #4169E1; } /* 研讨会蓝色 */
+
+
+/* 院校标题 */
+.institution-title {
+    border-left: 3px solid #4169E1;
+    padding-left: 10px;
+}
+
+/* 课程名称与时间布局 */
+.course-name {
+    width: 70%;
+    display: inline-block;
+}
+
+/* 课程代码样式 */
+.course-code {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* 课程类型标识 */
+.course-type {
+    color: #c00;
+}
+
+
+@media (max-width: 768px) {
+    .course-name {
+        width: 100%;
+        display: block;
+    }
+    .course-period {
+        float: none;
+        display: block;
+        margin-top: 5px;
+    }
+}

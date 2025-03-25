@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Your Name] - Courses</title>
+    <style>
+        /* 完全统一的全局样式 */
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            line-height: 1.4;
+            min-height: 100vh;
+        }
+      
+        .sidebar {
+            width: 200px;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+      
+        .main-content {
+            flex: 1;
+            padding: 20px 30px;
+        }
+      
+        h1 {
+            color: #4169E1;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* 严格统一侧边栏样式 */
+        .section-title {
+            font-weight: bold;
+            margin: 15px 0 5px;
+            color: #333;
+            font-size: 1em;
+        }
+      
+        .menu-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+      
+        .menu-items li {
+            margin-bottom: 5px;
+        }
+      
+        .menu-items a {
+            color: #4169E1;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+
+        /* 课程页面特定样式 */
+        .institution-title {
+            color: #2c3e50;
+            font-size: 1.1em;
+            margin: 25px 0 15px;
+            padding-left: 10px;
+            border-left: 3px solid #4169E1;
+        }
+      
+        .course-list {
+            list-style: none;
+            padding-left: 20px;
+        }
+      
+        .course-item {
+            margin: 15px 0;
+            position: relative;
+        }
+      
+        .course-name {
+            font-weight: bold;
+            display: inline-block;
+            width: 70%;
+        }
+      
+        .course-code {
+            color: #666;
+            font-size: 0.9em;
+        }
+      
+        .course-period {
+            float: right;
+            color: #4169E1;
+        }
+      
+        .course-type {
+            display: block;
+            color: #c00;
+            font-size: 0.9em;
+            margin-top: 3px;
+        }
+
+        /* 统一响应式布局 */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: auto;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 完全一致的侧边栏结构 -->
+    <div class="sidebar">
+        <div class="section-title">[Your Name]</div>
+        <ul class="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="biography.html">Biography</a></li>
+        </ul>
+      
+        <div class="section-title">Research</div>
+        <ul class="menu-items">
+            <li><a href="interests.html">Interests</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+      
+        <div class="section-title">Teaching</div>
+        <ul class="menu-items">
+            <li><a href="courses.html">Courses</a></li>
+        </ul>
+      
+        <div class="section-title">Group</div>
+        <ul class="menu-items">
+            <li><a href="members.html">Members</a></li>
+            <li><a href="alumni.html">Alumni</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h1>[Your Name] - Courses</h1>
+
+        <div class="institution-title">Tsinghua University Teaching Experience</div>
+        <ul class="course-list">
+            <li class="course-item">
+                <span class="course-name">Theory and Methods for Statistical Inference</span>
+                <span class="course-period">Fall 2017 - now</span>
+                <span class="course-code">(EE4101)</span>
+                <span class="course-type">Graduate Course (G)</span>
+            </li>
+          
+            <li class="course-item">
+                <span class="course-name">Probability Theory and Random Processes I</span>
+                <span class="course-period">Spring 2017 - now</span>
+                <span class="course-code">(EE3102)</span>
+                <span class="course-type">Undergraduate Course (U)</span>
+            </li>
+        </ul>
+
+        <div class="institution-title">MIT Teaching Experience</div>
+        <ul class="course-list">
+            <li class="course-item">
+                <span class="course-name">Statistics for Engineers and Scientists</span>
+                <span class="course-period">Fall 2014</span>
+                <span class="course-code">(6.434J)</span>
+                <span class="course-type">Graduate Course (G)</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

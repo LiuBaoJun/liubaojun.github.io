@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Your Name] - Publications</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 统一后的全局样式 */
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            line-height: 1.4;
+            min-height: 100vh;
+        }
+      
+        .sidebar {
+            width: 200px;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+      
+        .main-content {
+            flex: 1;
+            padding: 20px 30px;
+        }
+      
+        h1 {
+            color: #4169E1;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* 修正侧边栏样式 */
+        .section-title {
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+      
+        .menu-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+      
+        .menu-items li {
+            margin-bottom: 5px;
+        }
+      
+        .menu-items a {
+            color: #4169E1;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+
+        /* 出版物新排版样式 */
+        .pub-year {
+            color: #c00;
+            font-weight: bold;
+            margin: 25px 0 15px;
+            font-size: 1.1em;
+        }
+
+        .pub-list {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .pub-item {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .pub-item::before {
+            content: "•";
+            position: absolute;
+            left: -15px;
+            color: #666;
+        }
+
+        .pub-title {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .pub-authors {
+            color: #444;
+            font-size: 0.95em;
+        }
+
+        .pub-venue {
+            font-style: italic;
+            color: #2c3e50;
+            margin: 3px 0;
+        }
+
+        .pub-meta {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .pub-links {
+            margin-top: 5px;
+        }
+
+        .pub-links a {
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        .conf-link { color: #228B22; }
+        .journal-link { color: #c00; }
+        .workshop-link { color: #4169E1; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <!-- 统一后的导航结构 -->
+        <div class="section-title">[Your Name]</div>
+        <ul class="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="biography.html">Biography</a></li>
+        </ul>
+      
+        <div class="section-title">Research</div>
+        <ul class="menu-items">
+            <li><a href="interests.html">Interests</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+      
+        <div class="section-title">Teaching</div>
+        <ul class="menu-items">
+            <li><a href="courses.html">Courses</a></li>
+        </ul>
+      
+        <div class="section-title">Group</div>
+        <ul class="menu-items">
+            <li><a href="members.html">Members</a></li>
+            <li><a href="alumni.html">Alumni</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h1>[Your Name] - Publications</h1>
+
+        <div class="pub-year">2025</div>
+        <ul class="pub-list">
+            <li class="pub-item">
+                <span class="pub-title">Email Spoofing with SMTP Smuggling</span>
+                <div class="pub-authors">Chuhan Wang, Chenkai Wang, Songyi Yang, and [Your Name]</div>
+                <div class="pub-venue">USENIX Security Symposium</div>
+                <div class="pub-meta">August 2025 • Seattle, WA</div>
+                <div class="pub-links">
+                    <a href="#" class="conf-link"><i class="fa-solid fa-link"></i> Conference</a>
+                    <a href="#" class="conf-link"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+                </div>
+            </li>
+        </ul>
+
+        <div class="pub-year">2024</div>
+        <ul class="pub-list">
+            <li class="pub-item">
+                <span class="pub-title">Self-Supervised Probability Imputation to Estimate the External-Natural Cause of Injury Matrix</span>
+                <div class="pub-authors">Pirouz Naghavi, Erica Naghavi, and [Your Name]</div>
+                <div class="pub-venue">Machine Learning for Health Symposium (ML4H)</div>
+                <div class="pub-meta">December 2024 • Vancouver, Canada</div>
+                <div class="pub-links">
+                    <a href="#" class="workshop-link"><i class="fa-solid fa-link"></i> Workshop</a>
+                    <a href="#" class="workshop-link"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+                </div>
+            </li>
+        </ul>
+
+        <div class="pub-year">2023</div>
+        <ul class="pub-list">
+            <li class="pub-item">
+                <span class="pub-title">Deep Learning-Based Channel Estimation for 6G Systems</span>
+                <div class="pub-authors">[Your Name], Collaborator A, and Collaborator B</div>
+                <div class="pub-venue"><em>IEEE Transactions on Wireless Communications</em></div>
+                <div class="pub-meta">Volume 23, Issue 5 • May 2023</div>
+                <div class="pub-links">
+                    <a href="#" class="journal-link"><i class="fa-solid fa-link"></i> Journal</a>
+                    <a href="#" class="journal-link"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
