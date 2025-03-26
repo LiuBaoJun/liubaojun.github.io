@@ -119,3 +119,23 @@
         margin-top: 5px;
     }
 }
+
+/* 成员分类标题 */
+.member-category {
+    margin: 25px 0 15px;
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+}
+
+/* 时间对齐方式 */
+.member-period {
+    float: right;
+    color: #4169E1; /* 与education页面年份同色 */
+}
+
+/* 协作信息标注 */
+.collab-info {
+    color: #666;
+    font-size: 0.9em;
+}
+

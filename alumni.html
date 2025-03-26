@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baojun Liu - Group Alumni</title>
+    <style>
+        /* 继承全局样式 */
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            line-height: 1.4;
+            min-height: 100vh;
+        }
+    
+        .sidebar {
+            width: 200px;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+    
+        .main-content {
+            flex: 1;
+            padding: 20px 30px;
+        }
+    
+        h1 {
+            color: #4169E1;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* 严格统一侧边栏 */
+        .section-title {
+            font-weight: bold;
+            margin: 15px 0 5px;
+            color: #333;
+            font-size: 1em;
+        }
+    
+        .menu-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    
+        .menu-items li {
+            margin-bottom: 5px;
+        }
+    
+        .menu-items a {
+            color: #4169E1;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+
+        /* 成员页面样式 */
+        .member-category {
+            margin: 25px 0 15px;
+            color: #2c3e50;
+            font-size: 1.1em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+    
+        .member-list {
+            list-style: none;
+            padding-left: 20px;
+        }
+    
+        .member-item {
+            margin: 12px 0;
+            position: relative;
+        }
+
+        .member-item::before {
+            content: "•";
+            position: absolute;
+            left: -15px;
+            color: #666;
+        }
+    
+        .member-period {
+            float: right;
+            color: #4169E1;
+        }
+    
+        .collab-info {
+            color: #666;
+            font-size: 0.9em;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 完全一致的侧边栏结构 -->
+    <div class="sidebar">
+        <div class="section-title">Baojun Liu</div>
+        <ul class="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="biography.html">Biography</a></li>
+            <li><a href="assets/files/cv/baojuncv202503.pdf">CV</a></li>
+        </ul>
+    
+        <div class="section-title">Research</div>
+        <ul class="menu-items">
+            <li><a href="interests.html">Interests</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+    
+        <div class="section-title">Teaching</div>
+        <ul class="menu-items">
+            <li><a href="courses.html">Courses</a></li>
+        </ul>
+    
+        <div class="section-title">Group</div>
+        <ul class="menu-items">
+            <li><a href="members.html">Members</a></li>
+            <li><a href="alumni.html">Alumni</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <h1>Alumni</h1>
+        <div class="member-category">Ph.D. Students</div>
+        <ul class="member-list">
+            <!-- Ph.D. Students -->
+            <li class="member-item">
+                Yunyi Zhang <span class="collab-info">(w/ Prof. Min Zhang)</span>
+                <span class="member-period">2023 – 2025</span>
+            </li>
+        </ul>
+
+        <div class="member-category">Master Students</div>
+        <ul class="member-list">
+            <li class="member-item">
+                Ruixuan Li <span class="collab-info">(w/ Prof. Jun Shao)</span>
+                <span class="member-period">2023 – 2025</span>
+            </li>
+            <!-- 其他硕士生成员 -->
+        </ul>
+
+        </ul>
+    </div>
+</body>
+</html>

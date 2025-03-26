@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Your Name] - Education</title>
+    <title>Baojun Liu - Education</title>
     <style>
         body {
             font-family: "Times New Roman", Times, serif;
@@ -11,20 +11,21 @@
             padding: 0;
             display: flex;
             line-height: 1.4;
+            min-height: 100vh; /* 添加最小高度 */
         }
-        
+      
         .sidebar {
             width: 200px;
             background-color: #f5f5f5;
             padding: 20px;
             border-right: 1px solid #ddd;
         }
-        
+      
         .main-content {
             flex: 1;
-            padding: 20px;
+            padding: 20px 30px; /* 统一内边距 */
         }
-        
+      
         h1 {
             color: #4169E1;
             border-bottom: 1px solid #ccc;
@@ -32,7 +33,7 @@
             font-size: 24px;
             margin-bottom: 20px;
         }
-        
+      
         h2 {
             color: #4169E1;
             font-size: 20px;
@@ -41,72 +42,89 @@
             border-bottom: 1px solid #ccc;
             padding-bottom: 5px;
         }
-        
+
+        /* 统一侧边栏样式 */
+        .section-title {
+            font-weight: bold;
+            margin: 15px 0 5px;
+            color: #333;
+            font-size: 1em;
+        }
+      
         .menu-items {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-        
+      
         .menu-items li {
             margin-bottom: 5px;
         }
-        
+      
         .menu-items a {
             color: #4169E1;
             text-decoration: none;
+            font-size: 0.95em; /* 统一字号 */
         }
-        
-        .section-title {
-            font-weight: bold;
-            margin-top: 15px;
-            margin-bottom: 5px;
-        }
-        
+
+        /* 主内容区样式 */
         ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-        
+      
         .entry {
             margin-bottom: 15px;
         }
-        
+      
         .year {
             float: right;
+            color: #4169E1; /* 统一年份颜色 */
         }
-        
-        .institution {
-            font-weight: normal;
-        }
-        
+      
         .position {
             font-style: italic;
+            color: #666; /* 统一职位颜色 */
+        }
+
+        /* 响应式布局 */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+          
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- 统一后的侧边栏结构 -->
     <div class="sidebar">
-        <div class="section-title">[Your Name]</div>
+        <div class="section-title">Baojun Liu</div>
         <ul class="menu-items">
             <li><a href="index.html">Home</a></li>
             <li><a href="education.html">Education</a></li>
             <li><a href="biography.html">Biography</a></li>
+            <li><a href="assets/files/cv/baojuncv202503.pdf">CV</a></li>
         </ul>
-        
+      
         <div class="section-title">Research</div>
         <ul class="menu-items">
             <li><a href="interests.html">Interests</a></li>
             <li><a href="publications.html">Publications</a></li>
             <li><a href="projects.html">Projects</a></li>
         </ul>
-        
+      
         <div class="section-title">Teaching</div>
         <ul class="menu-items">
             <li><a href="courses.html">Courses</a></li>
         </ul>
-        
+      
         <div class="section-title">Group</div>
         <ul class="menu-items">
             <li><a href="members.html">Members</a></li>
@@ -115,54 +133,53 @@
     </div>
 
     <div class="main-content">
-        <h1>[Your Name] - Education</h1>
+        <h1>Baojun Liu - Education</h1>
 
         <h2>Education</h2>
         <ul>
             <li class="entry">
-                Massachusetts Institute of Technology <span class="year">2008 - 2014</span><br>
-                Ph.D., EECS<br>
-                Minor in Mathematics<br>
-                Advisor: Professor [Advisor Name]
+                Tsinghua University <span class="year">2015 - 2020</span><br>
+                Ph.D. in Computer Science and Technology<br>
+                Advisors: Prof. Ying Liu, Prof. Haixin Duan
             </li>
-            
+          
             <li class="entry">
-                Massachusetts Institute of Technology <span class="year">2005 - 2008</span><br>
-                Master of Science, EECS<br>
-                Advisor: Professor [Advisor Name]
+                University of California, Berkeley <span class="year">2018 - 2019</span><br>
+                Senior Visiting Scholar<br>
+                International Computer Science Institute (ICSI)<br>
+                Advisor: Prof. Vern Paxson (ACM Fellow)
             </li>
-            
+          
             <li class="entry">
-                Tsinghua University <span class="year">2001 - 2005</span><br>
-                Bachelor of Engineer, Electronic Engineering<br>
-                Advisor: Professor [Advisor Name]
+                Xidian University <span class="year">2011 - 2015</span><br>
+                B.Eng. in Electronic Engineering<br>
             </li>
         </ul>
 
         <h2>Work Experience</h2>
         <ul>
             <li class="entry">
-                Tsinghua University <span class="year">2021 - Present</span><br>
-                <span class="position">Professor</span>, Department of Electronic Engineering
+                Tsinghua University <span class="year">2022 - Present</span><br>
+                <span class="position">Assistant Professor</span>, Institute for Network Sciences and Cyberspace
             </li>
-            
+          
             <li class="entry">
-                Tsinghua University <span class="year">2014 - 2021</span><br>
-                <span class="position">Associate Professor</span>, Department of Electronic Engineering
-            </li>
-            
-            <li class="entry">
-                Massachusetts Institute of Technology <span class="year">2014</span><br>
-                <span class="position">Postdoctoral Associate</span>, Laboratory for Information and Decision Systems
+                Tsinghua University <span class="year">2020 - 2022</span><br>
+                <span class="position">Postdoctoral Researcher</span>, Tsinghua Shuimu Scholar
             </li>
         </ul>
 
         <h2>Honors and Awards</h2>
         <ul>
-            <li class="entry">IEEE ComSoc Radio Communications Technical Committee Early Achievement Award, 2023</li>
-            <li class="entry">IEEE ComSoc Radio Communications Technical Committee Outstanding Service Award, 2021</li>
-            <li class="entry">IEEE ComSoc Asia-Pacific Board Outstanding Young Researcher Award, 2018</li>
-            <li class="entry">Qiu Shi Outstanding Young Scholar Award, 2015</li>
+            <li class="entry">National "Ten Thousand Talents Program" Youth Top-Notch Talent Support Plan, 2023</li>
+            <li class="entry">Internet Foundation Technology Contribution Award, 2023</li>
+            <li class="entry">ACM CCS Distinguished Paper Award, 2023</li>
+            <li class="entry">ACM SIGSAC China Rising Star Award, 2022</li>
+            <li class="entry">Internet Society Applied Networking Research Award (ANRP), 2020</li>
+            <li class="entry">IEEE/IFIP DSN Best Paper Award, 2020</li>
+            <li class="entry">NDSS Distinguished Paper Award, 2019</li>
+            <li class="entry">ACM IMC Best Paper Award Nominee, 2019</li>
+            <li class="entry">ACM IMC Community Contribution Award Nominee, 2019</li>
         </ul>
     </div>
 </body>
