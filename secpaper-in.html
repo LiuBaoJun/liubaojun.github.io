@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* 优化后的专业风格Logo */
+        .logo {
+            width: 320px;
+            margin: 40px auto 30px;
+            text-align: center;
+            font: 500 36px/1.1 'Roboto', sans-serif;
+            position: relative;
+        }
+
+        .logo-text {
+            display: inline-block;
+            background: linear-gradient(45deg, 
+                #2B6CB0 0%, 
+                #3182CE 25%, 
+                #63B3ED 50%, 
+                #90CDF4 75%
+            );
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: subtleHue 12s infinite linear;
+        }
+
+        .logo-text span {
+            display: inline-block;
+            transition: transform 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .logo-text span:nth-child(odd) {
+            color: #2C5282; /* 深蓝强调色 */
+        }
+
+        @keyframes subtleFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-2px); }
+        }
+
+        @keyframes subtleHue {
+            100% { filter: hue-rotate(72deg); }
+        }
+
+        .logo:hover .logo-text span {
+            animation: subtleFloat 1.5s ease;
+        }
+    </style>
+  
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecPaper.CN - Security Papers Search Engine</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        /* 新版Logo设计 */
+        .logo {
+            width: 320px;
+            margin: 40px auto 30px;
+            text-align: center;
+            font: 500 36px/1.1 'Roboto', sans-serif;
+            color: #1a73e8;
+            position: relative;
+        }
+        .logo::after {
+        }
+         /* 修改2：优化提示文字 */
+        #mainSearch::placeholder {
+            color: #9aa0a6;  /* 原为#70757a */
+            opacity: 0.9;    /* 新增透明度 */
+            font-size: 15px;  /* 原为16px */
+        }
+
+
+        /* 搜索容器 */
+        .search-container {
+            max-width: 652px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Google式输入框优化 */
+        .search-box {
+            border: 1px solid #dfe1e5;
+            border-radius: 28px;
+            box-shadow: 0 1px 6px rgba(32,33,36,.08);
+            transition: all 0.2s cubic-bezier(0.4,0,0.2,1);
+            background: white;
+        }
+        .search-box:hover {
+            box-shadow: 0 1px 6px rgba(32,33,36,.2);
+        }
+
+        /* 输入框容器 */
+        .input-container {
+            display: flex;
+            align-items: center;
+            padding: 8px 16px;
+            height: 56px;
+        }
+
+        /* 双放大镜设计 */
+        .search-icon {
+            margin: 0 12px;
+            color: #5f6368;
+            font-size: 24px;
+        }
+        .search-icon-end {
+            margin-left: 12px;
+            color: #4285f4;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        #mainSearch:focus ~ .search-icon-end {
+            opacity: 1;
+        }
+
+        /* 输入框样式 */
+        #mainSearch {
+            flex: 1;
+            height: 100%;
+            border: 0;
+            outline: none;
+            font: 400 16px/24px 'Roboto', sans-serif;
+            color: #202124;
+        }
+        #mainSearch::placeholder {
+            color: #70757a;
+        }
+
+        /* 模式切换按钮 */
+        .mode-switch {
+            margin: 28px 0;
+            text-align: center;
+        }
+        .mode-btn {
+            background: none;
+            border: 1px solid transparent;
+            border-radius: 16px;
+            color: #5f6368;
+            padding: 8px 24px;
+            margin: 0 6px;
+            font: 500 14px/20px 'Roboto', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .mode-btn.active {
+            border-color: #dadce0;
+            color: #1a73e8;
+            background: #f8f9fa;
+        }
+
+        /* 高级搜索字段 */
+        .advanced-fields {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+            border-top: 1px solid #ebebeb;
+        }
+              /* 新增高级搜索字段样式 */
+        .advanced-options {
+            display: none; /* 默认隐藏 */
+            padding: 16px 24px;
+            border-top: 1px solid #eee;
+        }
+        .option-group {
+            margin-bottom: 12px;
+        }
+        .option-label {
+            display: block;
+            color: #5f6368;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+        .option-input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+      
+      /* 统一基础与高级搜索框样式 */
+#basicSearch,
+#advSearch {
+    flex: 1;
+    height: 100%;
+    border: 0;
+    outline: none;
+    font: 400 16px/24px 'Roboto', sans-serif;
+    color: #202124;
+    background: transparent; /* 统一透明背景 */
+}
+
+/* 确保输入容器高度一致 */
+#advancedSearch .input-container {
+    height: 56px; /* 与基础搜索框相同高度 */
+    padding: 8px 16px; /* 相同内边距 */
+}
+
+/* 统一图标样式 */
+#advancedSearch .search-icon {
+    font-size: 24px; /* 保持图标大小一致 */
+    margin: 0 12px; /* 相同边距 */
+}
+
+/* 增强高级选项视觉统一性 */
+.advanced-options {
+    padding: 20px 24px; /* 与基础布局对齐 */
+    border-top: 1px solid #ebebeb; /* 统一分割线颜色 */
+}
+
+/* 统一所有输入框的交互状态 */
+.option-input:focus,
+#advSearch:focus {
+    box-shadow: 0 0 0 2px #1a73e833; /* 统一点击反馈 */
+}
+      
+      
+      
+        .field label {
+            display: block;
+            margin-bottom: 8px;
+            color: #3c4043;
+            font: 500 14px/20px 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- 新版动态Logo -->
+    <div class="logo">
+        <div class="logo-text">
+            <span>S</span><span>e</span><span>c</span><span>P</span><span>a</span><span>p</span><span>e</span><span>r</span>
+        </div>
+    </div>
+
+
+    <div class="search-container">
+        <!-- 模式切换 -->
+        <div class="mode-switch">
+            <button class="mode-btn active" onclick="switchTab('basic')">Basic Search</button>
+            <button class="mode-btn" onclick="switchTab('advanced')">Advanced Search</button>
+        </div>
+
+        <!-- 基础搜索 -->
+        <div id="basicSearch" class="search-box">
+            <div class="input-container">
+                <span class="material-symbols-outlined search-icon">search</span>
+                <input type="text" id="mainSearch" placeholder="Search security papers (e.g. 'DNS hijacking' or 'author:John Doe')">
+                <span class="material-symbols-outlined search-icon-end">search</span>
+            </div>
+        </div>
+
+        <!-- 修改3：增强高级搜索 -->
+        <div id="advancedSearch" class="search-box" style="display:none;">
+            <div class="input-container">
+                <span class="material-symbols-outlined search-icon">manage_search</span>
+                <input type="text" id="advSearch" placeholder="Construct advanced query (e.g. title:'TLS 1.3' AND year>2020)">
+            </div>
+            <div class="advanced-options">
+                <div class="option-group">
+                    <label class="option-label">Primary Keyword</label>
+                    <input type="text" class="option-input" placeholder="Must contain these terms">
+                </div>
+                <div class="option-group">
+                    <label class="option-label">Secondary Keywords</label>
+                    <input type="text" class="option-input" placeholder="Should contain these terms">
+                </div>
+                <div class="option-group">
+                    <label class="option-label">Minimum Keywords</label>
+                    <input type="number" class="option-input" placeholder="Minimum 3 keywords" min="1">
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+     <script>
+        // 增强切换逻辑
+        function switchTab(tab) {
+            const buttons = document.querySelectorAll('.mode-btn');
+            const basicSearch = document.getElementById('basicSearch');
+    		const advSearch = document.getElementById('advancedSearch');
+            const options = document.querySelector('.advanced-options');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`button[onclick="switchTab('${tab}')"]`).classList.add('active');
+
+            if(tab === 'advanced') {
+                basicSearch.style.display = 'none';
+                advancedSearch.style.display = 'block';
+                options.style.display = 'block'; // 确保选项显示
+            } else {
+                basicSearch.style.display = 'block';
+                advancedSearch.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

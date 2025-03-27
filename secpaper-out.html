@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <!-- 保留所有样式 -->
+    <style>
+        /* 新增顶部搜索栏样式 */
+        .search-header {
+            padding: 20px 0 16px;
+            border-bottom: 1px solid #dfe1e5;
+            margin-bottom: 24px;
+        }
+      
+        /* 调整搜索容器宽度 */
+        .search-container {
+            max-width: 720px; /* 比结果区域稍宽 */
+            margin: 0 auto;
+        }
+
+        /* 搜索结果区域宽度控制 */
+        .results-area {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        /* 当前搜索词展示 */
+        .current-query {
+            color: #1a0dab;
+            font-size: 20px;
+            margin: 0 0 16px 12px;
+            font-weight: 500;
+        }
+    </style>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - SecPaper.CN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Google风格基础样式 */
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #202124;
+            line-height: 1.5;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 结果统计栏 */
+        .result-stats {
+            color: #70757a;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        /* 结果条目容器 */
+        .result-container {
+            margin-bottom: 32px;
+            border: 1px solid #dfe1e5;
+            border-radius: 8px;
+            padding: 16px;
+            transition: box-shadow 0.2s;
+        }
+        .result-container:hover {
+            box-shadow: 0 1px 6px rgba(32,33,36,.28);
+        }
+
+        /* 论文标题 */
+        .paper-title {
+            color: #1a0dab;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+        .paper-title:hover {
+            text-decoration: underline;
+        }
+
+        /* 会议年份 */
+        .conference-info {
+            display: flex;
+            align-items: center;
+            color: #70757a;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .conference {
+            color: #01875f;
+            font-weight: 500;
+            margin-right: 12px;
+        }
+
+        /* 作者列表 */
+        .authors {
+            color: #70757a;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        /* 匹配摘要 */
+        .abstract-snippet {
+            color: #4d5156;
+            font-size: 14px;
+            margin: 8px 0;
+        }
+        .highlight {
+            background-color: #e8f0fe;
+            color: #1a0dab;
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 操作按钮组 */
+        .action-links {
+            margin-top: 12px;
+            display: flex;
+            gap: 16px;
+        }
+        .action-link {
+            color: #1a0dab;
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+        .action-link:hover {
+            text-decoration: underline;
+        }
+
+        /* 分页导航 */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 32px;
+        }
+        .page-button {
+            background: #f8f9fa;
+            border: 1px solid #dadce0;
+            color: #1a0dab;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .page-button.active {
+            background: #1a73e8;
+            color: white;
+            border-color: #1a73e8;
+        }
+
+        /* 下载按钮 */
+        .download-btn {
+            background: #01875f;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+  
+  
+  
+    <div class="result-stats">About 30 results (0.42 seconds)</div>
+    <button class="download-btn">⬇ Download EXCEL</button>
+
+    <!-- 单个结果条目 -->
+    <div class="result-container">
+        <div class="conference-info">
+            <span class="conference">USENIX Security'24</span>
+            <span class="year">2024</span>
+        </div>
+        <a href="#" class="paper-title">Understanding DNS Hijacking at Global Scale</a>
+        <div class="authors">Baojun Liu, Zhou Li, Haixin Duan</div>
+        <div class="abstract-snippet">
+            This paper presents the first systematic study of DNS hijacking... 
+            <span class="highlight">DNS hijacking</span> incidents increased by 120% compared to previous studies.
+        </div>
+        <div class="action-links">
+            <a href="#" class="action-link">PDF</a>
+            <a href="#" class="action-link">BibTeX</a>
+            <a href="#" class="action-link">Related Papers</a>
+        </div>
+    </div>
+
+    <!-- 分页导航 -->
+    <div class="pagination">
+        <button class="page-button">Previous</button>
+        <button class="page-button active">1</button>
+        <button class="page-button">2</button>
+        <button class="page-button">3</button>
+        <button class="page-button">Next</button>
+    </div>
+</body>
+</html>
