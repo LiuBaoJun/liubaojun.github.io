@@ -56,13 +56,12 @@
 
         h1 {
             color: #4169E1;
-            font-size: 1.75em;
+            font-size: 1.7em;
             font-weight: bold;
-            margin: 0 0 12px 0;
-            padding: 0 0 8px 0;
+            margin: 0 0 18px 0;
+            padding-bottom: 8px;
             border-bottom: 1px solid #d4d4d4;
             line-height: 1.2;
-            letter-spacing: 0.2px;
         }
 
         h2 {
@@ -119,228 +118,49 @@
         }
         .pub-year:first-of-type { margin-top: 20px; }
 
-
-
-        /* ========== Design tokens (neutral palette + single accent) ========== */
-        :root {
-            --pub-bg:        #ffffff;
-            --pub-card:      #ffffff;
-            --pub-card-line: #ececec;      /* hairline border around card */
-            --pub-card-shadow: 0 1px 2px rgba(0,0,0,0.03), 0 4px 14px -8px rgba(15, 23, 42, 0.10);
-            --pub-card-hover: 0 1px 2px rgba(0,0,0,0.04), 0 8px 26px -10px rgba(15, 23, 42, 0.18);
-            --pub-text:      #111827;      /* title */
-            --pub-muted:     #4b5563;      /* authors, meta */
-            --pub-subtle:    #6b7280;      /* date/location */
-            --pub-num-bg:    #f8fafc;      /* number column bg */
-            --pub-num-fg:    #9ca3af;      /* light gray — 装饰性低权重视觉 */
-            --pub-num-bold:  #374151;      /* 主数字本体 */
-            --pub-red-year:  #b94b3d;      /* 红年份，比原来更柔和 */
-            --pub-divider-fg:#b0b7c0;
-            --pub-radius:    10px;
-            --pub-gap-col:   18px;         /* 数字列 ↔ 正文字 */
-            --pub-eyebrow:   12px;
-        }
-
-        /* Year headings — clean, single red numeral, generous spacing above */
-        .pub-year {
-            font-size: 1.6em;
-            font-weight: 700;
-            color: var(--pub-red-year);
-            letter-spacing: 0.01em;
-            margin: 34px 0 14px 0;
-            padding: 0;
-            border-bottom: none;
-            line-height: 1.1;
-        }
-        .pub-year:first-of-type { margin-top: 12px; }
-
-        /* List container */
-        .pub-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        /* ========== Paper card ========== */
+        .pub-list { list-style: none; padding: 0; margin: 0; }
         .pub-item {
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            gap: var(--pub-gap-col);
-
-            background: var(--pub-card);
-            border: 1px solid var(--pub-card-line);
-            border-radius: var(--pub-radius);
-            box-shadow: var(--pub-card-shadow);
-
-            padding: 16px 20px 16px 0;   /* left padding lives inside num-card */
-            margin: 0;                   /* gap handles spacing between cards */
-            transition: box-shadow 0.22s ease, transform 0.22s ease, border-color 0.22s ease;
+            margin-bottom: 18px;
+            padding-left: 0;
+            border-left: none;
         }
-        .pub-item:hover {
-            box-shadow: var(--pub-card-hover);
-            border-color: #dde3ea;
-            transform: translateY(-1px);
+        .pub-item::before {
+            content: "•";
+            display: inline-block;
+            margin-right: 8px;
+            color: #333;
+            font-weight: bold;
+            vertical-align: top;
         }
-
-        /* Left column — paper sequence number (1→82) */
-        .pub-num-card {
-            flex: 0 0 64px;                    /* fixed width column */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 4px 0 6px 0;
-
-            background: linear-gradient(180deg, #fafbfc 0%, #f3f5f8 100%);
-            border-right: 1px solid #eef0f3;
-            border-radius: var(--pub-radius) 0 0 var(--pub-radius);
-            margin: -16px 0 -16px 0;           /* bleed to card edges */
-            padding: 18px 6px 18px 6px;
-
-            font-family: "Helvetica Neue", "Inter", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-            color: var(--pub-num-bold);
-            font-weight: 700;
-            font-size: 1.25em;
-            letter-spacing: -0.01em;
-            font-variant-numeric: tabular-nums;
-            -webkit-font-smoothing: antialiased;
-            user-select: none;
-        }
-        .pub-num-card::after {
-            content: "";
-            display: block;
-            width: 18px;
-            height: 2px;
-            background: #dfe3e8;
-            border-radius: 1px;
-            margin-top: 8px;
-        }
-
-        /* Right column — title + authors + venue + meta + awards */
-        .pub-body {
-            flex: 1 1 auto;
-            min-width: 0;                     /* 允许长单词换行 */
-            display: flex;
-            flex-direction: column;
-            gap: 3px;
-        }
-
         .pub-title {
-            display: block;                   /* 独占一行，不再 inline */
-            font-weight: 700;
-            font-size: 1.05em;
-            color: var(--pub-text);
-            line-height: 1.45;
-            letter-spacing: -0.005em;
-            margin: 0 0 2px 0;
+            font-weight: bold;
+            color: #000;
+            display: inline;
         }
-
         .pub-authors {
-            color: var(--pub-muted);
-            font-size: 0.94em;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
+            color: #333;
+            font-size: 0.95em;
+            margin-top: 3px;
+            padding-left: 18px;
         }
-        .pub-authors strong {
-            color: #1f2937;
-            font-weight: 700;
-        }
-
         .pub-venue {
-            color: var(--pub-muted);
+            color: #333;
             font-style: italic;
             font-size: 0.92em;
-            margin: 0;
-            padding: 0;
+            margin-top: 2px;
+            padding-left: 18px;
         }
-
         .pub-meta {
-            color: var(--pub-subtle);
-            font-size: 0.86em;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            gap: 0;
-        }
-
-        /* Award badges — sit flush under meta, left-aligned, no runaway 54px indent */
-        .pub-award {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            margin: 7px 4px 0 0;
-            padding: 3px 10px;
-            border-radius: 5px;
-            font-size: 0.8em;
-            font-weight: 600;
-            font-style: normal;
-            line-height: 1.4;
-            white-space: nowrap;
-        }
-        .pub-award + .pub-award {
-            margin-left: 2px;
-        }
-        /* Gold / Silver / Bronze tiers keep colors */
-        .pub-award.tier-gold {
-            background-color: #fdf6e3;
-            color: #8a6d00;
-            border: 1px solid #e8d79a;
-        }
-        .pub-award.tier-gold::before {
-            content: "★";
-            color: #c69500;
-            font-size: 1.05em;
-        }
-        .pub-award.tier-silver {
-            background-color: #f2f4f7;
             color: #555;
-            border: 1px solid #d3d9e0;
+            font-size: 0.88em;
+            margin-top: 2px;
+            padding-left: 18px;
         }
-        .pub-award.tier-silver::before {
-            content: "◆";
-            color: #777;
-        }
-        .pub-award.tier-bronze {
-            background-color: #fafafa;
-            color: #666;
-            border: 1px solid #e2e2e2;
-            font-weight: 500;
-        }
-        .pub-award.tier-bronze::before {
-            content: "◇";
-            color: #888;
-        }
-
-        /* ===== Per-conference cluster divider (within a year) ===== */
-        .pub-conf-divider {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin: 14px 0 10px 0;
-            font-size: 0.78em;
-            font-weight: 600;
-            color: #777;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-        }
-        .pub-conf-divider::before,
-        .pub-conf-divider::after {
-            content: "";
-            flex: 0 0 auto;
-            width: 16px;
-            height: 1px;
-            background-color: #cfd4da;
-        }
-        .pub-conf-divider::after { display: none; }
-        .pub-list > .pub-conf-divider + .pub-item {
-            /* No extra margin — divider already spaces things */
+        .pub-award {
+            color: #d4a017;
+            font-weight: normal;
+            margin-left: 5px;
+            font-style: italic;
         }
 
         /* ===== Responsive ===== */
@@ -387,31 +207,9 @@
             .main-content { padding: 14px 12px 40px; }
             .main-content h1 { font-size: 1.3em; }
             .main-content h2 { font-size: 1.1em; }
-            /* Card layout on tiny screens: still flex column-lite */
-            .pub-item { padding: 12px 12px 12px 0 !important; gap: 12px !important; }
-            .pub-num-card { flex-basis: 52px !important; font-size: 1.05em !important; padding: 14px 4px !important; margin: -12px 0 -12px 0 !important; }
-            .pub-title { font-size: 0.98em !important; }
-            .pub-authors, .pub-venue, .pub-meta { font-size: 0.84em !important; }
-            /* Award badges: full-width centered so they dominate the visual row */
-            .pub-award {
-                display: flex;
-                justify-content: center;
-                width: 100%;
-                max-width: 100%;
-                margin: 5px 0 0 0;
-                padding: 4px 10px;
-                box-sizing: border-box;
-                white-space: normal;
-            }
-            .pub-award + .pub-award {
-                margin-left: 0;
-                margin-top: 4px;
-            }
-            .pub-conf-divider {
-                font-size: 0.72em;
-                letter-spacing: 0.04em;
-                margin: 12px 0 8px 0;
-            }
+            .pub-item { padding-left: 14px !important; }
+            .pub-item::before { left: 0 !important; }
+            .pub-award { display: block; margin: 2px 0 0 0; }
         }
 
         /* ===== Legacy unused styles (silent) ===== */
@@ -464,827 +262,533 @@
         </div>
         <div class="pub-year" id="2027">2027</div>
         <ul class="pub-list">
-            <li class="pub-item" data-pub-num="80">
-                <span class="pub-num-card">80</span>
-                <div class="pub-body">
+            <li class="pub-item">
                 <span class="pub-title">Marketplace Chameleons: Demystifying the Scam Ecosystem of Second-Hand Online Platforms</span>
                 <div class="pub-authors">Yijing Liu, Zilong Lin, XiaoFeng Wang, <strong>Baojun Liu</strong>, Haixin Duan</div>
                 <div class="pub-venue">Network and Distributed System Security Symposium (NDSS)</div>
                 <div class="pub-meta">March 2027 • Seoul, Republic of Korea</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="81">
-                <span class="pub-num-card">81</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Standards-to-Surface: A Comprehensive Evaluation of Windows Code-Signing (Non)Compliance</span>
                 <div class="pub-authors">Hanqing Zhao, Yiming Zhang, Lingyun Ying, Zi-Quan You, <strong>Baojun Liu</strong>, Haixin Duan, Shuhao Zhang, Huquan Jin</div>
                 <div class="pub-venue">Network and Distributed System Security Symposium (NDSS)</div>
                 <div class="pub-meta">March 2027 • Seoul, Republic of Korea</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="82">
-                <span class="pub-num-card">82</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Tracking the Shadows: A Longitudinal, End-to-End Analysis of the Criminal Ecosystem for Email Account Compromise</span>
                 <div class="pub-authors">Ruixuan Li, Liying Duan, Yunyi Zhang, Mingxuan Liu, <strong>Baojun Liu</strong>, Qingfeng Pan</div>
                 <div class="pub-venue">Network and Distributed System Security Symposium (NDSS)</div>
                 <div class="pub-meta">March 2027 • Seoul, Republic of Korea</div>
-                                </div>
-            </li>
-</ul>
+                </li>
+        </ul>
         <div class="pub-year" id="2026">2026</div>
         <ul class="pub-list">
-            <li class="pub-item" data-pub-num="63">
-                <span class="pub-num-card">63</span>
-                <div class="pub-body">
-                <span class="pub-title">Should I Trust You? Rethinking the Principle of Zone-Based Isolation DNS Bailiwick Checking</span>
+            <li class="pub-item">
+                <span class="pub-title">Should I Trust You? Rethinking the Principle of Zone-Based Isolation DNS Bailiwick Checking
+                <span class="pub-award"><i class="fa-solid fa-medal"></i> Distinguished Paper Award</span></span>
                 <div class="pub-authors">Yuxiao Wu, Yunyi Zhang, Chaoyi Lu, <strong>Baojun Liu</strong></div>
                 <div class="pub-venue">33rd Annual Network and Distributed System Security Symposium (NDSS)</div>
                 <div class="pub-meta">February 2026 • San Diego, CA, USA</div>
-                <div class="pub-award tier-gold">NDSS Distinguished Paper Award</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="64">
-                <span class="pub-num-card">64</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">CoordMail: Exploiting SMTP Timeout and Command Interaction to Coordinate Email Middleware for Convergence Amplification Attack</span>
                 <div class="pub-authors">Ruixuan Li, Chaoyi Lu, <strong>Baojun Liu</strong>, Yanzhong Lin, Qingfeng Pan, Jun Shao</div>
                 <div class="pub-venue">33rd Annual Network and Distributed System Security Symposium (NDSS)</div>
                 <div class="pub-meta">February 2026 • San Diego, CA, USA</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="65">
-                <span class="pub-num-card">65</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Understanding the Status and Strategies of the Code Signing Abuse Ecosystem</span>
                 <div class="pub-authors">Hanqing Zhao, Yiming Zhang, Lingyun Ying, Mingming Zhang, <strong>Baojun Liu</strong>, Haixin Duan, Zi-Quan You, Shuhao Zhang</div>
                 <div class="pub-venue">33rd Annual Network and Distributed System Security Symposium (NDSS)</div>
                 <div class="pub-meta">February 2026 • San Diego, CA, USA</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="66">
-                <span class="pub-num-card">66</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Beyond Jailbreak: Unveiling Risks in LLM Applications Arising from Blurred Capability Boundaries</span>
                 <div class="pub-authors">Yunyi Zhang, Shibo Cui, <strong>Baojun Liu</strong>, Jingkai Yu, Min Zhang, Fan Shi, Han Zheng</div>
                 <div class="pub-venue">33rd Annual Network and Distributed System Security Symposium (NDSS)</div>
                 <div class="pub-meta">February 2026 • San Diego, CA, USA</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="67">
-                <span class="pub-num-card">67</span>
-                <div class="pub-body">
-                <span class="pub-title">One Email, Many Faces: A Deep Dive into Identity Confusion in Email Aliases</span>
+                </li>
+            <li class="pub-item">
+                <span class="pub-title">One Email, Many Faces: A Deep Dive into Identity Confusion in Email Aliases
+                <span class="pub-award"><i class="fa-solid fa-medal"></i> Distinguished Paper Award</span></span>
                 <div class="pub-authors">Mengying Wu, Geng Hong, Jiatao Chen, Mingxuan Liu, <strong>Baojun Liu</strong>, Min Yang</div>
                 <div class="pub-venue">33rd Annual Network and Distributed System Security Symposium (NDSS)</div>
                 <div class="pub-meta">February 2026 • San Diego, CA, USA</div>
-                <div class="pub-award tier-gold">NDSS Distinguished Paper Award</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— IEEE S&P —</div>
-            <li class="pub-item" data-pub-num="68">
-                <span class="pub-num-card">68</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Breaking Free from Ivory Tower: Evaluating and Enhancing Real-world Chinese Underground Adversarial Jargon Detection</span>
                 <div class="pub-authors">Zhifan Jiang, Mingxuan Liu, Yue Qin, <strong>Baojun Liu</strong></div>
                 <div class="pub-venue">IEEE Symposium on Security and Privacy (S&P)</div>
                 <div class="pub-meta">May 2026 • San Francisco, CA, USA</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— WWW —</div>
-            <li class="pub-item" data-pub-num="69">
-                <span class="pub-num-card">69</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Characterizing Iran's Phased National Internet Shutdown in 2025: A Progressive and Distributed Action</span>
                 <div class="pub-authors">Shibo Cui, Mingxuan Liu, <strong>Baojun Liu</strong>, Haixin Duan, Ruixuan Li, Chaoyi Lu, Jin Zhang, Zhicheng Wang, Jinghua Bai</div>
                 <div class="pub-venue">The ACM Web Conference (WWW)</div>
                 <div class="pub-meta">June 2026 (TBD) • Dubai, UAE</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="70">
-                <span class="pub-num-card">70</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Unveiling the Resilience of LLM-Enhanced Search Engines Against Black-Hat SEO Manipulation</span>
                 <div class="pub-authors">Pei Chen, Geng Hong, Xinyi Wu, Mengying Wu, Zixuan Zhu, Mingxuan Liu, <strong>Baojun Liu</strong>, Mi Zhang, Min Yang</div>
                 <div class="pub-venue">The ACM Web Conference (WWW)</div>
                 <div class="pub-meta">June 2026 (TBD) • Dubai, UAE</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— USENIX Security —</div>
-            <li class="pub-item" data-pub-num="71">
-                <span class="pub-num-card">71</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Alias Equals Zone? Large-Scale and Stealthy Takeover of Domain Hosting Service via CNAME-Following Cross-Domain Verification</span>
                 <div class="pub-authors">Ruixuan Li, Xingyu Zhao, Yunyi Zhang, <strong>Baojun Liu</strong>, Jun Shao</div>
                 <div class="pub-venue">35th USENIX Security Symposium (USENIX Security)</div>
                 <div class="pub-meta">August 2026 • Seattle, WA, USA</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="72">
-                <span class="pub-num-card">72</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Shielding QR Codes: Unveiling the Real-World Illicit Promotion Behind Adversarial QR Code</span>
                 <div class="pub-authors">Lijie Wu, Xiaoping Zhang, Mingxuan Liu, Yue Qin, <strong>Baojun Liu</strong>, Geng Hong, Zhenrui Zhang, Chenghui Wu, Hui Jiang</div>
                 <div class="pub-venue">35th USENIX Security Symposium (USENIX Security)</div>
                 <div class="pub-meta">August 2026 • Seattle, WA, USA</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="73">
-                <span class="pub-num-card">73</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Cracks in the Walled Garden: Dissecting the Gray-Market of Unauthorized iOS App Distribution via Ad Hoc Sideloading</span>
                 <div class="pub-authors">Yijing Liu, Yiming Zhang, <strong>Baojun Liu</strong>, Haixin Duan</div>
                 <div class="pub-venue">35th USENIX Security Symposium (USENIX Security)</div>
                 <div class="pub-meta">August 2026 • Seattle, WA, USA</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— ACM CCS —</div>
-            <li class="pub-item" data-pub-num="74">
-                <span class="pub-num-card">74</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Good Cache, BAD Cache: Exploiting DNSSEC Validation Failures for DNS Cache Poisoning Attacks</span>
                 <div class="pub-authors">Shiming Liu, Yunyi Zhang, Chaoyi Lu, <strong>Baojun Liu</strong>, Shuhan Zhang, Donghong Sun, Yong Ma, Linjian Song</div>
                 <div class="pub-venue">ACM SIGSAC Conference on Computer and Communications Security (CCS)</div>
                 <div class="pub-meta">October 2026 • Salt Lake City, UT, USA</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="75">
-                <span class="pub-num-card">75</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">The Trade-off Between Performance and Security: Exploring Vulnerabilities in DNS Task Queue Scheduling</span>
                 <div class="pub-authors">Shiming Liu, Yunyi Zhang, Ruixuan Li, Shiyao Guo, <strong>Baojun Liu</strong>, Donghong Sun, Yong Ma, Linjian Song</div>
                 <div class="pub-venue">ACM SIGSAC Conference on Computer and Communications Security (CCS)</div>
                 <div class="pub-meta">October 2026 • Salt Lake City, UT, USA</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— ACM IMC —</div>
-            <li class="pub-item" data-pub-num="76">
-                <span class="pub-num-card">76</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">When Delivery Meets Error: Exploring Email Delivery Retry Strategies and Defects</span>
                 <div class="pub-authors">Ruixuan Li, Enlong Li, Mingxuan Liu, <strong>Baojun Liu</strong>, Haixin Duan, Qingfeng Pan</div>
                 <div class="pub-venue">ACM Internet Measurement Conference (IMC)</div>
                 <div class="pub-meta">October 2026 • Karlsruhe, Germany</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="77">
-                <span class="pub-num-card">77</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Unintended Revelations and Risks: Understanding Cellular DNS Leakage on the Public Internet</span>
                 <div class="pub-authors">Yiming Zhang, Hang Zhou, Tao Wan, Haixin Duan, Liqian Hao, <strong>Baojun Liu</strong>, Chaoyi Lu, Jingying Zhou</div>
                 <div class="pub-venue">ACM Internet Measurement Conference (IMC)</div>
                 <div class="pub-meta">October 2026 • Karlsruhe, Germany</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— ACM CCS —</div>
-            <li class="pub-item" data-pub-num="78">
-                <span class="pub-num-card">78</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">One Click to Leak: Characterizing the Real-World Usage and Threat Impact of MNO-based Single Sign-On Websites</span>
                 <div class="pub-authors">Jiasheng Huang, Mingxuan Liu, Pei Chen, <strong>Baojun Liu</strong>, Yiming Zhang, Geng Hong, Zhenrui Zhang, Hai Yang, Haixin Duan, Hui Jiang</div>
                 <div class="pub-venue">ACM SIGSAC Conference on Computer and Communications Security (CCS)</div>
                 <div class="pub-meta">November 2026 • The Hague, The Netherlands</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— IEEE/ACM ToN (Journal) —</div>
-            <li class="pub-item" data-pub-num="79">
-                <span class="pub-num-card">79</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Traffic Shadowing: A Global Investigation of Internet Traffic Observation and User Data Reutilization</span>
                 <div class="pub-authors">Yunpeng Xing, Chaoyi Lu, <strong>Baojun Liu</strong>, Ruixuan Li, Haixin Duan</div>
                 <div class="pub-venue"><em>IEEE Transactions on Networking</em></div>
                 <div class="pub-meta">Volume 34 • 2026</div>
-                                </div>
-            </li>
-</ul>
+                </li>
+        </ul>
         <div class="pub-year" id="2025">2025</div>
         <ul class="pub-list">
-            <li class="pub-item" data-pub-num="48">
-                <span class="pub-num-card">48</span>
-                <div class="pub-body">
+            <li class="pub-item">
                 <span class="pub-title">HADES Attack: Understanding and Evaluating Manipulation Risks of Email Blocklists</span>
                 <div class="pub-authors">Ruixuan Li, Chaoyi Lu, <strong>Baojun Liu</strong>, Yunyi Zhang, Geng Hong, Haixin Duan, Yanzhong Lin, Qingfeng Pan, Min Yang, Jun Shao</div>
                 <div class="pub-venue">32nd Annual Network and Distributed System Security Symposium (NDSS)</div>
                 <div class="pub-meta">February 2025 • San Diego, CA, USA</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="49">
-                <span class="pub-num-card">49</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Revealing the Black Box of Device Search Engine: Scanning Assets, Strategies, and Ethical Consideration</span>
                 <div class="pub-authors">Mengying Wu, Geng Hong, Jinsong Chen, Qi Liu, Shujun Tang, Youhao Li, <strong>Baojun Liu</strong>, Haixin Duan, Min Yang</div>
                 <div class="pub-venue">32nd Annual Network and Distributed System Security Symposium (NDSS)</div>
                 <div class="pub-meta">February 2025 • San Diego, CA, USA</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— WWW —</div>
-            <li class="pub-item" data-pub-num="50">
-                <span class="pub-num-card">50</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">You Can't Eat Your Cake and Have It Too: The Performance Degradation of LLMs with Jailbreak Defense</span>
                 <div class="pub-authors">Wuyuao Mai, Geng Hong, Pei Chen, Xudong Pan, <strong>Baojun Liu</strong>, Yuan Zhang, Haixin Duan, Min Yang</div>
                 <div class="pub-venue">ACM Web Conference (WWW)</div>
                 <div class="pub-meta">May 2025 • Sydney, Australia</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— IEEE/IFIP DSN —</div>
-            <li class="pub-item" data-pub-num="51">
-                <span class="pub-num-card">51</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Decoding DNS Centralization: Measuring and Identifying NS Domains Across Hosting Providers</span>
                 <div class="pub-authors">Qihang Peng, Mingming Zhang, Deliang Chang, Jia Zhang, <strong>Baojun Liu</strong>, Haixin Duan</div>
                 <div class="pub-venue">55th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)</div>
                 <div class="pub-meta">June 2025 • Naples, Italy</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— USENIX Security —</div>
-            <li class="pub-item" data-pub-num="52">
-                <span class="pub-num-card">52</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Beyond Exploit Scanning: A Functional Change-Driven Approach to Remote Software Version Identification</span>
                 <div class="pub-authors">Jinsong Chen, Mengying Wu, Geng Hong, Baichao An, Mingxuan Liu, Lei Zhang, <strong>Baojun Liu</strong>, Haixin Duan, Min Yang</div>
                 <div class="pub-venue">USENIX Security Symposium</div>
                 <div class="pub-meta">August 2025 • Seattle, WA, USA</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="53">
-                <span class="pub-num-card">53</span>
-                <div class="pub-body">
-                <span class="pub-title">Your Shield is My Sword: A Persistent Denial-of-Service Attack via the Reuse of Unvalidated Caches in DNSSEC Validation</span>
+                </li>
+            <li class="pub-item">
+                <span class="pub-title">Your Shield is My Sword: A Persistent Denial-of-Service Attack via the Reuse of Unvalidated Caches in DNSSEC Validation
+                <span class="pub-award"><i class="fa-solid fa-medal"></i> Honorable Mention</span></span>
                 <div class="pub-authors">Shuhan Zhang, Shuai Wang, Li Chen, Dan Li, <strong>Baojun Liu</strong></div>
                 <div class="pub-venue">34th USENIX Security Symposium (USENIX Security)</div>
                 <div class="pub-meta">August 2025 • Seattle, WA, USA</div>
-                <div class="pub-award tier-silver">USENIX Security Honorable Mention</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="54">
-                <span class="pub-num-card">54</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">NOKEScam: Understanding and Rectifying Non-Sense Keywords Spear Scam in Search Engines</span>
                 <div class="pub-authors">Mingxuan Liu, Yunyi Zhang, Lijie Wu, <strong>Baojun Liu</strong>, Geng Hong, Yinming Zhang, Hui Jiang, Jia Zhang, Haixin Duan, Min Zhang, Wei Guan, Fan Shi, Min Yang</div>
                 <div class="pub-venue">USENIX Security Symposium</div>
                 <div class="pub-meta">August 2025 • Seattle, WA, USA</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="55">
-                <span class="pub-num-card">55</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Misty Registry: An Empirical Study of Flawed Domain Registry Operation</span>
                 <div class="pub-authors">Mingming Zhang, Yunyi Zhang, <strong>Baojun Liu</strong>, Haixin Duan, Min Zhang, Fan Shi, Chengxi Xu</div>
                 <div class="pub-venue">USENIX Security Symposium</div>
                 <div class="pub-meta">August 2025 • Seattle, WA, USA</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— ESORICS —</div>
-            <li class="pub-item" data-pub-num="56">
-                <span class="pub-num-card">56</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Email Cloaking: Deceiving Users and Spam Email Detectors with Invisible HTML Settings</span>
                 <div class="pub-authors">Bingyang Guo, Mingxuan Liu, Yihui Ma, Ruixuan Li, Fan Shi, Min Zhang, <strong>Baojun Liu</strong>, Chengxi Xu, Haixin Duan, Geng Hong, Min Yang, Qingfeng Pan</div>
                 <div class="pub-venue">European Symposium on Research in Computer Security (ESORICS)</div>
                 <div class="pub-meta">September 2025 • Toulouse, France</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— ACM CCS —</div>
-            <li class="pub-item" data-pub-num="57">
-                <span class="pub-num-card">57</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Exploring and Analyzing Cross Layer DoS Attack Against UDP-based Services on Linux</span>
                 <div class="pub-authors">Dashuai Wu, Yunyi Zhang, <strong>Baojun Liu</strong>, Xiang Li, Eihal Alowaisheq, Haixin Duan</div>
                 <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS)</div>
                 <div class="pub-meta">October 2025 • Taipei, Taiwan, China</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="58">
-                <span class="pub-num-card">58</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">RebirthDay Attack: Reviving DNS Cache Poisoning with the Birthday Paradox</span>
                 <div class="pub-authors">Xiang Li, Mingming Zhang, Zuyao Xu, Fasheng Miao, Yuqi Qiu, <strong>Baojun Liu</strong>, Jia Zhang, Xiaofeng Zhang, Haixin Duan, Zheli Liu, Yunhai Zhang, Dunqiu Fan</div>
                 <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS)</div>
                 <div class="pub-meta">October 2025 • Taipei, Taiwan, China</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— ACM IMC —</div>
-            <li class="pub-item" data-pub-num="59">
-                <span class="pub-num-card">59</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Understanding and Characterizing Intermediate Paths of Email Delivery: The Hidden Dependencies</span>
                 <div class="pub-authors">Ruixuan Li, Chaoyi Lu, <strong>Baojun Liu</strong>, Yanzhong Lin, Haixin Duan, Qingfeng Pan, Jun Shao</div>
                 <div class="pub-venue">ACM Internet Measurement Conference (IMC)</div>
                 <div class="pub-meta">October 2025 • Madison, Wisconsin, USA</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="60">
-                <span class="pub-num-card">60</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Analyzing Compliance and Complications of Integrating Internationalized X.509 Certificates</span>
                 <div class="pub-authors">Mingming Zhang, Jinfeng Guo, Yiming Zhang, Shenglin Zhang, <strong>Baojun Liu</strong>, Hanqing Zhao, Xiang Li, Haixin Duan</div>
                 <div class="pub-venue">ACM Internet Measurement Conference (IMC)</div>
                 <div class="pub-meta">October 2025 • Madison, Wisconsin, USA</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="61">
-                <span class="pub-num-card">61</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Chaos in the Chain: Evaluate Deployment and Construction Compliance of Web PKI Certificate Chain</span>
                 <div class="pub-authors">Jia Yao, Yiming Zhang, <strong>Baojun Liu</strong>, Zhan Liu, Mingming Zhang, Haixin Duan</div>
                 <div class="pub-venue">ACM Internet Measurement Conference (IMC)</div>
                 <div class="pub-meta">October 2025 • Madison, Wisconsin, USA</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="62">
-                <span class="pub-num-card">62</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Dive into the cloud: Unveiling the (Ab)usage of Serverless Cloud Function in the Wild</span>
                 <div class="pub-authors">Yijing Liu, Mingxuan Liu, Yiming Zhang, <strong>Baojun Liu</strong>, Jia Zhang, Geng Hong, Haixin Duan, Min Yang</div>
                 <div class="pub-venue">ACM Internet Measurement Conference (IMC)</div>
                 <div class="pub-meta">October 2025 • Madison, Wisconsin, USA</div>
-                                </div>
-            </li>
-</ul>
+                </li>
+        </ul>
         <div class="pub-year" id="2024">2024</div>
         <ul class="pub-list">
-            <li class="pub-item" data-pub-num="37">
-                <span class="pub-num-card">37</span>
-                <div class="pub-body">
+            <li class="pub-item">
                 <span class="pub-title">Understanding the Implementation and Security Implications of Protective DNS Services</span>
                 <div class="pub-authors">Mingxuan Liu, Yiming Zhang, Xiang Li, Chaoyi Lu, <strong>Baojun Liu</strong>, Haixin Duan, Xiaofeng Zheng</div>
                 <div class="pub-venue">31st Annual Network and Distributed System Security Symposium (NDSS)</div>
                 <div class="pub-meta">February 2024 • San Diego, CA</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— IEEE S&P —</div>
-            <li class="pub-item" data-pub-num="38">
-                <span class="pub-num-card">38</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">TuDoor Attack: Systematically Exploring and Exploiting Logic Vulnerabilities in DNS Response Pre-processing with Malformed Packets</span>
                 <div class="pub-authors">Xiang Li, Wei Xu, <strong>Baojun Liu</strong>, Mingming Zhang, Zhou Li, Jia Zhang, Deliang Chang, Xiaofeng Zheng, Chuhan Wang, Jianjun Chen, Haixin Duan, Qi Li</div>
                 <div class="pub-venue">IEEE Symposium on Security and Privacy (SP)</div>
                 <div class="pub-meta">May 2024 • San Francisco, CA</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— WWW —</div>
-            <li class="pub-item" data-pub-num="39">
-                <span class="pub-num-card">39</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">A Worldwide View on the Reachability of Encrypted DNS Services</span>
                 <div class="pub-authors">Ruixuan Li, <strong>Baojun Liu</strong>, Chaoyi Lu, Haixin Duan, Jun Shao</div>
                 <div class="pub-venue">ACM Web Conference (WWW)</div>
                 <div class="pub-meta">May 2024 • Singapore</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— IEEE/IFIP DSN —</div>
-            <li class="pub-item" data-pub-num="40">
-                <span class="pub-num-card">40</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">ChatScam: Unveiling the Rising Impact of ChatGPT on Domain Name Abuse</span>
                 <div class="pub-authors">Mingxuan Liu, Zhenglong Jin, Jiahai Yang, <strong>Baojun Liu</strong>, Haixin Duan, Ying Liu, Ximeng Liu, Shujun Tang</div>
                 <div class="pub-venue">54th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)</div>
                 <div class="pub-meta">June 2024 • Brisbane, Australia</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— USENIX Security —</div>
-            <li class="pub-item" data-pub-num="41">
-                <span class="pub-num-card">41</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Tickets or Privacy? Understand the Ecosystem of Chinese Ticket Grabbing Apps</span>
                 <div class="pub-authors">Yijing Liu, Yiming Zhang, <strong>Baojun Liu</strong>, Haixin Duan, Qiang Li, Mingxuan Liu, Ruixuan Li, Jia Yao</div>
                 <div class="pub-venue">USENIX Security Symposium</div>
                 <div class="pub-meta">August 2024 • Philadelphia, PA</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="42">
-                <span class="pub-num-card">42</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Rethinking the Security Threats of Stale DNS Glue Records</span>
                 <div class="pub-authors">Yunyi Zhang, <strong>Baojun Liu</strong>, Haixin Duan, Min Zhang, Xiang Li, Fan Shi, Chengxi Xu, Eihal Alowaisheq</div>
                 <div class="pub-venue">USENIX Security Symposium</div>
                 <div class="pub-meta">August 2024 • Philadelphia, PA</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="43">
-                <span class="pub-num-card">43</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Into the Dark: Unveiling Internal Site Search Abused for Black Hat SEO</span>
                 <div class="pub-authors">Yunyi Zhang, Mingxuan Liu, <strong>Baojun Liu</strong>, Yiming Zhang, Haixin Duan, Min Zhang, Hui Jiang, Yanzhe Li, Fan Shi</div>
                 <div class="pub-venue">USENIX Security Symposium</div>
                 <div class="pub-meta">August 2024 • Philadelphia, PA</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="44">
-                <span class="pub-num-card">44</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Cross the Zone: Toward a Covert Domain Hijacking via Shared DNS Infrastructure</span>
                 <div class="pub-authors">Yunyi Zhang, Mingming Zhang, <strong>Baojun Liu</strong>, Zhan Liu, Jia Zhang, Haixin Duan, Min Zhang, Fan Shi, Chengxi Xu</div>
                 <div class="pub-venue">USENIX Security Symposium</div>
                 <div class="pub-meta">August 2024 • Philadelphia, PA</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— ACM IMC —</div>
-            <li class="pub-item" data-pub-num="45">
-                <span class="pub-num-card">45</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Yesterday Once More: Global Measurement of Internet Traffic Shadowing Behaviors</span>
                 <div class="pub-authors">Yunpeng Xing, Chaoyi Lu, <strong>Baojun Liu</strong>, Haixin Duan, Junzhe Sun, Zhou Li</div>
                 <div class="pub-venue">ACM Internet Measurement Conference (IMC)</div>
                 <div class="pub-meta">November 2024 • Madrid, Spain</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="46">
-                <span class="pub-num-card">46</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Bounce in the Wild: A Deep Dive into Email Delivery Failures from a Large Email Service Provider</span>
                 <div class="pub-authors">Ruixuan Li, Shaodong Xiao, <strong>Baojun Liu</strong>, Yanzhong Lin, Haixin Duan, Qingfeng Pan, Jianjun Chen, Jia Zhang, Ximeng Liu, Xiuqi Lu, Jun Shao</div>
                 <div class="pub-venue">ACM Internet Measurement Conference (IMC)</div>
                 <div class="pub-meta">November 2024 • Madrid, Spain</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— IEEE TDSC (Journal) —</div>
-            <li class="pub-item" data-pub-num="47">
-                <span class="pub-num-card">47</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Investigating Deployment Issues of DNS Root Server Instances From a China-Wide View</span>
                 <div class="pub-authors">Fenglu Zhang, <strong>Baojun Liu</strong>, Chaoyi Lu, Yunpeng Xing, Haixin Duan, Ying Liu, Liyuan Chang</div>
                 <div class="pub-venue">*IEEE Transactions on Dependable and Secure Computing*</div>
                 <div class="pub-meta">Volume 21, Issue 6 • November 2024</div>
-                                </div>
-            </li>
-</ul>
+                </li>
+        </ul>
         <div class="pub-year" id="2023">2023</div>
         <ul class="pub-list">
-            <li class="pub-item" data-pub-num="28">
-                <span class="pub-num-card">28</span>
-                <div class="pub-body">
+            <li class="pub-item">
                 <span class="pub-title">Ghost Domain Reloaded: Vulnerable Links in Domain Name Delegation and Revocation</span>
                 <div class="pub-authors">Xiang Li, <strong>Baojun Liu</strong>, Xuesong Bai, Mingming Zhang, Qifan Zhang, Zhou Li, Haixin Duan, Qi Li</div>
                 <div class="pub-venue">30th Annual Network and Distributed System Security Symposium (NDSS)</div>
                 <div class="pub-meta">February 2023 • San Diego, CA</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— SIGMETRICS —</div>
-            <li class="pub-item" data-pub-num="29">
-                <span class="pub-num-card">29</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Detecting and Measuring Security Risks of Hosting-Based Dangling Domains</span>
                 <div class="pub-authors">Mingming Zhang, Xiang Li, <strong>Baojun Liu</strong>, Jianyu Lu, Yiming Zhang, Jianjun Chen, Haixin Duan, Shuang Hao, Xiaofeng Zheng</div>
                 <div class="pub-venue">ACM SIGMETRICS International Conference on Measurement and Modeling of Computer Systems (SIGMETRICS)</div>
                 <div class="pub-meta">June 2023 • Orlando, FL, USA</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— TURC —</div>
-            <li class="pub-item" data-pub-num="30">
-                <span class="pub-num-card">30</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Silence is not Golden: Disrupting the Load Balancing of Authoritative DNS Servers</span>
                 <div class="pub-authors">Fenglu Zhang, <strong>Baojun Liu</strong>, Eihal Alowaisheq, Jianjun Chen, Chaoyi Lu, Linjian Song, Yong Ma, Ying Liu, Haixin Duan, Min Yang</div>
                 <div class="pub-venue">ACM Turing Award Celebration Conference - China (TURC)</div>
                 <div class="pub-meta">July 2023 • Wuhan, China</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— USENIX Security —</div>
-            <li class="pub-item" data-pub-num="31">
-                <span class="pub-num-card">31</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">The Maginot Line: Attacking the Boundary of DNS Caching Protection</span>
                 <div class="pub-authors">Xiang Li, Chaoyi Lu, <strong>Baojun Liu</strong>, Qifan Zhang, Zhou Li, Haixin Duan, Qi Li</div>
                 <div class="pub-venue">32nd USENIX Security Symposium (USENIX Security)</div>
                 <div class="pub-meta">August 2023 • Anaheim, CA, USA</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="32">
-                <span class="pub-num-card">32</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Temporal CDN-Convex Lens: A CDN-Assisted Practical Pulsing DDoS Attack</span>
                 <div class="pub-authors">Run Guo, Jianjun Chen, Yihang Wang, Keran Mu, <strong>Baojun Liu</strong>, Xiang Li, Chao Zhang, Haixin Duan, Jianping Wu</div>
                 <div class="pub-venue">32nd USENIX Security Symposium (USENIX Security)</div>
                 <div class="pub-meta">August 2023 • Anaheim, CA, USA</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— ACM IMC —</div>
-            <li class="pub-item" data-pub-num="33">
-                <span class="pub-num-card">33</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Wolf in Sheep's Clothing: Evaluating Security Risks of the Undelegated Record on DNS Hosting Services</span>
                 <div class="pub-authors">Fenglu Zhang, Yunyi Zhang, <strong>Baojun Liu</strong>, Eihal Alowaisheq, Lingyun Ying, Xiang Li, Zaifeng Zhang, Ying Liu, Haixin Duan, Min Zhang</div>
                 <div class="pub-venue">ACM Internet Measurement Conference (IMC)</div>
                 <div class="pub-meta">October 2023 • Montreal, QC, Canada</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— ACM CCS —</div>
-            <li class="pub-item" data-pub-num="34">
-                <span class="pub-num-card">34</span>
-                <div class="pub-body">
-                <span class="pub-title">Silence is not Golden: Disrupting the Load Balancing of Authoritative DNS Servers</span>
+                </li>
+            <li class="pub-item">
+                <span class="pub-title">Silence is not Golden: Disrupting the Load Balancing of Authoritative DNS Servers
+                <span class="pub-award"><i class="fa-solid fa-medal"></i> Distinguished Paper Award</span></span>
                 <div class="pub-authors">Fenglu Zhang, <strong>Baojun Liu</strong>, Eihal Alowaisheq, Jianjun Chen, Chaoyi Lu, Linjian Song, Yong Ma, Ying Liu, Haixin Duan, Min Yang</div>
                 <div class="pub-venue">ACM SIGSAC Conference on Computer and Communications Security (CCS)</div>
                 <div class="pub-meta">November 2023 • Copenhagen, Denmark</div>
-                <div class="pub-award tier-gold">ACM CCS Distinguished Paper Award</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="35">
-                <span class="pub-num-card">35</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">TsuKing: Coordinating DNS Resolvers and Queries into Potent DoS Amplifiers</span>
                 <div class="pub-authors">Wei Xu, Xiang Li, Chaoyi Lu, <strong>Baojun Liu</strong>, Haixin Duan, Jia Zhang, Jianjun Chen, Tao Wan</div>
                 <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS)</div>
                 <div class="pub-meta">November 2023 • Copenhagen, Denmark</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="36">
-                <span class="pub-num-card">36</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Under the Dark: A Systematical Study of Stealthy Mining Pools (Ab)use in the Wild</span>
                 <div class="pub-authors">Zhenrui Zhang, Geng Hong, Xiang Li, Zhuoqun Fu, Jia Zhang, Mingxuan Liu, Chuhan Wang, Jianjun Chen, <strong>Baojun Liu</strong>, Haixin Duan, Chao Zhang, Min Yang</div>
                 <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS)</div>
                 <div class="pub-meta">November 2023 • Copenhagen, Denmark</div>
-                                </div>
-            </li>
-</ul>
+                </li>
+        </ul>
         <div class="pub-year" id="2022">2022</div>
         <ul class="pub-list">
-            <li class="pub-item" data-pub-num="22">
-                <span class="pub-num-card">22</span>
-                <div class="pub-body">
+            <li class="pub-item">
                 <span class="pub-title">Measuring the Practical Effect of DNS Root Server Instances: A China-Wide Case Study</span>
                 <div class="pub-authors">Fenglu Zhang, Chaoyi Lu, <strong>Baojun Liu</strong>, Haixin Duan, Ying Liu</div>
                 <div class="pub-venue">Passive and Active Measurement (PAM) Conference</div>
                 <div class="pub-meta">March 2022 • Virtual Event</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— NDSS —</div>
-            <li class="pub-item" data-pub-num="23">
-                <span class="pub-num-card">23</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">PMTUD is not Panacea: Revisiting IP Fragmentation Attacks against TCP</span>
                 <div class="pub-authors">Xuewei Feng, Qi Li, Kun Sun, Ke Xu, <strong>Baojun Liu</strong>, Xiaofeng Zheng, Qiushi Yang, Haixin Duan, Zhiyun Qian</div>
                 <div class="pub-venue">29th Annual Network and Distributed System Security Symposium (NDSS)</div>
                 <div class="pub-meta">April 2022 • San Diego, CA</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— Euro S&P —</div>
-            <li class="pub-item" data-pub-num="24">
-                <span class="pub-num-card">24</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Trampoline Over the Air: Breaking in IoT Devices Through MQTT Brokers</span>
                 <div class="pub-authors">Huikai Xu, Miao Yu, Yanhao Wang, Yue Liu, Qinsheng Hou, Zhenbang Ma, Haixin Duan, Jianwei Zhuge, <strong>Baojun Liu</strong></div>
                 <div class="pub-venue">7th IEEE European Symposium on Security and Privacy (EuroS&P)</div>
                 <div class="pub-meta">June 2022 • Genoa, Italy</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— USENIX Security —</div>
-            <li class="pub-item" data-pub-num="25">
-                <span class="pub-num-card">25</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Building an Open, Robust, and Stable Voting-Based Domain Top List</span>
                 <div class="pub-authors">Qinge Xie, Shujun Tang, Xiaofeng Zheng, Qingran Lin, <strong>Baojun Liu</strong>, Haixin Duan, Frank Li</div>
                 <div class="pub-venue">31st USENIX Security Symposium (USENIX Security)</div>
                 <div class="pub-meta">August 2022 • Boston, MA, USA</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="26">
-                <span class="pub-num-card">26</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">A Large-scale and Longitudinal Measurement Study of DKIM Deployment</span>
                 <div class="pub-authors">Chuhan Wang, Kaiwen Shen, Minglei Guo, Yuxuan Zhao, Mingming Zhang, Jianjun Chen, <strong>Baojun Liu</strong>, Xiaofeng Zheng, Haixin Duan, Yanzhong Lin, Qingfeng Pan</div>
                 <div class="pub-venue">31st USENIX Security Symposium (USENIX Security)</div>
                 <div class="pub-meta">August 2022 • Boston, MA, USA</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— ESORICS —</div>
-            <li class="pub-item" data-pub-num="27">
-                <span class="pub-num-card">27</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Exploring the Characteristics and Security Risks of Emerging Emoji Domain Names</span>
                 <div class="pub-authors">Mingxuan Liu, Yiming Zhang, <strong>Baojun Liu</strong>, Haixin Duan</div>
                 <div class="pub-venue">27th European Symposium on Research in Computer Security (ESORICS)</div>
                 <div class="pub-meta">September 2022 • Copenhagen, Denmark</div>
-                                </div>
-            </li>
-</ul>
+                </li>
+        </ul>
         <div class="pub-year" id="2021">2021</div>
         <ul class="pub-list">
-            <li class="pub-item" data-pub-num="16">
-                <span class="pub-num-card">16</span>
-                <div class="pub-body">
+            <li class="pub-item">
                 <span class="pub-title">From WHOIS to WHOWAS: A Large-Scale Measurement Study of Domain Name Registration Privacy</span>
                 <div class="pub-authors">Chaoyi Lu, <strong>Baojun Liu</strong>, Yiming Zhang, Zhou Li, Fenglu Zhang, Haixin Duan, Ying Liu, Joann Qiongna Chen, Jinjin Liang, Zaifeng Zhang, Shuang Hao, Min Yang</div>
                 <div class="pub-venue">28th Annual Network and Distributed System Security Symposium (NDSS)</div>
                 <div class="pub-meta">February 2021 • Virtual Event</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— IEEE/IFIP DSN —</div>
-            <li class="pub-item" data-pub-num="17">
-                <span class="pub-num-card">17</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Fast IPv6 Network Periphery Discovery and Security Implications</span>
                 <div class="pub-authors">Xiang Li, <strong>Baojun Liu</strong>, Xiaofeng Zheng, Haixin Duan, Qi Li, Youjun Huang</div>
                 <div class="pub-venue">51st Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)</div>
-                <div class="pub-meta">June 2021 • Taipei, Taiwan, China</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— USENIX Security —</div>
-            <li class="pub-item" data-pub-num="18">
-                <span class="pub-num-card">18</span>
-                <div class="pub-body">
+                <div class="pub-meta">June 2021 • Taipei, Taiwan</div>
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Weak Links in Authentication Chains: A Large-scale Analysis of Email Sender Authentication</span>
                 <div class="pub-authors">Kaiwen Shen, Chuhan Wang, Xiaofeng Zheng, Minglei Guo, Chaoyi Lu, <strong>Baojun Liu</strong>, Yuxuan Zhao, Shuang Hao, Haixin Duan, Qingfeng Pan, Min Yang</div>
                 <div class="pub-venue">30th USENIX Security Symposium (USENIX Security)</div>
                 <div class="pub-meta">August 2021 • Virtual Event</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— ACM CCS —</div>
-            <li class="pub-item" data-pub-num="19">
-                <span class="pub-num-card">19</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Rusted Anchors: A National Client-Side View of Hidden Root CAs in the Web PKI Ecosystem</span>
                 <div class="pub-authors">Yiming Zhang, <strong>Baojun Liu</strong>, Chaoyi Lu, Zhou Li, Haixin Duan, Jiachen Li, Zaifeng Zhang</div>
                 <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS)</div>
                 <div class="pub-meta">November 2021 • Virtual Event, Republic of Korea</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— ACSAC —</div>
-            <li class="pub-item" data-pub-num="20">
-                <span class="pub-num-card">20</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Detecting and Characterizing SMS Spearphishing Attacks</span>
                 <div class="pub-authors">Mingxuan Liu, Yiming Zhang, <strong>Baojun Liu</strong>, Zhou Li, Haixin Duan, Donghong Sun</div>
                 <div class="pub-venue">Annual Computer Security Applications Conference (ACSAC)</div>
                 <div class="pub-meta">December 2021 • Virtual Event, USA</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— IEEE Access —</div>
-            <li class="pub-item" data-pub-num="21">
-                <span class="pub-num-card">21</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">DNSWeight: Quantifying Country-Wise Importance of Domain Name System</span>
                 <div class="pub-authors">Deliang Chang, Shanshan Hao, Zhou Li, <strong>Baojun Liu</strong>, Xing Li</div>
                 <div class="pub-venue">*IEEE Access*</div>
                 <div class="pub-meta">Volume 9 • March 2021</div>
-                                </div>
-            </li>
-</ul>
+                </li>
+        </ul>
         <div class="pub-year" id="2020">2020</div>
         <ul class="pub-list">
-            <li class="pub-item" data-pub-num="11">
-                <span class="pub-num-card">11</span>
-                <div class="pub-body">
+            <li class="pub-item">
                 <span class="pub-title">CDN Judo: Breaking the CDN DoS Protection with Itself</span>
                 <div class="pub-authors">Run Guo, Weizhong Li, <strong>Baojun Liu</strong>, Shuang Hao, Jia Zhang, Haixin Duan, Kaiwen Shen, Jianjun Chen, Ying Liu</div>
                 <div class="pub-venue">Network and Distributed System Security Symposium (NDSS)</div>
                 <div class="pub-meta">February 2020 • Virtual Event, USA</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— IEEE/IFIP DSN —</div>
-            <li class="pub-item" data-pub-num="12">
-                <span class="pub-num-card">12</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">CDN Backfired: Amplification Attacks Based on HTTP Range Requests</span>
                 <div class="pub-authors">Weizhong Li, Kaiwen Shen, Run Guo, <strong>Baojun Liu</strong>, Jia Zhang, Haixin Duan, Shuang Hao, Xiarun Chen, Yao Wang</div>
                 <div class="pub-venue">IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)</div>
                 <div class="pub-meta">June 2020 • Virtual Event, USA</div>
-                <div class="pub-award tier-gold">IEEE/IFIP DSN Best Paper Award</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— USENIX Security —</div>
-            <li class="pub-item" data-pub-num="13">
-                <span class="pub-num-card">13</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Poison Over Troubled Forwarders: A Cache Poisoning Attack Targeting DNS Forwarding Devices</span>
                 <div class="pub-authors">Xiaofeng Zheng, Chaoyi Lu, Jian Peng, Qiushi Yang, Dongjie Zhou, <strong>Baojun Liu</strong>, Keyu Man, Shuang Hao, Haixin Duan, Zhiyun Qian</div>
                 <div class="pub-venue">USENIX Security Symposium</div>
                 <div class="pub-meta">August 2020 • Virtual Event, USA</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— ACM CCS —</div>
-            <li class="pub-item" data-pub-num="14">
-                <span class="pub-num-card">14</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Lies in the Air: Characterizing Fake-base-station Spam Ecosystem</span>
                 <div class="pub-authors">Yiming Zhang, <strong>Baojun Liu</strong>, Chaoyi Lu, Zhou Li, Haixin Duan, Shuang Hao, Mingxuan Liu, Ying Liu, Dong Wang, Qiang Li</div>
                 <div class="pub-venue">ACM SIGSAC Conference on Computer and Communications Security (CCS)</div>
                 <div class="pub-meta">November 2020 • Virtual Event, USA</div>
-                                </div>
-            </li>
-            <li class="pub-item" data-pub-num="15">
-                <span class="pub-num-card">15</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Talking with Familiar Strangers: An Empirical Study on HTTPS Context Confusion Attacks</span>
                 <div class="pub-authors">Mingming Zhang, Xiaofeng Zheng, Kaiwen Shen, Ziqiao Kong, Chaoyi Lu, Yu Wang, Haixin Duan, Shuang Hao, <strong>Baojun Liu</strong>, Min Yang</div>
                 <div class="pub-venue">ACM SIGSAC Conference on Computer and Communications Security (CCS)</div>
                 <div class="pub-meta">November 2020 • Virtual Event, USA</div>
-                                </div>
-            </li>
-</ul>
+                </li>
+        </ul>
         <div class="pub-year" id="2019">2019</div>
         <ul class="pub-list">
-            <li class="pub-item" data-pub-num="6">
-                <span class="pub-num-card">6</span>
-                <div class="pub-body">
-                <span class="pub-title">Cracking the Wall of Confinement: Understanding and Analyzing Malicious Domain Take-downs</span>
+            <li class="pub-item">
+                <span class="pub-title">Cracking the Wall of Confinement: Understanding and Analyzing Malicious Domain Take-downs <span class="pub-award">Best Paper Award</span></span>
                 <div class="pub-authors">Eihal Alowaisheq, Peng Wang, Sumayah Alrwais, Xiaojing Liao, Xiaofeng Wang, Tasneem Alowaisheq, Xianghang Mi, Siyuan Tang, <strong>Baojun Liu</strong></div>
                 <div class="pub-venue">Network and Distributed System Security Symposium (NDSS)</div>
                 <div class="pub-meta">February 2019 • San Diego, CA, USA</div>
-                <div class="pub-award tier-gold">NDSS Best Paper Award</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— IEEE S&P —</div>
-            <li class="pub-item" data-pub-num="7">
-                <span class="pub-num-card">7</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Resident Evil: Understanding Residential IP Proxy as a Dark Service</span>
                 <div class="pub-authors">Xianghang Mi, Xuan Feng, Xiaojing Liao, <strong>Baojun Liu</strong>, Xiaofeng Wang, Feng Qian, Zhou Li, Sumayah Alrwais, Limin Sun, Ying Liu</div>
                 <div class="pub-venue">IEEE Symposium on Security and Privacy (S&amp;P)</div>
                 <div class="pub-meta">May 2019 • San Francisco, CA, USA</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— Euro S&P —</div>
-            <li class="pub-item" data-pub-num="8">
-                <span class="pub-num-card">8</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">TraffickStop: Detecting and Measuring Illicit Traffic Monetization Through Large-Scale DNS Log Analysis</span>
                 <div class="pub-authors"><strong>Baojun Liu</strong>, Zhou Li, Peiyuan Zong, Chaoyi Lu, Haixin Duan, Ying Liu, Sumayah Alrwais, Xiaofeng Wang, Shuang Hao, Yaoqi Jia, Yiming Zhang, Kai Chen, Zaifeng Zhang</div>
                 <div class="pub-venue">IEEE European Symposium on Security and Privacy (EuroS&amp;P)</div>
                 <div class="pub-meta">June 2019 • Stockholm, Sweden</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— SecureComm —</div>
-            <li class="pub-item" data-pub-num="9">
-                <span class="pub-num-card">9</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">TL;DR Hazard: A Comprehensive Study of Levelsquatting Scams</span>
                 <div class="pub-authors">Kun Du, Hao Yang, Zhou Li, Haixin Duan, Shuang Hao, <strong>Baojun Liu</strong>, Yuxiao Ye, Mingxuan Liu, Xiaodong Su, Guang Liu, Zhifeng Geng, Zaifeng Zhang, Jinjin Liang</div>
                 <div class="pub-venue">International Conference on Security and Privacy in Communication Networks (SecureComm)</div>
                 <div class="pub-meta">October 2019 • Orlando, FL, USA</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— ACM IMC —</div>
-            <li class="pub-item" data-pub-num="10">
-                <span class="pub-num-card">10</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">An End-to-End, Large-Scale Measurement of DNS-over-Encryption: How Far Have We Come?</span>
                 <div class="pub-authors">Chaoyi Lu, <strong>Baojun Liu</strong>, Zhou Li, Shuang Hao, Haixin Duan, Mingming Zhang, Chunying Leng, Ying Liu, Zaifeng Zhang, Jianping Wu</div>
                 <div class="pub-venue">ACM Internet Measurement Conference (IMC)</div>
                 <div class="pub-meta">October 2019 • Amsterdam, Netherlands</div>
-                <div class="pub-award tier-gold">ISOC Applied Networking Research Award (ANRP) 2020</div>
-                <div class="pub-award tier-bronze">ACM IMC Best Paper Award Nominee</div>
-                <div class="pub-award tier-bronze">ACM IMC Community Contribution Award Nominee</div>
-                                </div>
-            </li>
-</ul>
+                </li>
+        </ul>
         <div class="pub-year" id="2018">2018</div>
         <ul class="pub-list">
-            <li class="pub-item" data-pub-num="2">
-                <span class="pub-num-card">2</span>
-                <div class="pub-body">
+            <li class="pub-item">
                 <span class="pub-title">A Reexamination of Internationalized Domain Names: the Good, the Bad and the Ugly</span>
                 <div class="pub-authors"><strong>Baojun Liu</strong>, Chaoyi Lu, Zhou Li, Ying Liu, Haixin Duan, Shuang Hao, Zaifeng Zhang</div>
                 <div class="pub-venue">IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)</div>
                 <div class="pub-meta">June 2018 • Luxembourg City, Luxembourg</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— USENIX Security —</div>
-            <li class="pub-item" data-pub-num="3">
-                <span class="pub-num-card">3</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Who is answering my queries: Understanding and Characterizing Interception of the DNS Resolution Path</span>
                 <div class="pub-authors"><strong>Baojun Liu</strong>, Chaoyi Lu, Haixin Duan, Ying Liu, Zhou Li, Shuang Hao, Min Yang</div>
                 <div class="pub-venue">USENIX Security Symposium</div>
                 <div class="pub-meta">August 2018 • Baltimore, MD, USA</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— FOCI —</div>
-            <li class="pub-item" data-pub-num="4">
-                <span class="pub-num-card">4</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Measuring Privacy Threats in China-Wide Mobile Networks</span>
                 <div class="pub-authors">Mingming Zhang, <strong>Baojun Liu</strong>, Chaoyi Lu, Jia Zhang, Shuang Hao, Haixin Duan</div>
                 <div class="pub-venue">USENIX Workshop on Free and Open Communications on the Internet (FOCI)</div>
                 <div class="pub-meta">August 2018 • Baltimore, MD, USA</div>
-                                </div>
-            </li>
-            <div class="pub-conf-divider">— SRDS —</div>
-            <li class="pub-item" data-pub-num="5">
-                <span class="pub-num-card">5</span>
-                <div class="pub-body">
+                </li>
+            <li class="pub-item">
                 <span class="pub-title">Abusing CDNs for Fun and Profit: Security Issues in CDNs' Origin Validation</span>
                 <div class="pub-authors">Run Guo, Jianjun Chen, <strong>Baojun Liu</strong>, Jia Zhang, Chao Zhang, Haixin Duan, Tao Wan, Jian Jiang, Shuang Hao, Yaoqi Jia</div>
                 <div class="pub-venue">IEEE International Symposium on Reliable Distributed Systems (SRDS)</div>
                 <div class="pub-meta">October 2018 • Salvador, Brazil</div>
-                                </div>
-            </li>
-</ul>
+                </li>
+        </ul>
         <div class="pub-year" id="2017">2017</div>
         <ul class="pub-list">
-            <li class="pub-item" data-pub-num="1">
-                <span class="pub-num-card">1</span>
-                <div class="pub-body">
+            <li class="pub-item">
                 <span class="pub-title">Don't Let One Rotten Apple Spoil the Whole Barrel: Towards Automated Detection of Shadowed Domains</span>
                 <div class="pub-authors">Daiping Liu, Zhou Li, Kun Du, Haining Wang, <strong>Baojun Liu</strong>, Haixin Duan</div>
                 <div class="pub-venue">ACM SIGSAC Conference on Computer and Communications Security (CCS)</div>
                 <div class="pub-meta">October 2017 • Dallas, TX, USA</div>
-                                </div>
-            </li>
-</ul>
+                </li>
+        </ul>
     </div>
 </body>
 </html>

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baojun Liu - Biography</title>
+    <title>Baojun Liu - Courses</title>
     <style>
-        /* 继承全局样式 */
+        /* 完全统一的全局样式 */
         body {
             font-family: "Times New Roman", Times, serif;
             margin: 0;
@@ -44,7 +44,7 @@
             letter-spacing: 0.2px;
         }
 
-        /* 严格统一侧边栏 */
+        /* 严格统一侧边栏样式 */
         .section-title {
             font-weight: bold;
             margin: 18px 0 6px;
@@ -62,38 +62,49 @@
         }
         .menu-items a:hover { text-decoration: underline; }
 
-        /* 传记页面特定样式 */
-        .bio-section {
-            margin: 25px 0;
-            padding-left: 15px;
-            border-left: 2px solid #4169E1;
-        }
-      
-        .time-period {
-            float: right;
-            color: #4169E1;
-            font-weight: normal;
-        }
-      
-        .position-title {
-            font-weight: bold;
+        /* 课程页面特定样式 */
+        .institution-title {
             color: #2c3e50;
+            font-size: 1.1em;
+            margin: 25px 0 15px;
+            padding-left: 10px;
+            border-left: 3px solid #4169E1;
         }
       
-        .research-interests {
+        .course-list {
             list-style: none;
             padding-left: 20px;
         }
       
-        .research-interests li::before {
-            content: "•";
-            color: #4169E1;
+        .course-item {
+            margin: 15px 0;
+            position: relative;
+        }
+      
+        .course-name {
+            font-weight: bold;
             display: inline-block;
-            width: 1em;
-            margin-left: -1em;
+            width: 70%;
+        }
+      
+        .course-code {
+            color: #666;
+            font-size: 0.9em;
+        }
+      
+        .course-period {
+            float: right;
+            color: #4169E1;
+        }
+      
+        .course-type {
+            display: block;
+            color: #c00;
+            font-size: 0.9em;
+            margin-top: 3px;
         }
 
-        /* ===== Responsive (Mobile) ===== */
+        /* 统一响应式布局 — 移动端优化 */
         @media (max-width: 768px) {
             body {
                 flex-direction: column;
@@ -122,24 +133,27 @@
                 box-sizing: border-box;
             }
             .main-content h1 { font-size: 1.45em; margin-bottom: 12px; }
-            .bio-section {
-                margin: 18px 0;
-                padding-left: 10px;
+            .institution-title {
+                margin: 20px 0 10px;
+                padding-left: 8px;
                 border-left-width: 2px;
             }
-            .time-period {
-                float: none;
-                display: block;
-                margin-bottom: 4px;
-                font-size: 0.9em;
+            .course-list { padding-left: 10px; }
+            .course-item {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                margin: 12px 0;
+                font-size: 0.95em;
             }
-            .research-interests { padding-left: 0; }
+            .course-period, .course-code, .course-type { display: block; }
         }
 
         @media (max-width: 480px) {
             .sidebar { padding: 14px 14px 10px; }
             .main-content { padding: 14px 12px 40px; }
             .main-content h1 { font-size: 1.3em; }
+            .course-item { font-size: 0.92em; }
         }
     </style>
 </head>
@@ -164,55 +178,50 @@
             <li><a href="members.html">Members</a></li>
             <li><a href="alumni.html">Alumni</a></li>
         </ul>
-
     </div>
 
     <div class="main-content">
-        <h1>Baojun Liu - Biography</h1>
+        <h1>Baojun Liu - Courses</h1>
+
+        <div class="institution-title">Tsinghua University Teaching Experience</div>
+        <ul class="course-list">
+            <li class="course-item">
+                <span class="course-name">Computer Network Security Technology</span>
+                <span class="course-period">Fall 2025</span>
+                <span class="course-code">(80240352)</span>
+                <span class="course-type">Graduate Course (G)</span>
+            </li>
+          
+            <li class="course-item">
+                <span class="course-name">Internet Architecture and its Security Foundations</span>
+                <span class="course-period">Fall 2013 - now</span>
+                <span class="course-code">(74120013)</span>
+                <span class="course-type">Graduate Course (G)</span>
+            </li>
+
+                      
+            <li class="course-item">
+                <span class="course-name">Interdisciplinary Basic Science Practice Course</span>
+                <span class="course-period">Summer 2023 - now</span>
+                <span class="course-code">(44710062)</span>
+                <span class="course-type">Undergraduate Course (U)</span>
+            </li>
+
+
+        </ul>
 
         <!--
-        <div class="bio-section">
-
-            
-            <h2>Academic Background</h2>
-            <p>
-                <span class="position-title">Ph.D. in EECS</span>
-                <span class="time-period">2008-2014</span><br>
-                Massachusetts Institute of Technology (MIT)<br>
-                Advisor: Professor [Advisor Name]
-            </p>
-            <p>
-                <span class="position-title">M.S. in EECS</span>
-                <span class="time-period">2005-2008</span><br>
-                Massachusetts Institute of Technology (MIT)<br>
-                Advisor: Professor [Advisor Name]
-            </p>
-        </div>
-
-        <div class="bio-section">
-            <h2>Research Focus</h2>
-            <ul class="research-interests">
-                <li>Wireless communication systems</li>
-                <li>Network localization and navigation</li>
-                <li>Multi-agent systems</li>
-                <li>Biomedical system modeling</li>
-            </ul>
-        </div>
-
-        <div class="bio-section">
-            <h2>Academic Service</h2>
-            <p>
-                <span class="position-title">IEEE Senior Member</span>
-                <span class="time-period">2020-Present</span><br>
-                Technical Program Committee Member for IEEE ICC 2022-2024
-            </p>
-            <p>
-                <span class="position-title">Associate Editor</span>
-                <span class="time-period">2018-2020</span><br>
-                IEEE Transactions on Wireless Communications
-            </p>
-        </div>
+        <div class="institution-title">MIT Teaching Experience</div>
+        <ul class="course-list">
+            <li class="course-item">
+                <span class="course-name">Statistics for Engineers and Scientists</span>
+                <span class="course-period">Fall 2014</span>
+                <span class="course-code">(6.434J)</span>
+                <span class="course-type">Graduate Course (G)</span>
+            </li>
+        </ul>
         -->
+
     </div>
 </body>
 </html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baojun Liu</title>
+    <meta name="last-modified" content="2025-03-26">
+    <style>
+        /* 统一后的全局样式 */
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            line-height: 1.4;
+            min-height: 100vh;
+        }
+      
+        .sidebar {
+            width: 180px;
+            background-color: #f8f8f8;
+            padding: 25px 20px;
+            border-right: 1px solid #e6e6e6;
+            flex-shrink: 0;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+      
+        .main-content {
+            flex: 1;
+            padding: 20px 30px;
+        }
+      
+        h1 {
+            color: #4169E1;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+      
+        h2 {
+            color: #4169E1;
+            font-size: 20px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        /* 统一侧边栏样式 */
+        .section-title {
+            font-weight: bold;
+            margin: 18px 0 6px;
+            color: #333;
+            font-size: 0.98em;
+        }
+        .section-title:first-child { margin-top: 0; }
+
+        .menu-items { list-style: none; padding: 0; margin: 0; }
+        .menu-items li { margin-bottom: 4px; }
+        .menu-items a {
+            color: #4169E1;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+        .menu-items a:hover { text-decoration: underline; }
+
+        /* 个人信息模块优化 */
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            gap: 25px;
+        }
+      
+        .profile-image {
+            width: 180px;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+      
+        .position {
+            font-style: italic;
+            color: #666;
+            margin: 5px 0;
+        }
+      
+        .department {
+            color: #444;
+            font-size: 0.95em;
+        }
+
+        /* 高亮框样式统一 */
+        .highlight-box {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 15px;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        /* 联系信息优化 */
+        .contact-section {
+            margin-top: 30px;
+            font-size: 0.95em;
+            padding-left: 15px;
+            border-left: 2px solid #4169E1;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+          
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+          
+            .profile {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+            
+        /* 最后修改日期样式 */
+        .last-modified {
+            font-size: 0.9em;
+            color: #666;
+        }
+    
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+        
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+        
+            .profile {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 统一后的侧边栏结构 -->
+    <div class="sidebar">
+        <div class="section-title">Baojun Liu</div>
+        <ul class="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="assets/files/cv/baojuncv202503.pdf">CV</a></li>
+            <li><a href="publications.html">Publications</a></li>
+        </ul>
+      
+        <div class="section-title">Teaching</div>
+        <ul class="menu-items">
+            <li><a href="courses.html">Courses</a></li>
+        </ul>
+      
+        <div class="section-title">Group</div>
+        <ul class="menu-items">
+            <li><a href="members.html">Members</a></li>
+            <li><a href="alumni.html">Alumni</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h1>Baojun Liu</h1>
+      
+        <div class="profile">
+            <img src="assets/images/photo-2025.jpg" alt="Profile Photo" class="profile-image">
+            <div class="profile-info">
+                <h2>Baojun Liu</h2>
+                <p class="position">Associate Professor</p>
+                <p class="department">Institute for Network Sciences and Cyberspace</p>
+                <p class="institution">Tsinghua University</p>
+            </div>
+        </div>
+
+        <h2>Welcome</h2>
+        <p>I am the Director of the Network and Information System Security Lab (NISL) and an Associate Professor at the Institute for Network Sciences and Cyberspace, Tsinghua University. My team works on Internet Measurement and Network Security, with a focus on uncovering and mitigating real-world threats to the global Internet infrastructure and applications.</p>
+
+        <div class="highlight-box">
+            <div class="section-title">Students and Postdocs:</div>
+            <p>I am looking for highly motivated students and postdoctoral researchers.</p>
+        </div>
+
+        <div class="contact-section">
+            <h2>Contact Information</h2>
+            <p>Institute for Network Sciences and Cyberspace<br>
+            Room 3-228, FIT Building<br>
+            Tsinghua University<br>
+            Beijing 100084, China</p>
+            <p>Email: lbj  at   tsinghua.edu.cn<br>
+            Web: <a href="https://www.insc.tsinghua.edu.cn/info/1157/3432.htm" target="_blank">https://www.insc.tsinghua.edu.cn/info/1157/3432.htm</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

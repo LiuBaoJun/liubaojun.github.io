@@ -16,56 +16,62 @@
         }
       
         .sidebar {
-            width: 200px;
-            background-color: #f5f5f5;
-            padding: 20px;
-            border-right: 1px solid #ddd;
+            width: 180px;
+            background-color: #f8f8f8;
+            padding: 25px 20px;
+            border-right: 1px solid #e6e6e6;
+            flex-shrink: 0;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            box-sizing: border-box;
+            overflow-y: auto;
         }
       
         .main-content {
             flex: 1;
             padding: 20px 30px;
+            max-width: 980px;
+            box-sizing: content-box;
         }
       
         h1 {
             color: #4169E1;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-            font-size: 24px;
-            margin-bottom: 20px;
+            font-size: 1.75em;
+            font-weight: bold;
+            margin: 0 0 12px 0;
+            padding: 0 0 8px 0;
+            border-bottom: 1px solid #d4d4d4;
+            line-height: 1.2;
+            letter-spacing: 0.2px;
         }
 
         /* 严格统一侧边栏样式 */
         .section-title {
             font-weight: bold;
-            margin: 15px 0 5px;
+            margin: 18px 0 6px;
             color: #333;
-            font-size: 1em;
+            font-size: 0.98em;
         }
-      
-        .menu-items {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-      
-        .menu-items li {
-            margin-bottom: 5px;
-        }
-      
+        .section-title:first-child { margin-top: 0; }
+
+        .menu-items { list-style: none; padding: 0; margin: 0; }
+        .menu-items li { margin-bottom: 4px; }
         .menu-items a {
             color: #4169E1;
             text-decoration: none;
             font-size: 0.95em;
         }
+        .menu-items a:hover { text-decoration: underline; }
 
         /* 课程页面特定样式 */
         .institution-title {
             color: #2c3e50;
-            font-size: 1.1em;
-            margin: 25px 0 15px;
-            padding-left: 10px;
+            font-size: 1.04em;
+            margin: 18px 0 8px;
+            padding: 1px 0 2px 9px;
             border-left: 3px solid #4169E1;
+            line-height: 1.3;
         }
       
         .course-list {
@@ -78,39 +84,359 @@
             position: relative;
         }
       
-        .course-name {
-            font-weight: bold;
-            display: inline-block;
-            width: 70%;
+
+        /* ========== Textbooks / 教材 section ========== */
+        .section-heading {
+            color: #2c3e50;
+            font-size: 1.04em;
+            font-weight: 700;
+            margin: 18px 0 8px;
+            padding: 1px 0 2px 9px;
+            border-left: 3px solid #4169E1;
+            line-height: 1.3;
         }
-      
-        .course-code {
-            color: #666;
-            font-size: 0.9em;
-        }
-      
-        .course-period {
-            float: right;
-            color: #4169E1;
-        }
-      
-        .course-type {
-            display: block;
-            color: #c00;
-            font-size: 0.9em;
-            margin-top: 3px;
+        .section-heading:first-of-type {
+            margin-top: 18px;
         }
 
-        /* 统一响应式布局 */
+        .textbook-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .textbook-item {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 12px;
+            background: #ffffff;
+            border: 1px solid #ececec;
+            border-radius: 10px;
+            padding: 12px 14px;
+            box-shadow: 0 1px 2px rgba(15,23,42,0.04), 0 0 0 1px rgba(236,240,246,0.75);
+            transition: box-shadow 0.22s ease, transform 0.22s ease, border-color 0.22s ease;
+        }
+        .textbook-item:hover {
+            box-shadow: 0 3px 10px rgba(15,23,42,0.06), 0 0 0 1px #dde3ea;
+            transform: translateY(-1px);
+            border-color: #dde3ea;
+        }
+
+        .textbook-cover {
+            flex: 0 0 72px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 3 / 4;
+            border-radius: 6px;
+            overflow: hidden;
+            background: linear-gradient(160deg, #4169E1 0%, #5d87ff 55%, #7ea6ff 100%);
+            color: #fff;
+            font-family: "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
+            font-size: 1.75em;
+            font-weight: 700;
+            letter-spacing: 0.015em;
+            text-align: center;
+            box-shadow: 0 1px 4px rgba(15,23,42,0.09), inset 0 0 0 1px rgba(255,255,255,0.18);
+        }
+        .textbook-item.in-press .textbook-cover {
+            background: linear-gradient(160deg, #4b5563 0%, #6b7280 55%, #9ca3af 100%);
+            box-shadow: 0 1px 4px rgba(71,85,105,0.18), inset 0 0 0 1px rgba(255,255,255,0.15);
+        }
+
+        .textbook-body {
+            flex: 1 1 auto;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .textbook-title-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .textbook-title-zh {
+            font-family: "Songti SC", "SimSun", "Noto Serif CJK SC", "PingFang SC", serif;
+            color: #111827;
+            font-size: 1.05em;
+            font-weight: 700;
+            line-height: 1.3;
+            letter-spacing: 0.01em;
+        }
+        .textbook-title-en {
+            color: #374151;
+            font-size: 0.90em;
+            font-style: italic;
+            margin-top: 1px;
+        }
+
+        .textbook-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 2px 8px;
+            border-radius: 999px;
+            font-size: 0.70em;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            line-height: 1.5;
+            white-space: nowrap;
+        }
+        .textbook-badge.published {
+            background: #ecfdf5;
+            color: #065f46;
+            border: 1px solid #a7f3d0;
+        }
+        .textbook-badge.published::before {
+            content: "✓  Published";
+        }
+        .textbook-badge.in-press {
+            background: #fff7ed;
+            color: #9a3412;
+            border: 1px solid #fed7aa;
+        }
+        .textbook-badge.in-press::before {
+            content: "⏳  In Press";
+        }
+
+        .textbook-meta {
+            color: #4b5563;
+            font-size: 0.84em;
+            line-height: 1.35;
+            margin: 1px 0 0 0;
+        }
+        .textbook-meta strong {
+            color: #1f2937;
+            font-weight: 700;
+        }
+
+        .textbook-links {
+            margin-top: 3px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 6px;
+            font-size: 0.78em;
+        }
+        .textbook-links a {
+            color: #4169E1;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 2px 8px;
+            border-radius: 5px;
+            border: 1px solid #d8e1f2;
+            background: #f5f8ff;
+            font-weight: 600;
+            transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+        }
+        .textbook-links a:hover {
+            background: #4169E1;
+            border-color: #4169E1;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .textbook-links a::before {
+            content: "↗";
+            font-weight: bold;
+        }
+
+        /* ========== Teaching course cards (modern rows — compact) ========== */
+        .course-list.cardified {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .course-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            background: #ffffff;
+            border: 1px solid #ececec;
+            border-radius: 9px;
+            padding: 10px 14px;
+            box-shadow: 0 1px 2px rgba(15,23,42,0.04), 0 0 0 1px rgba(236,240,246,0.75);
+            transition: box-shadow 0.22s ease, transform 0.22s ease, border-color 0.22s ease;
+        }
+        .course-item:hover {
+            box-shadow: 0 3px 10px rgba(15,23,42,0.06), 0 0 0 1px #dde3ea;
+            transform: translateY(-1px);
+            border-color: #dde3ea;
+        }
+
+        /* LEFT column: course info block — compact */
+        .course-left {
+            flex: 1 1 auto;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+        .course-head {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 6px 10px;
+        }
+        .course-name {
+            font-size: 0.97em;
+            font-weight: 700;
+            color: #111827;
+            letter-spacing: -0.004em;
+            line-height: 1.28;
+        }
+        .course-code {
+            font-family: "SF Mono", ui-monospace, Menlo, Consolas, "Courier New", monospace;
+            font-size: 0.76em;
+            color: #5b6675;
+            background: #f4f6f9;
+            padding: 2px 8px;
+            border-radius: 6px;
+            border: 1px solid #e4e8ed;
+            letter-spacing: 0.01em;
+            white-space: nowrap;
+        }
+        .course-pills {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .course-type-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.70em;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            padding: 2px 8px;
+            border-radius: 999px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        /* Pill variants: Graduate = blue/academic tone; Undergraduate = emerald green */
+        .course-type-pill.grad {
+            color: #1e3a8a;
+            background: #eef2ff;
+            border: 1px solid #c7d2fe;
+        }
+        .course-type-pill.grad::before  { content: "🎓"; font-size: 0.98em; transform: translateY(-1px); display: inline-block; }
+        .course-type-pill.ugrad {
+            color: #065f46;
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+        }
+        .course-type-pill.ugrad::before { content: "📚"; font-size: 0.95em; transform: translateY(-1px); display: inline-block; }
+
+        /* RIGHT column: term pill — compact */
+        .course-right {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .course-term-pill {
+            font-size: 0.78em;
+            font-weight: 700;
+            color: #4169E1;
+            background: #f5f8ff;
+            border: 1px solid #d8e1f2;
+            padding: 3px 10px;
+            border-radius: 999px;
+            white-space: nowrap;
+            letter-spacing: 0.01em;
+        }
+        .course-term-pill.ongoing::after {
+            content: " · ongoing";
+            color: #7f8fa3;
+            font-weight: 500;
+        }
+
+        /* 统一响应式布局 — 移动端优化 */
         @media (max-width: 768px) {
             body {
                 flex-direction: column;
+                -webkit-text-size-adjust: 100%;
             }
             .sidebar {
-                width: auto;
+                width: 100% !important;
+                max-width: 100%;
+                height: auto;
+                position: relative;
+                top: auto;
+                flex-shrink: 1;
+                box-sizing: border-box;
                 border-right: none;
-                border-bottom: 1px solid #ddd;
+                border-bottom: 1px solid #e6e6e6;
+                padding: 16px 18px 12px 18px;
+                overflow-y: visible;
             }
+            .sidebar .section-title { font-size: 1em; margin: 14px 0 4px; }
+            .sidebar .section-title:first-child { margin-top: 0; }
+            .sidebar .menu-items li { margin-bottom: 6px; }
+            .sidebar .menu-items a { font-size: 1em; display: block; padding: 6px 2px; }
+            .main-content {
+                padding: 18px 16px 40px 16px;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+            .main-content h1 { font-size: 1.45em; margin-bottom: 12px; }
+            .institution-title {
+                margin: 16px 0 8px;
+                padding-left: 8px;
+                border-left-width: 2px;
+            }
+            .course-list { padding-left: 0; }
+            .course-item {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 8px;
+                padding: 10px 12px;
+                margin: 0;
+                font-size: 0.94em;
+            }
+            .course-left { gap: 4px; }
+            .course-head { align-items: flex-start; gap: 6px 8px; }
+            .course-name { font-size: 0.96em; }
+            .course-code { font-size: 0.76em; padding: 2px 7px; }
+            .course-right { justify-content: flex-start; }
+            .course-term-pill { align-self: flex-start; }
+            .textbook-item { flex-direction: column !important; padding: 12px; gap: 10px; border-radius: 10px; }
+            .textbook-cover { flex: 0 0 68px !important; width: 68px !important; aspect-ratio: 3/4; font-size: 1.6em !important; }
+            .textbook-title-zh { font-size: 1.0em !important; }
+            .textbook-meta { font-size: 0.84em !important; }
+            .main-content { max-width: none !important; }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar { padding: 14px 14px 10px; }
+            .main-content { padding: 14px 12px 40px; }
+            .main-content h1 { font-size: 1.3em; }
+            .course-item { font-size: 0.90em !important; padding: 9px 11px !important; border-radius: 8px !important; }
+            .course-name { font-size: 0.94em !important; }
+            .course-type-pill { font-size: 0.68em !important; padding: 2px 7px !important; }
+            .course-term-pill { font-size: 0.78em !important; padding: 3px 9px !important; }
+            .textbook-item { padding: 11px !important; border-radius: 8px; }
+            .textbook-cover { flex: 0 0 64px !important; width: 64px !important; font-size: 1.55em !important; }
+            .textbook-title-zh { font-size: 0.98em !important; }
+            .textbook-meta { font-size: 0.82em !important; }
+            .textbook-links a { font-size: 0.82em; padding: 2px 7px; }
+            .main-content { max-width: none !important; }
         }
     </style>
 </head>
@@ -140,28 +466,98 @@
     <div class="main-content">
         <h1>Baojun Liu - Courses</h1>
 
+        <!-- ========== Academic Textbooks / 学科教材 ========== -->
+        <div class="section-heading">Academic Textbooks &middot; 学科教材</div>
+        <ul class="textbook-list">
+            <li class="textbook-item published">
+                <div class="textbook-cover" aria-label="教材封面占位符">教</div>
+                <div class="textbook-body">
+                    <div class="textbook-title-row">
+                        <span class="textbook-title-zh">《计算机网络安全实践教程》</span>
+                        <span class="textbook-badge published" aria-label="已出版"></span>
+                    </div>
+                    <div class="textbook-title-en">Computer Network Security &mdash; A Hands-on Tutorial</div>
+                    <div class="textbook-meta">
+                        <strong>Co-Author &middot; 参与编写</strong><br>
+                        Tsinghua University Press (清华大学出版社) &middot; 已出版<br>
+                        <span style="color:#6b7280;">国内主要图书平台、出版社官网及高校图书馆均可检索到本书相关资料。</span>
+                    </div>
+                    <div class="textbook-links">
+                        <a href="https://book.douban.com/subject/37507701/"
+                           target="_blank" rel="noopener noreferrer">Douban · 豆瓣详情</a>
+                        <a href="https://search.jd.com/Search?keyword=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%AE%9E%E8%B7%B5%E6%95%99%E7%A8%8B&enc=utf-8"
+                           target="_blank" rel="noopener noreferrer">JD · 京东图书</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="textbook-item in-press">
+                <div class="textbook-cover" aria-label="教材封面占位符">网</div>
+                <div class="textbook-body">
+                    <div class="textbook-title-row">
+                        <span class="textbook-title-zh">《网络协议安全分析》</span>
+                        <span class="textbook-badge in-press" aria-label="出版中"></span>
+                    </div>
+                    <div class="textbook-title-en">Security Analysis of Network Protocols</div>
+                    <div class="textbook-meta">
+                        <strong>Co-Author &middot; 参与编写</strong><br>
+                        Tsinghua University Press (清华大学出版社) &middot; 正在出版中<br>
+                        <span style="color:#6b7280;">预计 2026 年底 &ndash; 2027 年上半年正式面世，详情稍后更新。</span>
+                    </div>
+                    <div class="textbook-links">
+                        <a href="#top" aria-disabled="true" style="opacity:.55;pointer-events:none;background:#fafafa;border-color:#e5e7eb;color:#6b7280;">封面、详情与链接待出版后添加</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+
         <div class="institution-title">Tsinghua University Teaching Experience</div>
-        <ul class="course-list">
-            <li class="course-item">
-                <span class="course-name">Computer Network Security Technology</span>
-                <span class="course-period">Fall 2025</span>
-                <span class="course-code">(80240352)</span>
-                <span class="course-type">Graduate Course (G)</span>
+        <ul class="course-list cardified">
+                        <li class="course-item">
+                <div class="course-left">
+                    <div class="course-head">
+                        <span class="course-name">Computer Network Security Technology</span>
+                        <span class="course-code">80240352</span>
+                    </div>
+                    <div class="course-pills">
+                        <span class="course-type-pill grad">Graduate · 研究生课</span>
+                    </div>
+                </div>
+                <div class="course-right">
+                    <span class="course-term-pill">Fall 2025</span>
+                </div>
             </li>
           
-            <li class="course-item">
-                <span class="course-name">Internet Architecture and its Security Foundations</span>
-                <span class="course-period">Fall 2013 - now</span>
-                <span class="course-code">(74120013)</span>
-                <span class="course-type">Graduate Course (G)</span>
+                        <li class="course-item">
+                <div class="course-left">
+                    <div class="course-head">
+                        <span class="course-name">Internet Architecture and its Security Foundations</span>
+                        <span class="course-code">74120013</span>
+                    </div>
+                    <div class="course-pills">
+                        <span class="course-type-pill grad">Graduate · 研究生课</span>
+                    </div>
+                </div>
+                <div class="course-right">
+                    <span class="course-term-pill ongoing">Fall 2013 - now</span>
+                </div>
             </li>
 
                       
-            <li class="course-item">
-                <span class="course-name">Interdisciplinary Basic Science Practice Course</span>
-                <span class="course-period">Summer 2023 - now</span>
-                <span class="course-code">(44710062)</span>
-                <span class="course-type">Undergraduate Course (U)</span>
+                        <li class="course-item">
+                <div class="course-left">
+                    <div class="course-head">
+                        <span class="course-name">Interdisciplinary Basic Science Practice Course</span>
+                        <span class="course-code">44710062</span>
+                    </div>
+                    <div class="course-pills">
+                        <span class="course-type-pill ugrad">Undergraduate · 本科生课</span>
+                    </div>
+                </div>
+                <div class="course-right">
+                    <span class="course-term-pill ongoing">Summer 2023 - now</span>
+                </div>
             </li>
 
 

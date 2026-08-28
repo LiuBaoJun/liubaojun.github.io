@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baojun Liu - Education</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            line-height: 1.4;
+            min-height: 100vh; /* 添加最小高度 */
+        }
+      
+        .sidebar {
+            width: 180px;
+            background-color: #f8f8f8;
+            padding: 25px 20px;
+            border-right: 1px solid #e6e6e6;
+            flex-shrink: 0;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+      
+        .main-content {
+            flex: 1;
+            padding: 20px 30px; /* 统一内边距 */
+        }
+      
+        h1 {
+            color: #4169E1;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+      
+        h2 {
+            color: #4169E1;
+            font-size: 20px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        /* 统一侧边栏样式 */
+        .section-title {
+            font-weight: bold;
+            margin: 18px 0 6px;
+            color: #333;
+            font-size: 0.98em;
+        }
+        .section-title:first-child { margin-top: 0; }
+
+        .menu-items { list-style: none; padding: 0; margin: 0; }
+        .menu-items li { margin-bottom: 4px; }
+        .menu-items a {
+            color: #4169E1;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+        .menu-items a:hover { text-decoration: underline; }
+
+        /* 主内容区样式 */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+      
+        .entry {
+            margin-bottom: 15px;
+        }
+      
+        .year {
+            float: right;
+            color: #4169E1; /* 统一年份颜色 */
+        }
+      
+        .position {
+            font-style: italic;
+            color: #666; /* 统一职位颜色 */
+        }
+
+        /* 响应式布局 — 统一移动端适配 */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+                -webkit-text-size-adjust: 100%;
+            }
+            .sidebar {
+                width: 100% !important;
+                max-width: 100%;
+                height: auto;
+                position: relative;
+                top: auto;
+                flex-shrink: 1;
+                box-sizing: border-box;
+                border-right: none;
+                border-bottom: 1px solid #e6e6e6;
+                padding: 16px 18px 12px 18px;
+                overflow-y: visible;
+            }
+            .sidebar .section-title { font-size: 1em; margin: 14px 0 4px; }
+            .sidebar .section-title:first-child { margin-top: 0; }
+            .sidebar .menu-items li { margin-bottom: 6px; }
+            .sidebar .menu-items a { font-size: 1em; display: block; padding: 6px 2px; }
+            .main-content {
+                padding: 18px 16px 40px 16px;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+            .main-content h1 { font-size: 1.45em; margin-bottom: 12px; }
+            .main-content h2 { font-size: 1.15em; margin-top: 20px; margin-bottom: 10px; }
+            .entry { margin-bottom: 12px; font-size: 0.95em; line-height: 1.45; }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar { padding: 14px 14px 10px; }
+            .main-content { padding: 14px 12px 40px; }
+            .main-content h1 { font-size: 1.3em; }
+            .main-content h2 { font-size: 1.05em; }
+        }
+    </style>
+</head>
+<body>
+    <!-- 统一后的侧边栏结构 -->
+    <div class="sidebar">
+        <div class="section-title">Baojun Liu</div>
+        <ul class="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="assets/files/cv/baojuncv202503.pdf">CV</a></li>
+            <li><a href="publications.html">Publications</a></li>
+        </ul>
+      
+        <div class="section-title">Teaching</div>
+        <ul class="menu-items">
+            <li><a href="courses.html">Courses</a></li>
+        </ul>
+      
+        <div class="section-title">Group</div>
+        <ul class="menu-items">
+            <li><a href="members.html">Members</a></li>
+            <li><a href="alumni.html">Alumni</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h1>Baojun Liu - Education</h1>
+
+        <h2>Education</h2>
+        <ul>
+            <li class="entry">
+                Tsinghua University <span class="year">2015 - 2020</span><br>
+                Ph.D. in Computer Science and Technology<br>
+                Advisors: Prof. Ying Liu, Prof. Haixin Duan
+            </li>
+          
+            <li class="entry">
+                University of California, Berkeley <span class="year">2018 - 2019</span><br>
+                Senior Visiting Scholar<br>
+                International Computer Science Institute (ICSI)<br>
+                Advisor: Prof. Vern Paxson (ACM Fellow)
+            </li>
+          
+            <li class="entry">
+                Xidian University <span class="year">2011 - 2015</span><br>
+                B.Eng. in Electronic Engineering<br>
+            </li>
+        </ul>
+
+        <h2>Work Experience</h2>
+        <ul>
+            <li class="entry">
+                Tsinghua University <span class="year">2025 - Present</span><br>
+                <span class="position">Associate Professor</span>, Institute for Network Sciences and Cyberspace
+            </li>
+
+            <li class="entry">
+                Tsinghua University <span class="year">2022 - 2025</span><br>
+                <span class="position">Assistant Professor</span>, Institute for Network Sciences and Cyberspace
+            </li>
+          
+            <li class="entry">
+                Tsinghua University <span class="year">2020 - 2022</span><br>
+                <span class="position">Postdoctoral Researcher</span>, Tsinghua Shuimu Scholar
+            </li>
+        </ul>
+
+        <h2>Honors and Awards</h2>
+        <ul>
+            <li class="entry">NDSS Distinguished Paper Award (DNS Bailiwick), 2026</li>
+            <li class="entry">NDSS Distinguished Paper Award (Email Aliases), 2026</li>  
+            <li class="entry">USENIX Security Honorable Mention, 2025</li>   
+            <li class="entry">National "Ten Thousand Talents Program" Youth Top-Notch Talent Support Plan, 2023</li>
+            <li class="entry">Internet Foundation Technology Contribution Award, 2023</li>
+            <li class="entry">ACM CCS Distinguished Paper Award, 2023</li>
+            <li class="entry">ACM SIGSAC China Rising Star Award, 2022</li>
+            <li class="entry">Internet Society Applied Networking Research Award (ANRP), 2020</li>
+            <li class="entry">IEEE/IFIP DSN Best Paper Award, 2020</li>
+            <li class="entry">NDSS Distinguished Paper Award, 2019</li>
+            <li class="entry">ACM IMC Best Paper Award Nominee, 2019</li>
+            <li class="entry">ACM IMC Community Contribution Award Nominee, 2019</li>
+        </ul>
+    </div>
+</body>
+</html>

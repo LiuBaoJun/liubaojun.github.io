@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baojun Liu - Biography</title>
+    <title>Baojun Liu - Group Alumni</title>
     <style>
         /* 继承全局样式 */
         body {
@@ -14,7 +14,7 @@
             line-height: 1.4;
             min-height: 100vh;
         }
-      
+    
         .sidebar {
             width: 180px;
             background-color: #f8f8f8;
@@ -27,12 +27,12 @@
             box-sizing: border-box;
             overflow-y: auto;
         }
-      
+    
         .main-content {
             flex: 1;
             padding: 20px 30px;
         }
-      
+    
         h1 {
             color: #4169E1;
             font-size: 1.75em;
@@ -62,35 +62,41 @@
         }
         .menu-items a:hover { text-decoration: underline; }
 
-        /* 传记页面特定样式 */
-        .bio-section {
-            margin: 25px 0;
-            padding-left: 15px;
-            border-left: 2px solid #4169E1;
-        }
-      
-        .time-period {
-            float: right;
-            color: #4169E1;
-            font-weight: normal;
-        }
-      
-        .position-title {
-            font-weight: bold;
+        /* 成员页面样式 */
+        .member-category {
+            margin: 25px 0 15px;
             color: #2c3e50;
+            font-size: 1.1em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
         }
-      
-        .research-interests {
+    
+        .member-list {
             list-style: none;
             padding-left: 20px;
         }
-      
-        .research-interests li::before {
+    
+        .member-item {
+            margin: 12px 0;
+            position: relative;
+        }
+
+        .member-item::before {
             content: "•";
+            position: absolute;
+            left: -15px;
+            color: #666;
+        }
+    
+        .member-period {
+            float: right;
             color: #4169E1;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
+        }
+    
+        .collab-info {
+            color: #666;
+            font-size: 0.9em;
+            margin-left: 8px;
         }
 
         /* ===== Responsive (Mobile) ===== */
@@ -122,24 +128,27 @@
                 box-sizing: border-box;
             }
             .main-content h1 { font-size: 1.45em; margin-bottom: 12px; }
-            .bio-section {
-                margin: 18px 0;
-                padding-left: 10px;
-                border-left-width: 2px;
+            .member-category {
+                margin: 20px 0 10px;
+                font-size: 1.1em;
             }
-            .time-period {
-                float: none;
-                display: block;
-                margin-bottom: 4px;
-                font-size: 0.9em;
+            .member-list { padding-left: 4px; }
+            .member-item {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                margin: 10px 0;
+                font-size: 0.95em;
             }
-            .research-interests { padding-left: 0; }
+            .member-period { display: block; color: #666; font-size: 0.9em; }
+            .collab-info { display: block; margin-left: 0; }
         }
 
         @media (max-width: 480px) {
             .sidebar { padding: 14px 14px 10px; }
             .main-content { padding: 14px 12px 40px; }
             .main-content h1 { font-size: 1.3em; }
+            .member-item { font-size: 0.92em; }
         }
     </style>
 </head>
@@ -153,66 +162,49 @@
             <li><a href="assets/files/cv/baojuncv202503.pdf">CV</a></li>
             <li><a href="publications.html">Publications</a></li>
         </ul>
-      
+    
         <div class="section-title">Teaching</div>
         <ul class="menu-items">
             <li><a href="courses.html">Courses</a></li>
         </ul>
-      
+    
         <div class="section-title">Group</div>
         <ul class="menu-items">
             <li><a href="members.html">Members</a></li>
             <li><a href="alumni.html">Alumni</a></li>
         </ul>
-
     </div>
-
     <div class="main-content">
-        <h1>Baojun Liu - Biography</h1>
+        <h1>Alumni</h1>
+        <div class="member-category">Ph.D. Students</div>
+        <ul class="member-list">
+            <!-- Ph.D. Students -->
+            <li class="member-item">
+                Yunyi Zhang <span class="collab-info">(w/ Prof. Min Zhang)</span>
+                <span class="member-period">2023 – 2025</span>
+            </li>
+             <!-- Ph.D. Students -->
+             <li class="member-item">
+                Xiang Li <span class="collab-info">(w/ Prof. Qi Li)</span>
+                <span class="member-period">2019 – 2024</span>
+            </li>           
+        </ul>
 
-        <!--
-        <div class="bio-section">
+        <div class="member-category">Master Students</div>
+        <ul class="member-list">
+            <li class="member-item">
+                Ruixuan Li <span class="collab-info">(w/ Prof. Jun Shao)</span>
+                <span class="member-period">2023 – 2025</span>
+            </li>
 
-            
-            <h2>Academic Background</h2>
-            <p>
-                <span class="position-title">Ph.D. in EECS</span>
-                <span class="time-period">2008-2014</span><br>
-                Massachusetts Institute of Technology (MIT)<br>
-                Advisor: Professor [Advisor Name]
-            </p>
-            <p>
-                <span class="position-title">M.S. in EECS</span>
-                <span class="time-period">2005-2008</span><br>
-                Massachusetts Institute of Technology (MIT)<br>
-                Advisor: Professor [Advisor Name]
-            </p>
-        </div>
+            <li class="member-item">
+                Wei Xu <span class="collab-info">(w/ Prof. Haixin Duan)</span>
+                <span class="member-period">2021 – 2024</span>
+            </li>
+            <!-- 其他硕士生成员 -->
+        </ul>
 
-        <div class="bio-section">
-            <h2>Research Focus</h2>
-            <ul class="research-interests">
-                <li>Wireless communication systems</li>
-                <li>Network localization and navigation</li>
-                <li>Multi-agent systems</li>
-                <li>Biomedical system modeling</li>
-            </ul>
-        </div>
-
-        <div class="bio-section">
-            <h2>Academic Service</h2>
-            <p>
-                <span class="position-title">IEEE Senior Member</span>
-                <span class="time-period">2020-Present</span><br>
-                Technical Program Committee Member for IEEE ICC 2022-2024
-            </p>
-            <p>
-                <span class="position-title">Associate Editor</span>
-                <span class="time-period">2018-2020</span><br>
-                IEEE Transactions on Wireless Communications
-            </p>
-        </div>
-        -->
+        </ul>
     </div>
 </body>
 </html>

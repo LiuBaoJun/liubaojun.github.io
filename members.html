@@ -16,10 +16,16 @@
         }
       
         .sidebar {
-            width: 200px;
-            background-color: #f5f5f5;
-            padding: 20px;
-            border-right: 1px solid #ddd;
+            width: 180px;
+            background-color: #f8f8f8;
+            padding: 25px 20px;
+            border-right: 1px solid #e6e6e6;
+            flex-shrink: 0;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            box-sizing: border-box;
+            overflow-y: auto;
         }
       
         .main-content {
@@ -29,71 +35,272 @@
       
         h1 {
             color: #4169E1;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-            font-size: 24px;
-            margin-bottom: 20px;
+            font-size: 1.75em;
+            font-weight: bold;
+            margin: 0 0 12px 0;
+            padding: 0 0 8px 0;
+            border-bottom: 1px solid #d4d4d4;
+            line-height: 1.2;
+            letter-spacing: 0.2px;
         }
 
         /* 严格统一侧边栏 */
         .section-title {
             font-weight: bold;
-            margin: 15px 0 5px;
+            margin: 18px 0 6px;
             color: #333;
-            font-size: 1em;
+            font-size: 0.98em;
         }
-      
-        .menu-items {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-      
-        .menu-items li {
-            margin-bottom: 5px;
-        }
-      
+        .section-title:first-child { margin-top: 0; }
+
+        .menu-items { list-style: none; padding: 0; margin: 0; }
+        .menu-items li { margin-bottom: 4px; }
         .menu-items a {
             color: #4169E1;
             text-decoration: none;
             font-size: 0.95em;
         }
+        .menu-items a:hover { text-decoration: underline; }
 
-        /* 成员页面样式 */
+        /* ========== Members page — modern card grid ========== */
+        :root {
+            --m-bg:       #ffffff;
+            --m-card:     #ffffff;
+            --m-line:     #ececec;
+            --m-shade:    #f6f8fb;
+            --m-shadow:   0 1px 2px rgba(0,0,0,0.03), 0 4px 14px -8px rgba(15, 23, 42, 0.10);
+            --m-hover:    0 1px 2px rgba(0,0,0,0.04), 0 8px 26px -10px rgba(15, 23, 42, 0.18);
+            --m-name:     #111827;
+            --m-muted:    #4b5563;
+            --m-subtle:   #6b7280;
+            --m-accent:   #4169E1;
+            --m-radius:   12px;
+        }
+
+        /* Section headers: identical blue-left-border treatment as courses.html */
         .member-category {
-            margin: 25px 0 15px;
             color: #2c3e50;
             font-size: 1.1em;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
+            font-weight: 700;
+            margin: 28px 0 14px;
+            padding: 0 0 0 10px;
+            border-left: 3px solid var(--m-accent);
+            border-bottom: none;
+            line-height: 1.3;
+            letter-spacing: 0.005em;
         }
-      
+        .member-category:first-of-type { margin-top: 22px; }
+
+        /* Card grid: responsive 3 columns */
         .member-list {
             list-style: none;
-            padding-left: 20px;
-        }
-      
-        .member-item {
-            margin: 12px 0;
-            position: relative;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            max-width: 940px;       /* prevent sprawling 2-col on ultrawide */
         }
 
-        .member-item::before {
-            content: "•";
-            position: absolute;
-            left: -15px;
-            color: #666;
+/* Single member card (compact layout — slim, dense, narrow) */
+        .member-item {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;        /* vertically tighter */
+            gap: 10px;
+
+            background: var(--m-card);
+            border: 1px solid var(--m-line);
+            border-radius: 10px;
+            padding: 10px 12px;
+            box-shadow: var(--m-shadow);
+            transition: box-shadow 0.22s ease, transform 0.22s ease, border-color 0.22s ease;
+            margin: 0;
         }
-      
+        .member-item:hover {
+            box-shadow: var(--m-hover);
+            transform: translateY(-1px);
+            border-color: #dde3ea;
+        }
+
+        /* Strip legacy bullet */
+
+        /* Strip legacy bullet */
+        .member-item::before { display: none; }
+
+        /* Avatar circle (initials) — 48 x 48, gradient + white bold initials */
+        .member-avatar {
+            flex: 0 0 36px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-family: "Helvetica Neue", "Inter", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+            font-weight: 700;
+            font-size: 0.86em;
+            letter-spacing: 0.01em;
+            line-height: 1;
+            user-select: none;
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.22),
+                        0 1px 3px rgba(15,23,42,0.10);
+        }
+        /* Palette of 8 soft gradients, rotated by name-hash so cards don't look identical */
+        .member-avatar.g0 { background: linear-gradient(135deg, #4169E1 0%, #6b8cff 100%); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18), 0 2px 4px rgba(65,105,225,0.22); }
+        .member-avatar.g1 { background: linear-gradient(135deg, #1e3a8a 0%, #4169E1 100%); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18), 0 2px 4px rgba(30,58,138,0.22); }
+        .member-avatar.g2 { background: linear-gradient(135deg, #3b82f6 0%, #93c5fd 100%); color: #0f2a55; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18), 0 2px 4px rgba(59,130,246,0.22); }
+        .member-avatar.g3 { background: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18), 0 2px 4px rgba(37,99,235,0.22); }
+        .member-avatar.g4 { background: linear-gradient(135deg, #1d4ed8 0%, #4f83f5 100%); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18), 0 2px 4px rgba(29,78,216,0.22); }
+        .member-avatar.g5 { background: linear-gradient(135deg, #475569 0%, #94a3b8 100%); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18), 0 2px 4px rgba(71,85,105,0.22); }
+        .member-avatar.g6 { background: linear-gradient(135deg, #6366f1 0%, #a5b4fc 100%); color: #1f2568; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18), 0 2px 4px rgba(99,102,241,0.22); }
+        .member-avatar.g7 { background: linear-gradient(135deg, #0ea5e9 0%, #7dd3fc 100%); color: #0c3b55; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18), 0 2px 4px rgba(14,165,233,0.22); }
+        .member-body {
+            flex: 1 1 auto;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+        .member-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 6px;
+        }
+        .member-name {
+            font-size: 0.97em;
+            font-weight: 700;
+            color: var(--m-name);
+            letter-spacing: -0.005em;
+            line-height: 1.25;
+        }
+        .member-role-tag {
+            font-size: 0.66em;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            padding: 2px 7px;
+            border-radius: 999px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        .member-role-tag.engineer { color: #334155; background: #f1f5f9; border: 1px solid #cbd5e1; letter-spacing: 0.03em; }
+        .member-role-tag.engineer::before { content: "\1F6E0\0020"; }   /* 🛠 */
+
+        .member-role-tag.postdoc  { color: #4338ca; background: #eef2ff; border: 1px solid #c7d2fe; }
+        .member-role-tag.postdoc::before { content: "\1F393\0020"; }   /* 🎓 */
+
+        .member-role-tag.phd      { color: #1e40af; background: #dbeafe; border: 1px solid #93c5fd; }
+        .member-role-tag.phd::before     { content: "\1F4DA\0020"; }   /* 📚 */
+
+        .member-role-tag.master   { color: #334155; background: #f8fafc; border: 1px solid #cbd5e1; }
+        .member-role-tag.master::before  { content: "\1F4D6\0020"; }   /* 📖 */
+
+        .member-advisor {
+            color: var(--m-muted);
+            font-size: 0.78em;
+            line-height: 1.3;
+            /* no min-height — so empty members collapse to zero (keeps card thin) */
+        }
+
+        .member-footer {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 1px;
+            gap: 6px;
+        }
         .member-period {
-            float: right;
-            color: #4169E1;
+            float: none;
+            color: var(--m-accent);
+            font-weight: 600;
+            font-size: 0.72em;
+            background: #f5f8ff;
+            border: 1px solid #d8e1f2;
+            padding: 1px 8px;
+            border-radius: 999px;
+            letter-spacing: 0.005em;
+            white-space: nowrap;
         }
-      
+        /* member-period: no prefix icon (was 📅) */
         .collab-info {
-            color: #666;
-            font-size: 0.9em;
-            margin-left: 8px;
+            color: var(--m-subtle);
+            font-size: 0.76em;
+            margin-left: 0;
+            line-height: 1.3;
+        }
+
+        /* Legacy bullet reset overrides (belt + suspenders) */
+        .member-list { padding-left: 0; }
+        .member-item { position: relative; }
+
+
+        /* ===== Responsive (Mobile) ===== */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+                -webkit-text-size-adjust: 100%;
+            }
+            .sidebar {
+                width: 100% !important;
+                max-width: 100%;
+                height: auto;
+                position: relative;
+                top: auto;
+                flex-shrink: 1;
+                box-sizing: border-box;
+                border-right: none;
+                border-bottom: 1px solid #e6e6e6;
+                padding: 16px 18px 12px 18px;
+                overflow-y: visible;
+            }
+            .sidebar .section-title { font-size: 1em; margin: 14px 0 4px; }
+            .sidebar .section-title:first-child { margin-top: 0; }
+            .sidebar .menu-items li { margin-bottom: 6px; }
+            .sidebar .menu-items a { font-size: 1em; display: block; padding: 6px 2px; }
+            .main-content {
+                padding: 18px 16px 40px 16px;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+            .main-content h1 { font-size: 1.45em; margin-bottom: 12px; }
+            .member-category {
+                margin: 22px 0 10px;
+                font-size: 1.05em;
+            }
+            .member-list {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+                padding-left: 0;
+            }
+            .member-item {
+                padding: 9px 11px;
+                gap: 9px;
+                font-size: 0.95em;
+                flex-direction: row;
+                margin: 0;
+                display: flex;
+                border-radius: 10px;
+            }
+            .member-list { max-width: none !important; }     /* grid cap only matters for desktop */
+            .member-avatar { width: 34px; height: 34px; flex: 0 0 34px; font-size: 0.82em; }
+            .member-name { font-size: 0.95em !important; }
+            .member-period { display: inline-flex; font-size: 0.7em; padding: 1px 8px; }
+            .collab-info { display: block; margin-left: 0; }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar { padding: 14px 14px 10px; }
+            .main-content { padding: 14px 12px 40px; }
+            .main-content h1 { font-size: 1.3em; }
+            .member-list { grid-template-columns: 1fr !important; gap: 8px !important; padding-left: 0 !important; max-width: none !important; }
+            .member-item { padding: 8px 10px !important; gap: 8px !important; font-size: 0.92em !important; border-radius: 9px !important; }
+            .member-avatar { width: 32px !important; height: 32px !important; flex: 0 0 32px !important; font-size: 0.8em !important; }
+            .member-name { font-size: 0.94em !important; }
+            .member-period { font-size: 0.68em !important; padding: 1px 7px !important; }
+            .member-role-tag { font-size: 0.64em !important; padding: 1px 6px !important; }
         }
     </style>
 </head>
@@ -123,100 +330,254 @@
     <div class="main-content">
         <h1>Current Members</h1>
 
+        <div class="member-category">Research Engineers</div>
+        <ul class="member-list">
+            <li class="member-item">
+                <span class="member-avatar g4" aria-label="Fulin Zhou avatar">FZ</span>
+                <div class="member-body">
+                    <div class="member-head">
+                        <span class="member-name">Fulin Zhou</span>
+                        <span class="member-role-tag engineer">Engineer</span>
+                    </div>
+                    <div class="member-advisor"></div>
+                    <div class="member-footer">
+                        <span class="member-period">2026 – now</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
         <div class="member-category">Postdoctoral Fellow</div>
         <ul class="member-list">
             <li class="member-item">
-                Yunyi Zhang
-                <span class="member-period">2025 – now</span>
+                <span class="member-avatar g6" aria-label="Yunyi Zhang avatar">YZ</span>
+                <div class="member-body">
+                    <div class="member-head">
+                        <span class="member-name">Yunyi Zhang</span>
+                        <span class="member-role-tag postdoc">Postdoc</span>
+                    </div>
+                    <div class="member-advisor"></div>
+                    <div class="member-footer">
+                        <span class="member-period">2025 – now</span>
+                    </div>
+                </div>
             </li>
         </ul>
 
         <div class="member-category">Ph.D. Students</div>
         <ul class="member-list">
             <li class="member-item">
-                Yijing Liu <span class="collab-info"></span>
-                <span class="member-period">2023 – now</span>
+                <span class="member-avatar g4" aria-label="Yijing Liu avatar">YL</span>
+                <div class="member-body">
+                    <div class="member-head">
+                        <span class="member-name">Yijing Liu</span>
+                        <span class="member-role-tag phd">Ph.D.</span>
+                    </div>
+                    <div class="member-advisor"></div>
+                    <div class="member-footer">
+                        <span class="member-period">2023 – now</span>
+                    </div>
+                </div>
             </li>
-
             <li class="member-item">
-                Zhenglong Jin <span class="collab-info">(w/ Prof. Ying Liu)</span>
-                <span class="member-period">2023 – now</span>
+                <span class="member-avatar g5" aria-label="Zhenglong Jin avatar">ZJ</span>
+                <div class="member-body">
+                    <div class="member-head">
+                        <span class="member-name">Zhenglong Jin</span>
+                        <span class="member-role-tag phd">Ph.D.</span>
+                    </div>
+                    <div class="member-advisor">(w/ Prof. Ying Liu)</div>
+                    <div class="member-footer">
+                        <span class="member-period">2023 – now</span>
+                    </div>
+                </div>
             </li>
-
             <li class="member-item">
-                Shiming Liu <span class="collab-info"></span>
-                <span class="member-period">2023 – now</span>
+                <span class="member-avatar g1" aria-label="Shiming Liu avatar">SL</span>
+                <div class="member-body">
+                    <div class="member-head">
+                        <span class="member-name">Shiming Liu</span>
+                        <span class="member-role-tag phd">Ph.D.</span>
+                    </div>
+                    <div class="member-advisor"></div>
+                    <div class="member-footer">
+                        <span class="member-period">2023 – now</span>
+                    </div>
+                </div>
             </li>
-
             <li class="member-item">
-                Shibo Cui <span class="collab-info"></span>
-                <span class="member-period">2024 – now</span>
+                <span class="member-avatar g6" aria-label="Shibo Cui avatar">SC</span>
+                <div class="member-body">
+                    <div class="member-head">
+                        <span class="member-name">Shibo Cui</span>
+                        <span class="member-role-tag phd">Ph.D.</span>
+                    </div>
+                    <div class="member-advisor"></div>
+                    <div class="member-footer">
+                        <span class="member-period">2024 – now</span>
+                    </div>
+                </div>
             </li>
-
             <li class="member-item">
-                Dashuai Wu <span class="collab-info"></span>
-                <span class="member-period">2024 – now</span>
+                <span class="member-avatar g3" aria-label="Dashuai Wu avatar">DW</span>
+                <div class="member-body">
+                    <div class="member-head">
+                        <span class="member-name">Dashuai Wu</span>
+                        <span class="member-role-tag phd">Ph.D.</span>
+                    </div>
+                    <div class="member-advisor"></div>
+                    <div class="member-footer">
+                        <span class="member-period">2024 – now</span>
+                    </div>
+                </div>
             </li>
-
             <li class="member-item">
-                Ruixuan Li <span class="collab-info"></span>
-                <span class="member-period">2025 – now</span>
+                <span class="member-avatar g1" aria-label="Ruixuan Li avatar">RL</span>
+                <div class="member-body">
+                    <div class="member-head">
+                        <span class="member-name">Ruixuan Li</span>
+                        <span class="member-role-tag phd">Ph.D.</span>
+                    </div>
+                    <div class="member-advisor"></div>
+                    <div class="member-footer">
+                        <span class="member-period">2025 – now</span>
+                    </div>
+                </div>
             </li>
-
             <li class="member-item">
-                Yuxiao Wu <span class="collab-info"></span>
-                <span class="member-period">2025 – now</span>
+                <span class="member-avatar g3" aria-label="Yuxiao Wu avatar">YW</span>
+                <div class="member-body">
+                    <div class="member-head">
+                        <span class="member-name">Yuxiao Wu</span>
+                        <span class="member-role-tag phd">Ph.D.</span>
+                    </div>
+                    <div class="member-advisor"></div>
+                    <div class="member-footer">
+                        <span class="member-period">2025 – now</span>
+                    </div>
+                </div>
             </li>
-
             <li class="member-item">
-                Lijie Wu <span class="collab-info">(w/ Prof. Xiaoping Zhang)</span>
-                <span class="member-period">2025 – now</span>
+                <span class="member-avatar g1" aria-label="Lijie Wu avatar">LW</span>
+                <div class="member-body">
+                    <div class="member-head">
+                        <span class="member-name">Lijie Wu</span>
+                        <span class="member-role-tag phd">Ph.D.</span>
+                    </div>
+                    <div class="member-advisor">(w/ Prof. Xiaoping Zhang)</div>
+                    <div class="member-footer">
+                        <span class="member-period">2025 – now</span>
+                    </div>
+                </div>
             </li>
-
             <li class="member-item">
-                Shiyao Guo <span class="collab-info"></span>
-                <span class="member-period">2026 – now</span>
+                <span class="member-avatar g0" aria-label="Shiyao Guo avatar">SG</span>
+                <div class="member-body">
+                    <div class="member-head">
+                        <span class="member-name">Shiyao Guo</span>
+                        <span class="member-role-tag phd">Ph.D.</span>
+                    </div>
+                    <div class="member-advisor"></div>
+                    <div class="member-footer">
+                        <span class="member-period">2026 – now</span>
+                    </div>
+                </div>
             </li>
-
             <li class="member-item">
-                Yihan Lin <span class="collab-info"></span>
-                <span class="member-period">2026 – now</span>
-            </li>            
-
-            <!-- 其他博士生成员 -->
+                <span class="member-avatar g4" aria-label="Yihan Lin avatar">YL</span>
+                <div class="member-body">
+                    <div class="member-head">
+                        <span class="member-name">Yihan Lin</span>
+                        <span class="member-role-tag phd">Ph.D.</span>
+                    </div>
+                    <div class="member-advisor"></div>
+                    <div class="member-footer">
+                        <span class="member-period">2026 – now</span>
+                    </div>
+                </div>
+            </li>
         </ul>
 
         <div class="member-category">Master Students</div>
         <ul class="member-list">
-            <li class="member-item">
-                Yunpeng Xing
-                <span class="member-period">2023 – now</span>
+<li class="member-item">
+                <span class="member-avatar g2" aria-label="Junzhe Sun avatar">JS</span>
+                <div class="member-body">
+                    <div class="member-head">
+                        <span class="member-name">Junzhe Sun</span>
+                        <span class="member-role-tag master">Master</span>
+                    </div>
+                    <div class="member-advisor">(w/ Prof. Donghong Sun)</div>
+                    <div class="member-footer">
+                        <span class="member-period">2024 – now</span>
+                    </div>
+                </div>
             </li>
             <li class="member-item">
-                Junzhe Sun <span class="collab-info">(w/ Prof. Donghong Sun)</span>
-                <span class="member-period">2024 – now</span>
+                <span class="member-avatar g3" aria-label="Qingxin Gui avatar">QG</span>
+                <div class="member-body">
+                    <div class="member-head">
+                        <span class="member-name">Qingxin Gui</span>
+                        <span class="member-role-tag master">Master</span>
+                    </div>
+                    <div class="member-advisor"></div>
+                    <div class="member-footer">
+                        <span class="member-period">2024 – now</span>
+                    </div>
+                </div>
             </li>
             <li class="member-item">
-                Qingxin Gui 
-                <span class="member-period">2024 – now</span>
+                <span class="member-avatar g3" aria-label="Jingkai Yu avatar">JY</span>
+                <div class="member-body">
+                    <div class="member-head">
+                        <span class="member-name">Jingkai Yu</span>
+                        <span class="member-role-tag master">Master</span>
+                    </div>
+                    <div class="member-advisor">(w/ Prof. Jia Zhang)</div>
+                    <div class="member-footer">
+                        <span class="member-period">2024 – now</span>
+                    </div>
+                </div>
             </li>
             <li class="member-item">
-                Jingkai Yu <span class="collab-info">(w/ Prof. Jia Zhang)</span>
-                <span class="member-period">2024 – now</span>
+                <span class="member-avatar g5" aria-label="Jia Yao avatar">JY</span>
+                <div class="member-body">
+                    <div class="member-head">
+                        <span class="member-name">Jia Yao</span>
+                        <span class="member-role-tag master">Master</span>
+                    </div>
+                    <div class="member-advisor"></div>
+                    <div class="member-footer">
+                        <span class="member-period">2025 – now</span>
+                    </div>
+                </div>
             </li>
             <li class="member-item">
-                Jia Yao
-                <span class="member-period">2025 – now</span>
+                <span class="member-avatar g6" aria-label="Junguo Zou avatar">JZ</span>
+                <div class="member-body">
+                    <div class="member-head">
+                        <span class="member-name">Junguo Zou</span>
+                        <span class="member-role-tag master">Master</span>
+                    </div>
+                    <div class="member-advisor">(w/ Prof. Donghong Sun)</div>
+                    <div class="member-footer">
+                        <span class="member-period">2025 – now</span>
+                    </div>
+                </div>
             </li>
             <li class="member-item">
-                Junguo Zou <span class="collab-info">(w/ Prof. Donghong Sun)</span>
-                <span class="member-period">2025 – now</span>
+                <span class="member-avatar g5" aria-label="Luwen Zhao avatar">LZ</span>
+                <div class="member-body">
+                    <div class="member-head">
+                        <span class="member-name">Luwen Zhao</span>
+                        <span class="member-role-tag master">Master</span>
+                    </div>
+                    <div class="member-advisor"></div>
+                    <div class="member-footer">
+                        <span class="member-period">2026 – now</span>
+                    </div>
+                </div>
             </li>
-            <li class="member-item">
-                Luwen Zhao
-                <span class="member-period">2026 – now</span>
-            </li>            
-            <!-- 其他硕士生成员 -->
         </ul>
     </div>
 </body>

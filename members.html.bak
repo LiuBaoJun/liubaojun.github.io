@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baojun Liu - Group Members</title>
+    <style>
+        /* 继承全局样式 */
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            line-height: 1.4;
+            min-height: 100vh;
+        }
+      
+        .sidebar {
+            width: 180px;
+            background-color: #f8f8f8;
+            padding: 25px 20px;
+            border-right: 1px solid #e6e6e6;
+            flex-shrink: 0;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+      
+        .main-content {
+            flex: 1;
+            padding: 20px 30px;
+        }
+      
+        h1 {
+            color: #4169E1;
+            font-size: 1.75em;
+            font-weight: bold;
+            margin: 0 0 12px 0;
+            padding: 0 0 8px 0;
+            border-bottom: 1px solid #d4d4d4;
+            line-height: 1.2;
+            letter-spacing: 0.2px;
+        }
+
+        /* 严格统一侧边栏 */
+        .section-title {
+            font-weight: bold;
+            margin: 18px 0 6px;
+            color: #333;
+            font-size: 0.98em;
+        }
+        .section-title:first-child { margin-top: 0; }
+
+        .menu-items { list-style: none; padding: 0; margin: 0; }
+        .menu-items li { margin-bottom: 4px; }
+        .menu-items a {
+            color: #4169E1;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+        .menu-items a:hover { text-decoration: underline; }
+
+        /* 成员页面样式 */
+        .member-category {
+            margin: 25px 0 15px;
+            color: #2c3e50;
+            font-size: 1.1em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+      
+        .member-list {
+            list-style: none;
+            padding-left: 20px;
+        }
+      
+        .member-item {
+            margin: 12px 0;
+            position: relative;
+        }
+
+        .member-item::before {
+            content: "•";
+            position: absolute;
+            left: -15px;
+            color: #666;
+        }
+      
+        .member-period {
+            float: right;
+            color: #4169E1;
+        }
+      
+        .collab-info {
+            color: #666;
+            font-size: 0.9em;
+            margin-left: 8px;
+        }
+
+        /* ===== Responsive (Mobile) ===== */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+                -webkit-text-size-adjust: 100%;
+            }
+            .sidebar {
+                width: 100% !important;
+                max-width: 100%;
+                height: auto;
+                position: relative;
+                top: auto;
+                flex-shrink: 1;
+                box-sizing: border-box;
+                border-right: none;
+                border-bottom: 1px solid #e6e6e6;
+                padding: 16px 18px 12px 18px;
+                overflow-y: visible;
+            }
+            .sidebar .section-title { font-size: 1em; margin: 14px 0 4px; }
+            .sidebar .section-title:first-child { margin-top: 0; }
+            .sidebar .menu-items li { margin-bottom: 6px; }
+            .sidebar .menu-items a { font-size: 1em; display: block; padding: 6px 2px; }
+            .main-content {
+                padding: 18px 16px 40px 16px;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+            .main-content h1 { font-size: 1.45em; margin-bottom: 12px; }
+            .member-category {
+                margin: 20px 0 10px;
+                font-size: 1.1em;
+            }
+            .member-list { padding-left: 4px; }
+            .member-item {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                margin: 10px 0;
+                font-size: 0.95em;
+            }
+            .member-period { display: block; color: #666; font-size: 0.9em; }
+            .collab-info { display: block; margin-left: 0; }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar { padding: 14px 14px 10px; }
+            .main-content { padding: 14px 12px 40px; }
+            .main-content h1 { font-size: 1.3em; }
+            .member-item { font-size: 0.92em; }
+        }
+    </style>
+</head>
+<body>
+    <!-- 完全一致的侧边栏结构 -->
+    <div class="sidebar">
+        <div class="section-title">Baojun Liu</div>
+        <ul class="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="assets/files/cv/baojuncv202503.pdf">CV</a></li>
+            <li><a href="publications.html">Publications</a></li>
+        </ul>
+      
+        <div class="section-title">Teaching</div>
+        <ul class="menu-items">
+            <li><a href="courses.html">Courses</a></li>
+        </ul>
+      
+        <div class="section-title">Group</div>
+        <ul class="menu-items">
+            <li><a href="members.html">Members</a></li>
+            <li><a href="alumni.html">Alumni</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h1>Current Members</h1>
+
+        <div class="member-category">Postdoctoral Fellow</div>
+        <ul class="member-list">
+            <li class="member-item">
+                Yunyi Zhang
+                <span class="member-period">2025 – now</span>
+            </li>
+        </ul>
+
+        <div class="member-category">Ph.D. Students</div>
+        <ul class="member-list">
+            <li class="member-item">
+                Yijing Liu <span class="collab-info"></span>
+                <span class="member-period">2023 – now</span>
+            </li>
+
+            <li class="member-item">
+                Zhenglong Jin <span class="collab-info">(w/ Prof. Ying Liu)</span>
+                <span class="member-period">2023 – now</span>
+            </li>
+
+            <li class="member-item">
+                Shiming Liu <span class="collab-info"></span>
+                <span class="member-period">2023 – now</span>
+            </li>
+
+            <li class="member-item">
+                Shibo Cui <span class="collab-info"></span>
+                <span class="member-period">2024 – now</span>
+            </li>
+
+            <li class="member-item">
+                Dashuai Wu <span class="collab-info"></span>
+                <span class="member-period">2024 – now</span>
+            </li>
+
+            <li class="member-item">
+                Ruixuan Li <span class="collab-info"></span>
+                <span class="member-period">2025 – now</span>
+            </li>
+
+            <li class="member-item">
+                Yuxiao Wu <span class="collab-info"></span>
+                <span class="member-period">2025 – now</span>
+            </li>
+
+            <li class="member-item">
+                Lijie Wu <span class="collab-info">(w/ Prof. Xiaoping Zhang)</span>
+                <span class="member-period">2025 – now</span>
+            </li>
+
+            <li class="member-item">
+                Shiyao Guo <span class="collab-info"></span>
+                <span class="member-period">2026 – now</span>
+            </li>
+
+            <li class="member-item">
+                Yihan Lin <span class="collab-info"></span>
+                <span class="member-period">2026 – now</span>
+            </li>            
+
+            <!-- 其他博士生成员 -->
+        </ul>
+
+        <div class="member-category">Master Students</div>
+        <ul class="member-list">
+            <li class="member-item">
+                Yunpeng Xing
+                <span class="member-period">2023 – now</span>
+            </li>
+            <li class="member-item">
+                Junzhe Sun <span class="collab-info">(w/ Prof. Donghong Sun)</span>
+                <span class="member-period">2024 – now</span>
+            </li>
+            <li class="member-item">
+                Qingxin Gui 
+                <span class="member-period">2024 – now</span>
+            </li>
+            <li class="member-item">
+                Jingkai Yu <span class="collab-info">(w/ Prof. Jia Zhang)</span>
+                <span class="member-period">2024 – now</span>
+            </li>
+            <li class="member-item">
+                Jia Yao
+                <span class="member-period">2025 – now</span>
+            </li>
+            <li class="member-item">
+                Junguo Zou <span class="collab-info">(w/ Prof. Donghong Sun)</span>
+                <span class="member-period">2025 – now</span>
+            </li>
+            <li class="member-item">
+                Luwen Zhao
+                <span class="member-period">2026 – now</span>
+            </li>            
+            <!-- 其他硕士生成员 -->
+        </ul>
+    </div>
+</body>
+</html>

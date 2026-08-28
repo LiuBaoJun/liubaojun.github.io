@@ -5,99 +5,257 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baojun Liu - Education</title>
     <style>
+        /* =====================================================
+           Color system (user request: MINIMAL color use)
+           - Accent: #4169E1  (Royal Blue) — used ONLY for
+                     links, h1, and subtle row accents
+           - All other UI: shades of gray (#fafafa / #f4f4f4
+             / #e5e5e5 / #555 / #333 / #111)
+           ===================================================== */
         body {
             font-family: "Times New Roman", Times, serif;
             margin: 0;
             padding: 0;
             display: flex;
             line-height: 1.4;
-            min-height: 100vh; /* 添加最小高度 */
-        }
-      
-        .sidebar {
-            width: 200px;
-            background-color: #f5f5f5;
-            padding: 20px;
-            border-right: 1px solid #ddd;
-        }
-      
-        .main-content {
-            flex: 1;
-            padding: 20px 30px; /* 统一内边距 */
-        }
-      
-        h1 {
-            color: #4169E1;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-      
-        h2 {
-            color: #4169E1;
-            font-size: 20px;
-            margin-top: 25px;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
+            min-height: 100vh;
+            background-color: #ffffff;
         }
 
-        /* 统一侧边栏样式 */
+        /* -------------- Sidebar -------------- */
+        .sidebar {
+            width: 180px;
+            background-color: #f8f8f8;
+            padding: 25px 20px;
+            border-right: 1px solid #e6e6e6;
+            flex-shrink: 0;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
         .section-title {
             font-weight: bold;
-            margin: 15px 0 5px;
+            margin: 18px 0 6px;
             color: #333;
-            font-size: 1em;
+            font-size: 0.98em;
         }
-      
-        .menu-items {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-      
-        .menu-items li {
-            margin-bottom: 5px;
-        }
-      
+        .section-title:first-child { margin-top: 0; }
+
+        .menu-items { list-style: none; padding: 0; margin: 0; }
+        .menu-items li { margin-bottom: 4px; }
         .menu-items a {
             color: #4169E1;
             text-decoration: none;
-            font-size: 0.95em; /* 统一字号 */
+            font-size: 0.95em;
+        }
+        .menu-items a:hover { text-decoration: underline; }
+
+        /* -------------- Main content layout -------------- */
+        .main-content {
+            flex: 1;
+            padding: 24px 40px 48px 40px;
+            max-width: 980px;
+            box-sizing: border-box;
         }
 
-        /* 主内容区样式 */
-        ul {
+        h1 {
+            color: #4169E1;
+            font-size: 1.75em;
+            font-weight: bold;
+            margin: 0 0 12px 0;
+            padding: 0 0 8px 0;
+            border-bottom: 1px solid #d4d4d4;
+            line-height: 1.2;
+            letter-spacing: 0.2px;
+        }
+
+        /* Page sections: divider line above, consistent with index.html */
+        .page-section {
+            padding-top: 22px;
+            margin-top: 8px;
+            border-top: 1px solid #d8dde4;
+        }
+        .page-section h2 {
+            color: #1a1a1a;
+            font-size: 1.25em;
+            font-weight: bold;
+            margin: 0 0 16px 0;
+            padding: 0 0 6px 0;
+            border: none;
+            letter-spacing: 0.2px;
+        }
+
+        /* -------------- Entry card (Education / Work / Research) -------------- */
+        .entry-card {
+            background-color: #fafafa;
+            border: 1px solid #eaeaea;
+            border-radius: 3px;
+            padding: 14px 18px;
+            margin-bottom: 12px;
+            transition: background-color 0.15s ease;
+        }
+        .entry-card:hover {
+            background-color: #f4f4f4;
+        }
+
+        .entry-head {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+
+        .entry-org {
+            font-size: 1.05em;
+            font-weight: bold;
+            color: #1a1a1a;
+            line-height: 1.35;
+        }
+
+        .entry-year {
+            font-size: 0.92em;
+            color: #4169E1;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .entry-degree {
+            font-size: 0.98em;
+            color: #333;
+            margin: 4px 0 2px 0;
+            line-height: 1.4;
+        }
+
+        .entry-position {
+            font-size: 0.98em;
+            font-style: italic;
+            color: #444;
+            margin: 4px 0 2px 0;
+            line-height: 1.4;
+        }
+        .entry-position .honor {
+            font-style: normal;
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+
+        .entry-meta {
+            font-size: 0.92em;
+            color: #606060;
+            margin-top: 4px;
+            line-height: 1.45;
+        }
+        .entry-meta .person {
+            font-weight: bold;
+            color: #333;
+        }
+        .entry-meta .fellow-mark {
+            color: #444;
+            font-style: italic;
+        }
+
+        .entry-divider {
+            height: 1px;
+            background: #eaeaea;
+            margin: 30px 0 22px 0;
+        }
+
+        /* -------------- Honors list (minimal two-column) -------------- */
+        .honors-list {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-      
-        .entry {
-            margin-bottom: 15px;
+
+        .honors-list li {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 10px 16px;
+            padding: 9px 10px;
+            border-bottom: 1px solid #ececec;
+            line-height: 1.45;
+            font-size: 0.98em;
+            color: #222;
         }
-      
-        .year {
-            float: right;
-            color: #4169E1; /* 统一年份颜色 */
+        .honors-list li:first-child { border-top: 1px solid #ececec; }
+        .honors-list li:hover { background-color: #fafafa; }
+
+        .honor-name {
+            flex: 1 1 auto;
+            min-width: 0;
         }
-      
-        .position {
-            font-style: italic;
-            color: #666; /* 统一职位颜色 */
+        .honor-year {
+            color: #555;
+            font-weight: 600;
+            white-space: nowrap;
+            font-size: 0.95em;
         }
 
-        /* 响应式布局 */
+        /* =====================================================
+           Responsive (mobile)
+           ===================================================== */
         @media (max-width: 768px) {
             body {
                 flex-direction: column;
+                -webkit-text-size-adjust: 100%;
             }
-          
             .sidebar {
-                width: 100%;
+                width: 100% !important;
+                max-width: 100%;
+                height: auto;
+                position: relative;
+                top: auto;
+                flex-shrink: 1;
+                box-sizing: border-box;
                 border-right: none;
-                border-bottom: 1px solid #ddd;
+                border-bottom: 1px solid #e6e6e6;
+                padding: 16px 18px 12px 18px;
+                overflow-y: visible;
+            }
+            .sidebar .section-title { font-size: 1em; margin: 14px 0 4px; }
+            .sidebar .section-title:first-child { margin-top: 0; }
+            .sidebar .menu-items li { margin-bottom: 6px; }
+            .sidebar .menu-items a { font-size: 1em; display: block; padding: 6px 2px; }
+
+            .main-content {
+                padding: 18px 16px 40px 16px;
+                max-width: 100%;
+            }
+            h1 { font-size: 1.4em; margin-bottom: 10px; }
+            .page-section { padding-top: 18px; }
+            .page-section h2 { font-size: 1.12em; margin-bottom: 12px; }
+
+            .entry-card { padding: 12px 14px; }
+            .entry-org { font-size: 1em; }
+            .entry-year { font-size: 0.88em; }
+
+            .honors-list li {
+                padding: 8px 4px;
+                font-size: 0.94em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar { padding: 14px 14px 10px; }
+            .main-content { padding: 14px 12px 40px; }
+            h1 { font-size: 1.28em; }
+            .page-section h2 { font-size: 1.06em; }
+            .entry-head {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 2px;
+            }
+            .honors-list li {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 2px;
             }
         }
     </style>
@@ -112,12 +270,12 @@
             <li><a href="assets/files/cv/baojuncv202503.pdf">CV</a></li>
             <li><a href="publications.html">Publications</a></li>
         </ul>
-      
+
         <div class="section-title">Teaching</div>
         <ul class="menu-items">
             <li><a href="courses.html">Courses</a></li>
         </ul>
-      
+
         <div class="section-title">Group</div>
         <ul class="menu-items">
             <li><a href="members.html">Members</a></li>
@@ -128,60 +286,135 @@
     <div class="main-content">
         <h1>Baojun Liu - Education</h1>
 
-        <h2>Education</h2>
-        <ul>
-            <li class="entry">
-                Tsinghua University <span class="year">2015 - 2020</span><br>
-                Ph.D. in Computer Science and Technology<br>
-                Advisors: Prof. Ying Liu, Prof. Haixin Duan
-            </li>
-          
-            <li class="entry">
-                University of California, Berkeley <span class="year">2018 - 2019</span><br>
-                Senior Visiting Scholar<br>
-                International Computer Science Institute (ICSI)<br>
-                Advisor: Prof. Vern Paxson (ACM Fellow)
-            </li>
-          
-            <li class="entry">
-                Xidian University <span class="year">2011 - 2015</span><br>
-                B.Eng. in Electronic Engineering<br>
-            </li>
-        </ul>
+        <!-- ============= Section 1: Education ============= -->
+        <div class="page-section">
+            <h2>Education</h2>
 
-        <h2>Work Experience</h2>
-        <ul>
-            <li class="entry">
-                Tsinghua University <span class="year">2025 - Present</span><br>
-                <span class="position">Associate Professor</span>, Institute for Network Sciences and Cyberspace
-            </li>
+            <div class="entry-card">
+                <div class="entry-head">
+                    <div class="entry-org">Tsinghua University</div>
+                    <div class="entry-year">2015 – 2020</div>
+                </div>
+                <div class="entry-degree">Ph.D. in Computer Science and Technology</div>
+                <div class="entry-meta">Advisors: <span class="person">Prof. Ying Liu</span>, <span class="person">Prof. Haixin Duan</span></div>
+            </div>
 
-            <li class="entry">
-                Tsinghua University <span class="year">2022 - 2025</span><br>
-                <span class="position">Assistant Professor</span>, Institute for Network Sciences and Cyberspace
-            </li>
-          
-            <li class="entry">
-                Tsinghua University <span class="year">2020 - 2022</span><br>
-                <span class="position">Postdoctoral Researcher</span>, Tsinghua Shuimu Scholar
-            </li>
-        </ul>
+            <div class="entry-card">
+                <div class="entry-head">
+                    <div class="entry-org">Xidian University</div>
+                    <div class="entry-year">2011 – 2015</div>
+                </div>
+                <div class="entry-degree">B.Eng. in Electronic Engineering</div>
+            </div>
+        </div>
 
-        <h2>Honors and Awards</h2>
-        <ul>
-            <li class="entry">NDSS Distinguished Paper Award (DNS Bailiwick), 2026</li>
-            <li class="entry">NDSS Distinguished Paper Award (Email Aliases), 2026</li>  
-            <li class="entry">USENIX Security Honorable Mention, 2025</li>   
-            <li class="entry">National "Ten Thousand Talents Program" Youth Top-Notch Talent Support Plan, 2023</li>
-            <li class="entry">Internet Foundation Technology Contribution Award, 2023</li>
-            <li class="entry">ACM CCS Distinguished Paper Award, 2023</li>
-            <li class="entry">ACM SIGSAC China Rising Star Award, 2022</li>
-            <li class="entry">Internet Society Applied Networking Research Award (ANRP), 2020</li>
-            <li class="entry">IEEE/IFIP DSN Best Paper Award, 2020</li>
-            <li class="entry">NDSS Distinguished Paper Award, 2019</li>
-            <li class="entry">ACM IMC Best Paper Award Nominee, 2019</li>
-            <li class="entry">ACM IMC Community Contribution Award Nominee, 2019</li>
-        </ul>
+        <!-- ============= Section 2: Research Experience (NEW) ============= -->
+        <div class="page-section">
+            <h2>Research Experience</h2>
+
+            <div class="entry-card">
+                <div class="entry-head">
+                    <div class="entry-org">University of California, Berkeley</div>
+                    <div class="entry-year">2018 – 2019</div>
+                </div>
+                <div class="entry-degree">Senior Visiting Scholar</div>
+                <div class="entry-meta">
+                    International Computer Science Institute (ICSI)<br>
+                    Advisor: <span class="person">Prof. Vern Paxson</span> <span class="fellow-mark">(ACM Fellow)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============= Section 3: Work Experience ============= -->
+        <div class="page-section">
+            <h2>Work Experience</h2>
+
+            <div class="entry-card">
+                <div class="entry-head">
+                    <div class="entry-org">Tsinghua University</div>
+                    <div class="entry-year">2025 – Present</div>
+                </div>
+                <div class="entry-position">Associate Professor, Institute for Network Sciences and Cyberspace</div>
+                <div class="entry-meta">Director, Network and Information System Security Lab (NISL)</div>
+            </div>
+
+            <div class="entry-card">
+                <div class="entry-head">
+                    <div class="entry-org">Tsinghua University</div>
+                    <div class="entry-year">2022 – 2025</div>
+                </div>
+                <div class="entry-position">Assistant Professor, Institute for Network Sciences and Cyberspace</div>
+            </div>
+
+            <div class="entry-card">
+                <div class="entry-head">
+                    <div class="entry-org">Tsinghua University</div>
+                    <div class="entry-year">2020 – 2022</div>
+                </div>
+                <div class="entry-position">
+                    Postdoctoral Researcher, Institute for Network Sciences and Cyberspace
+                </div>
+                <div class="entry-meta">
+                    Awarded the <span class="honor">Tsinghua Shuimu Scholar</span> Fellowship
+                </div>
+            </div>
+        </div>
+
+        <!-- ============= Section 4: Honors & Awards ============= -->
+        <div class="page-section">
+            <h2>Honors and Awards</h2>
+
+            <ul class="honors-list">
+                <li>
+                    <span class="honor-name">NDSS Distinguished Paper Award (DNS Bailiwick)</span>
+                    <span class="honor-year">2026</span>
+                </li>
+                <li>
+                    <span class="honor-name">NDSS Distinguished Paper Award (Email Aliases)</span>
+                    <span class="honor-year">2026</span>
+                </li>
+                <li>
+                    <span class="honor-name">USENIX Security Honorable Mention</span>
+                    <span class="honor-year">2025</span>
+                </li>
+                <li>
+                    <span class="honor-name">National "Ten Thousand Talents Program" Youth Top-Notch Talent Support Plan</span>
+                    <span class="honor-year">2023</span>
+                </li>
+                <li>
+                    <span class="honor-name">Internet Foundation Technology Contribution Award</span>
+                    <span class="honor-year">2023</span>
+                </li>
+                <li>
+                    <span class="honor-name">ACM CCS Distinguished Paper Award</span>
+                    <span class="honor-year">2023</span>
+                </li>
+                <li>
+                    <span class="honor-name">ACM SIGSAC China Rising Star Award</span>
+                    <span class="honor-year">2022</span>
+                </li>
+                <li>
+                    <span class="honor-name">Internet Society Applied Networking Research Award (ANRP)</span>
+                    <span class="honor-year">2020</span>
+                </li>
+                <li>
+                    <span class="honor-name">IEEE/IFIP DSN Best Paper Award</span>
+                    <span class="honor-year">2020</span>
+                </li>
+                <li>
+                    <span class="honor-name">NDSS Distinguished Paper Award</span>
+                    <span class="honor-year">2019</span>
+                </li>
+                <li>
+                    <span class="honor-name">ACM IMC Best Paper Award Nominee</span>
+                    <span class="honor-year">2019</span>
+                </li>
+                <li>
+                    <span class="honor-name">ACM IMC Community Contribution Award Nominee</span>
+                    <span class="honor-year">2019</span>
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
